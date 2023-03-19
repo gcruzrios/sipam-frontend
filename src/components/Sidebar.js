@@ -1,0 +1,164 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
+const Sidebar = () => {
+  return (
+    <div>
+
+      
+
+      <div className="sidebar__menu-group">
+        <ul className="sidebar_nav">
+          <li className="has-child open">
+            <a href="#" className="active">
+              <span className="nav-icon uil uil-create-dashboard"></span>
+              <span className="menu-text">Dashboard</span>
+              <span className="toggle-icon"></span>
+            </a>
+            <ul>
+              <li className="active">
+              <Link  className="menu-text" to={`/index`}>  Inicio </Link>
+              </li>
+            </ul>
+          </li>
+         
+
+          <li className="menu-title mt-30">
+              <span>Operaciones</span>
+            </li>
+            <li className="has-child">
+              <a href="#" className="">
+                <span className="nav-icon uil uil-envelope"></span>
+                <span className="menu-text">Alertas</span>
+                <span className="toggle-icon"></span>
+              </a>
+              <ul>
+                <li className="">
+                  <Link  className="menu-text" to={`/index`}>  Buzón de Entrada </Link>
+            
+                </li>
+                {/* <li className="">
+                           <a href="read-email.html">Read
+                              Email</a>
+                        </li> */}
+              </ul>
+            </li>
+
+            <li className="has-child">
+              <a href="#" className="">
+                <span className="nav-icon uil uil-folder"></span>
+                <span className="menu-text">Seguimiento</span>
+                <span className="toggle-icon"></span>
+              </a>
+              <ul>
+                <li className="">
+                  <Link  className="menu-text" to={`/index`}>  Lista de OBS</Link>
+                 
+                </li>
+                <li className="">
+                  <Link  className="menu-text" to={`/index`}>  Lista de PAM x OBS </Link>
+                  
+                </li>
+                <li className="">
+                  <Link  className="menu-text" to={`/agregarpam`}>  Agregar PAM </Link>
+                 
+                </li>
+                
+              </ul>
+            </li>
+            <li className="has-child">
+              <a href="calendar.html" className="">
+                <span className="nav-icon uil uil-calendar-alt"></span>
+                <span className="menu-text">Calendario</span>
+                
+                
+              </a>
+              <ul>
+                <li className="">
+                  <Link  className="menu-text" to={`/index`}>  Eventos programados</Link>
+                 
+                </li>
+               
+                
+              </ul>
+            </li>
+            <li className="has-child">
+              <a href="#" className="">
+                <span className="nav-icon uil uil-users-alt"></span>
+                <span className="menu-text">Usuarios</span>
+                <span className="toggle-icon"></span>
+              </a>
+              <ul>
+                <li className="">
+                  <Link  className="menu-text" to={`/index`}>  Lista de Usuarios</Link>
+                </li>
+                <li className="">
+                  <Link  className="menu-text" to={`/index`}>  Agregar Usuarios</Link>
+                </li>
+               
+              </ul>
+            </li>
+            <li className="has-child">
+              <a href="#" className="">
+                <span className="nav-icon uil uil-at"></span>
+                <span className="menu-text">OBS Contactos</span>
+                <span className="toggle-icon"></span>
+              </a>
+              <ul>
+                {/* <li className="">
+                           <a href="contact-2.html">Contact
+                              Grid</a>
+                        </li> */}
+                <li className="">
+                  <Link  className="menu-text" to={`/index`}>  Lista Contactos OBS</Link>
+           
+                </li>
+                <li className="">
+                   <Link  className="menu-text" to={`/index`}> Agregar Contacto OBS</Link>
+                  
+                </li>
+              </ul>
+            </li>
+            <li className="has-child">
+              <a href="#" className="">
+                <span className="nav-icon uil uil-user"></span>
+                <span className="menu-text">Soporte</span>
+                <span className="toggle-icon"></span>
+              </a>
+              <ul>
+                <li className="">
+                  <Link  className="menu-text" to={`/index`}> Lista de Solicitudes</Link>
+                  <a href="support-ticket.html"></a>
+                </li>
+               
+                <li className="">
+                  <Link  className="menu-text" to={`/index`}> Lista de Solicitudes</Link>
+                  {/* <a href="new-ticket.html">Agregar Solicitud</a> */}
+                </li>
+              </ul>
+            </li>
+            <li className="menu-title mt-30">
+              <span>Ayuda</span>
+            </li>
+            <li className="has-child">
+              <a href="#" className="">
+                <span className="nav-icon uil uil-database"></span>
+                <span className="menu-text">Lista de Temas</span>
+                <span className="toggle-icon"></span>
+              </a>
+              <ul>
+                <li className="">
+                  <Link  className="menu-text" to={`/index`}>Ver todo</Link>
+                 
+                </li>
+                
+              </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default Sidebar;
+
