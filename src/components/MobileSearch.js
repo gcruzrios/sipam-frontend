@@ -5,7 +5,7 @@ const MobileSearch = () => {
     <div>
       <div className="mobile-search">
         <form action="/" className="search-form">
-          <img src="img/svg/search.svg" alt="search" className="svg" />
+          <img src="/img/svg/search.svg" alt="search" className="svg" />
           <input
             className="form-control me-sm-2 box-shadow-none"
             type="search"

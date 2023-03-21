@@ -24,7 +24,7 @@ const Editobs = () => {
                 data-bs-dismiss="modal"
                 aria-label="Close"
               >
-                <img src="img/svg/x.svg" alt="x" class="svg" />
+                <img src="/img/svg/x.svg" alt="x" class="svg" />
               </button>
             </div>
             <div class="modal-body">
@@ -119,7 +119,7 @@ const Editobs = () => {
                         <a href="#">
                           <img
                             class="svg"
-                            src="img/svg/chevron-right.svg"
+                            src="/img/svg/chevron-right.svg"
                             alt="chevron-right.svg"
                           />
                         </a>
@@ -137,7 +137,7 @@ const Editobs = () => {
                         <a href="#">
                           <img
                             class="svg"
-                            src="img/svg/chevron-right.svg"
+                            src="/img/svg/chevron-right.svg"
                             alt="chevron-right.svg"
                           />
                         </a>

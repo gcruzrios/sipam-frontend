@@ -22,7 +22,7 @@ const UserMenu = () => {
         <li class="nav-message">
           <div class="dropdown-custom">
             <a href="javascript:;" class="nav-item-toggle icon-active">
-              <img class="svg" src="img/svg/message.svg" alt="img" />
+              <img class="svg" src="/img/svg/message.svg" alt="img" />
             </a>
             <div class="dropdown-parent-wrapper">
               <div class="dropdown-wrapper">
@@ -33,7 +33,7 @@ const UserMenu = () => {
                 <ul>
                   <li class="author-online has-new-message">
                     <div class="user-avater">
-                      <img src="img/team-1.png" alt="" />
+                      <img src="/img/team-1.png" alt="" />
                     </div>
                     <div class="user-message">
                       <p>
@@ -62,7 +62,7 @@ const UserMenu = () => {
 
                   <li class="author-offline">
                     <div class="user-avater">
-                      <img src="img/team-1.png" alt="" />
+                      <img src="/img/team-1.png" alt="" />
                     </div>
                     <div class="user-message">
                       <p>
@@ -97,7 +97,7 @@ const UserMenu = () => {
         <li class="nav-notification">
           <div class="dropdown-custom">
             <a href="javascript:;" class="nav-item-toggle icon-active">
-              <img class="svg" src="img/svg/alarm.svg" alt="img" />
+              <img class="svg" src="/img/svg/alarm.svg" alt="img" />
             </a>
             <div class="dropdown-parent-wrapper">
               <div class="dropdown-wrapper">
@@ -108,7 +108,7 @@ const UserMenu = () => {
                 <ul>
                   <li class="nav-notification__single nav-notification__single--unread d-flex flex-wrap">
                     <div class="nav-notification__type nav-notification__type--primary">
-                      <img class="svg" src="img/svg/inbox.svg" alt="inbox" />
+                      <img class="svg" src="/img/svg/inbox.svg" alt="inbox" />
                     </div>
                     <div class="nav-notification__details">
                       <p>
@@ -129,7 +129,7 @@ const UserMenu = () => {
 
                   <li class="nav-notification__single nav-notification__single d-flex flex-wrap">
                     <div class="nav-notification__type nav-notification__type--danger">
-                      <img src="img/svg/heart.svg" alt="heart" class="svg" />
+                      <img src="/img/svg/heart.svg" alt="heart" class="svg" />
                     </div>
                     <div class="nav-notification__details">
                       <p>
@@ -159,14 +159,14 @@ const UserMenu = () => {
         <li class="nav-settings">
           <div class="dropdown-custom">
             <a href="javascript:;" class="nav-item-toggle">
-              <img src="img/setting.png" alt="setting" />
+              <img src="/img/setting.png" alt="setting" />
             </a>
             <div class="dropdown-parent-wrapper">
               <div class="dropdown-wrapper dropdown-wrapper--large">
                 <ul class="list-settings">
                   <li class="d-flex">
                     <div class="me-3">
-                      <img src="img/mail.png" alt="" />
+                      <img src="/img/mail.png" alt="" />
                     </div>
                     <div class="flex-grow-1">
                       <h6>
@@ -179,7 +179,7 @@ const UserMenu = () => {
                   </li>
                   <li class="d-flex">
                     <div class="me-3">
-                      <img src="img/color-palette.png" alt="" />
+                      <img src="/img/color-palette.png" alt="" />
                     </div>
                     <div class="flex-grow-1">
                       <h6>
@@ -192,7 +192,7 @@ const UserMenu = () => {
                   </li>
                   <li class="d-flex">
                     <div class="me-3">
-                      <img src="img/home.png" alt="" />
+                      <img src="/img/home.png" alt="" />
                     </div>
                     <div class="flex-grow-1">
                       <h6>
@@ -205,7 +205,7 @@ const UserMenu = () => {
                   </li>
                   <li class="d-flex">
                     <div class="me-3">
-                      <img src="img/video-camera.png" alt="" />
+                      <img src="/img/video-camera.png" alt="" />
                     </div>
                     <div class="flex-grow-1">
                       <h6>
@@ -218,7 +218,7 @@ const UserMenu = () => {
                   </li>
                   <li class="d-flex">
                     <div class="me-3">
-                      <img src="img/document.png" alt="" />
+                      <img src="/img/document.png" alt="" />
                     </div>
                     <div class="flex-grow-1">
                       <h6>
@@ -231,7 +231,7 @@ const UserMenu = () => {
                   </li>
                   <li class="d-flex">
                     <div class="me-3">
-                      <img src="img/microphone.png" alt="" />
+                      <img src="/img/microphone.png" alt="" />
                     </div>
                     <div class="flex-grow-1">
                       <h6>
@@ -251,15 +251,15 @@ const UserMenu = () => {
         <li class="nav-flag-select">
           <div class="dropdown-custom">
             <a href="javascript:;" class="nav-item-toggle">
-              <img src="img/flag.png" alt="" class="rounded-circle" />
+              <img src="/img/flag.png" alt="" class="rounded-circle" />
             </a>
             <div class="dropdown-parent-wrapper">
               <div class="dropdown-wrapper dropdown-wrapper--small">
                 <a href="">
-                  <img src="img/eng.png" alt="" /> English
+                  <img src="/img/eng.png" alt="" /> English
                 </a>
                 <a href="">
-                  <img src="img/spa.png" alt="" /> Spanish
+                  <img src="/img/spa.png" alt="" /> Spanish
                 </a>
               </div>
             </div>
@@ -269,7 +269,7 @@ const UserMenu = () => {
         <li class="nav-author">
           <div class="dropdown-custom">
             <a href="javascript:;" class="nav-item-toggle">
-              <img src="img/author-nav.jpg" alt="" class="rounded-circle" />
+              <img src="/img/author-nav.jpg" alt="" class="rounded-circle" />
               <span class="nav-item__title">
                 Danial<i class="las la-angle-down nav-item__arrow"></i>
               </span>
@@ -279,7 +279,7 @@ const UserMenu = () => {
                 <div class="nav-author__info">
                   <div class="author-img">
                     <img
-                      src="img/author-nav.jpg"
+                      src="/img/author-nav.jpg"
                       alt=""
                       class="rounded-circle"
                     />
@@ -323,16 +323,16 @@ const UserMenu = () => {
       <div class="navbar-right__mobileAction d-md-none">
         <a href="#" class="btn-search">
           <img
-            src="img/svg/search.svg"
+            src="/img/svg/search.svg"
             alt="search"
             class="svg feather-search"
           />
-          <img src="img/svg/x.svg" alt="x" class="svg feather-x" />
+          <img src="/img/svg/x.svg" alt="x" class="svg feather-x" />
         </a>
         <a href="#" class="btn-author-action">
           <img
             class="svg"
-            src="img/svg/more-vertical.svg"
+            src="/img/svg/more-vertical.svg"
             alt="more-vertical"
           />
         </a>

@@ -2,7 +2,7 @@
                <li className="nav-message">
                   <div className="dropdown-custom">
                      <a href="" className="nav-item-toggle icon-active">
-                        <img className="svg" src="img/svg/message.svg" alt="img" />
+                        <img className="svg" src="/img/svg/message.svg" alt="img" />
                      </a>
                      <div className="dropdown-parent-wrapper">
                         <div className="dropdown-wrapper">
@@ -10,7 +10,7 @@
                            <ul>
                               <li className="author-online has-new-message">
                                  <div className="user-avater">
-                                    <img src="img/team-1.png" alt=""/>
+                                    <img src="/img/team-1.png" alt=""/>
                                  </div>
                                  <div className="user-message">
                                     <p>
@@ -29,7 +29,7 @@
                               
                               <li className="author-offline">
                                  <div className="user-avater">
-                                    <img src="img/team-1.png" alt=""/>
+                                    <img src="/img/team-1.png" alt=""/>
                                  </div>
                                  <div className="user-message">
                                     <p>

@@ -6,11 +6,11 @@ const Sidebar = () => {
     <div class="navbar-left">
             <div class="logo-area">
                <a class="navbar-brand" href="index.html">
-                  <img class="dark" src="img/logo-white.png" alt="logo" />
-                  <img class="light" src="img/logo-white.png" alt="logo"/>
+                  <img class="dark" src="/img/logo-white.png" alt="logo" />
+                  <img class="light" src="/img/logo-white.png" alt="logo"/>
                </a>
                <a href="#" class="sidebar-toggle">
-                  <img class="svg" src="img/svg/align-center-alt.svg" alt="img"/></a>
+                  <img class="svg" src="/img/svg/align-center-alt.svg" alt="img"/></a>
             </div>
             <div class="top-menu">
 
@@ -48,7 +48,7 @@ const Sidebar = () => {
                               <ul>
                                  <li class="has-subMenu-left">
                                     <a href="#" class="">
-                                       <img src="img/svg/mail.svg" alt="mail" class="svg nav-icon">
+                                       <img src="/img/svg/mail.svg" alt="mail" class="svg nav-icon">
                                        <span class="menu-text">Email</span>
                                     </a>
                                     <ul class="subMenu">
@@ -125,7 +125,7 @@ const Sidebar = () => {
                                  </li>
                                  <li class="has-subMenu-left">
                                     <a href="#" class="">
-                                       <img src="img/svg/user-check.svg" alt="user-check" class="svg nav-icon"/>
+                                       <img src="/img/svg/user-check.svg" alt="user-check" class="svg nav-icon"/>
                                        <span class="menu-text">OBS Contactos</span>
                                     </a>
                                     <ul class="subMenu">
@@ -146,7 +146,7 @@ const Sidebar = () => {
                                  
                                  <li class="has-subMenu-left">
                                     <a href="#" class="">
-                                       <img src="img/svg/repeat.svg" alt="repeat" class="svg nav-icon"/>
+                                       <img src="/img/svg/repeat.svg" alt="repeat" class="svg nav-icon"/>
                                        <span class="menu-text">Import & Export</span>
                                     </a>
                                     <ul class="subMenu">
@@ -214,7 +214,7 @@ const Sidebar = () => {
                         <ul class="subMenu">
                            <li class="has-subMenu-left">
                               <a href="#" class="">
-                                 <img src="img/svg/shopping-cart.svg" alt="shopping-cart" class="svg nav-icon" />
+                                 <img src="/img/svg/shopping-cart.svg" alt="shopping-cart" class="svg nav-icon" />
                                  <span class="menu-text">Firestore Crud</span>
                               </a>
                               <ul class="subMenu">

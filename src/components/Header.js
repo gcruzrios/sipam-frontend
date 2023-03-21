@@ -18,7 +18,7 @@ const Header = () => {
                <li className="nav-message">
                   <div className="dropdown-custom">
                      <a href="javascript:;" className="nav-item-toggle icon-active">
-                        <img className="svg" src="img/svg/message.svg" alt="img" />
+                        <img className="svg" src="/img/svg/message.svg" alt="img" />
                      </a>
                      <div className="dropdown-parent-wrapper">
                         <div className="dropdown-wrapper">
@@ -26,7 +26,7 @@ const Header = () => {
                            <ul>
                               <li className="author-online has-new-message">
                                  <div className="user-avater">
-                                    <img src="img/team-1.png" alt=""/>
+                                    <img src="/img/team-1.png" alt=""/>
                                  </div>
                                  <div className="user-message">
                                     <p>
@@ -54,7 +54,7 @@ const Header = () => {
                <li className="nav-notification">
                   <div className="dropdown-custom">
                      <a href="javascript:;" className="nav-item-toggle icon-active">
-                        <img className="svg" src="img/svg/alarm.svg" alt="img"/>
+                        <img className="svg" src="/img/svg/alarm.svg" alt="img"/>
                      </a>
                      <div className="dropdown-parent-wrapper">
                         <div className="dropdown-wrapper">
@@ -62,7 +62,7 @@ const Header = () => {
                            <ul>
                               <li className="nav-notification__single nav-notification__single--unread d-flex flex-wrap">
                                  <div className="nav-notification__type nav-notification__type--primary">
-                                    <img className="svg" src="img/svg/inbox.svg" alt="inbox"/>
+                                    <img className="svg" src="/img/svg/inbox.svg" alt="inbox"/>
                                  </div>
                                  <div className="nav-notification__details">
                                     <p>
@@ -84,14 +84,14 @@ const Header = () => {
                <li className="nav-settings">
                   <div className="dropdown-custom">
                      <a href="javascript:;" className="nav-item-toggle">
-                        <img src="img/setting.png" alt="setting"/>
+                        <img src="/img/setting.png" alt="setting"/>
                      </a>
                      <div className="dropdown-parent-wrapper">
                         <div className="dropdown-wrapper dropdown-wrapper--large">
                            <ul className="list-settings">
                               <li className="d-flex">
                                  <div className="me-3">
-                                  <img src="img/mail.png" alt=""/></div>
+                                  <img src="/img/mail.png" alt=""/></div>
                                  <div className="flex-grow-1">
                                     <h6>
                                        <a href="" className="stretched-link">All Features</a>
@@ -104,7 +104,7 @@ const Header = () => {
                               
                               <li className="d-flex">
                                  <div className="me-3">
-                                  <img src="img/document.png" alt=""/></div>
+                                  <img src="/img/document.png" alt=""/></div>
                                  <div className="flex-grow-1">
                                     <h6>
                                        <a href="" className="stretched-link">Content Planner</a>
@@ -114,7 +114,7 @@ const Header = () => {
                               </li>
                               <li className="d-flex">
                                  <div className="me-3">
-                                  <img src="img/microphone.png" alt=""/></div>
+                                  <img src="/img/microphone.png" alt=""/></div>
                                  <div className="flex-grow-1">
                                     <h6>
                                        <a href="" className="stretched-link">Diagram Maker</a>
@@ -131,11 +131,11 @@ const Header = () => {
                <li className="nav-flag-select">
                   <div className="dropdown-custom">
                      <a href="javascript:;" className="nav-item-toggle">
-                      <img src="img/flag.png" alt="" className="rounded-circle"/></a>
+                      <img src="/img/flag.png" alt="" className="rounded-circle"/></a>
                      <div className="dropdown-parent-wrapper">
                         <div className="dropdown-wrapper dropdown-wrapper--small">
-                           <a href=""><img src="img/eng.png" alt=""/> English</a>
-                           <a href=""><img src="img/spa.png" alt=""/> Spanish</a>
+                           <a href=""><img src="/img/eng.png" alt=""/> English</a>
+                           <a href=""><img src="/img/spa.png" alt=""/> Spanish</a>
                            
                         </div>
                      </div>
@@ -146,14 +146,14 @@ const Header = () => {
                <li className="nav-author">
                   <div className="dropdown-custom">
                      <a href="javascript:;" className="nav-item-toggle">
-                      <img src="img/author-nav.jpg" alt="" className="rounded-circle"/>
+                      <img src="/img/author-nav.jpg" alt="" className="rounded-circle"/>
                         <span className="nav-item__title">Danial<i className="las la-angle-down nav-item__arrow"></i></span>
                      </a>
                      <div className="dropdown-parent-wrapper">
                         <div className="dropdown-wrapper">
                            <div className="nav-author__info">
                               <div className="author-img">
-                                 <img src="img/author-nav.jpg" alt="" className="rounded-circle" />
+                                 <img src="/img/author-nav.jpg" alt="" className="rounded-circle" />
                               </div>
                               <div>
                                  <h6>Rabbi Islam Rony</h6>
@@ -189,10 +189,10 @@ const Header = () => {
             
             <div className="navbar-right__mobileAction d-md-none">
                <a href="#" className="btn-search">
-                  <img src="img/svg/search.svg" alt="search" className="svg feather-search" />
-                  <img src="img/svg/x.svg" alt="x" className="svg feather-x" /></a>
+                  <img src="/img/svg/search.svg" alt="search" className="svg feather-search" />
+                  <img src="/img/svg/x.svg" alt="x" className="svg feather-x" /></a>
                <a href="#" className="btn-author-action">
-                  <img className="svg" src="img/svg/more-vertical.svg" alt="more-vertical" /></a>
+                  <img className="svg" src="/img/svg/more-vertical.svg" alt="more-vertical" /></a>
             </div>
          </div>
       

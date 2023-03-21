@@ -89,10 +89,9 @@ export const Login = () => {
            
                    
             const estado = 'activo';
-         
-
             localStorage.setItem('Estado', estado);
             window.location.href='/index'
+            //window.location.href='/6767646'
         }
 
     }
@@ -112,8 +111,8 @@ export const Login = () => {
                         <div className="edit-profile">
                             <div className="edit-profile__logos">
                                 <a href="index.html">
-                                <img className="dark" src="img/logo-white.png" alt="" />
-                                <img className="light" src="img/logo-white.png" alt=""/>
+                                <img className="dark" src="/img/logo-white.png" alt="" />
+                                <img className="light" src="/img/logo-white.png" alt=""/>
                                 </a>
                             </div>
                             <div className="card border-0">

@@ -18,13 +18,13 @@ const Index = () => {
           <div className="navbar-left">
             <div className="logo-area">
               <a className="navbar-brand" href="index.html">
-                <img className="dark" src="img/logo-white.png" alt="logo" />
-                <img className="light" src="img/logo-white.png" alt="logo" />
+                <img className="dark" src="/img/logo-white.png" alt="logo" />
+                <img className="light" src="/img/logo-white.png" alt="logo" />
               </a>
               <a href="#" className="sidebar-toggle">
                 <img
                   className="svg"
-                  src="img/svg/align-center-alt.svg"
+                  src="/img/svg/align-center-alt.svg"
                   alt="img"
                 />
               </a>
@@ -38,7 +38,7 @@ const Index = () => {
 
           <div className="navbar-right">
             {/* <!-- navigation nav.js --> */}
-            <Nav />
+            {/* <Nav /> */}
           </div>
           {/* <!-- ends: .navbar-right --> */}
         </nav>
@@ -46,7 +46,7 @@ const Index = () => {
       <main className="main-content">
         <div className="sidebar-wrapper">
           <div className="sidebar sidebar-collapse" id="sidebar">
-          <Sidebar />
+          {/* <Sidebar /> */}
           </div>
         </div>
        

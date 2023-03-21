@@ -15,7 +15,7 @@ const SearchName = () => {
           action="/"
           className="d-flex align-items-center user-member__form my-sm-0 my-2"
         >
-          <img src="img/svg/search.svg" alt="search" className="svg" />
+          <img src="/img/svg/search.svg" alt="search" className="svg" />
           <input
             className="form-control me-sm-2 border-0 box-shadow-none"
             type="search"

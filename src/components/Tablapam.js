@@ -8,7 +8,7 @@ import {
 import axios from "axios";
 
 const Tablaobs = () => {
-  const [obsSeleccionado, setobsSeleccionado] = useState({
+  const [pamSeleccionado, setpamSeleccionado] = useState({
     
 
 
@@ -56,11 +56,11 @@ const Tablaobs = () => {
  
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setobsSeleccionado((prevState) => ({
+    setpamSeleccionado((prevState) => ({
       ...prevState,
       [name]: value,
     }));
-    console.log(obsSeleccionado);
+    console.log(pamSeleccionado);
   };
 
   useEffect(() => {
@@ -116,7 +116,7 @@ const Tablaobs = () => {
               
               
               <div className="userDatatable-content">
-              <Link  className="nav-author__signout" to={`/lista-pam/${pam.identificacion}`}>  <i className="uil uil-home-alt"></i> {pam.identificacion}</Link>
+              <Link  className="nav-author__signout" to={`/detallepam/${pam.identificacion}`}>  <i className="uil uil-home-alt"></i> {pam.identificacion}</Link>
               </div>
             </td>
             <td>

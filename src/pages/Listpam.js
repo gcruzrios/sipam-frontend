@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
+
 import Nav from "../components/Nav.js";
 import Footer from "../components/Footer.js";
 import Content from "../components/Content.js";
@@ -17,13 +18,13 @@ const Index = () => {
           <div className="navbar-left">
             <div className="logo-area">
               <a className="navbar-brand" href="index.html">
-                <img className="dark" src="img/logo-white.png" alt="logo" />
-                <img className="light" src="img/logo-white.png" alt="logo" />
+                <img className="dark" src="/img/logo-white.png" alt="logo" />
+                <img className="light" src="/img/logo-white.png" alt="logo" />
               </a>
               <a href="#" className="sidebar-toggle">
                 <img
                   className="svg"
-                  src="img/svg/align-center-alt.svg"
+                  src="/img/svg/align-center-alt.svg"
                   alt="img"
                 />
               </a>

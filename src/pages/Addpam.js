@@ -15,7 +15,7 @@ const Index = () => {
     <div>
       <div className="mobile-search">
         <form action="/" className="search-form">
-          <img src="img/svg/search.svg" alt="search" className="svg" />
+          <img src="/img/svg/search.svg" alt="search" className="svg" />
           <input
             className="form-control me-sm-2 box-shadow-none"
             type="search"
@@ -30,13 +30,13 @@ const Index = () => {
           <div className="navbar-left">
             <div className="logo-area">
               <a className="navbar-brand" href="index.html">
-                <img className="dark" src="img/logo-white.png" alt="logo" />
-                <img className="light" src="img/logo-white.png" alt="logo" />
+                <img className="dark" src="/img/logo-white.png" alt="logo" />
+                <img className="light" src="/img/logo-white.png" alt="logo" />
               </a>
               <a href="#" className="sidebar-toggle">
                 <img
                   className="svg"
-                  src="img/svg/align-center-alt.svg"
+                  src="/img/svg/align-center-alt.svg"
                   alt="img"
                 />
               </a>

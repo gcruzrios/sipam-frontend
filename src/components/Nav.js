@@ -40,14 +40,14 @@ const Nav = () => {
         <li className="nav-settings">
           <div className="dropdown-custom">
             <a href="" className="nav-item-toggle">
-              <img src="img/setting.png" alt="setting" />
+              <img src="/img/setting.png" alt="setting" />
             </a>
             <div className="dropdown-parent-wrapper">
               <div className="dropdown-wrapper dropdown-wrapper--large">
                 <ul className="list-settings">
                   <li className="d-flex">
                     <div className="me-3">
-                      <img src="img/mail.png" alt="" />
+                      <img src="/img/mail.png" alt="" />
                     </div>
                     <div className="flex-grow-1">
                       <h6>
@@ -60,7 +60,7 @@ const Nav = () => {
                   </li>
                   <li className="d-flex">
                     <div className="me-3">
-                      <img src="img/color-palette.png" alt="" />
+                      <img src="/img/color-palette.png" alt="" />
                     </div>
                     <div className="flex-grow-1">
                       <h6>
@@ -73,7 +73,7 @@ const Nav = () => {
                   </li>
                   <li className="d-flex">
                     <div className="me-3">
-                      <img src="img/home.png" alt="" />
+                      <img src="/img/home.png" alt="" />
                     </div>
                     <div className="flex-grow-1">
                       <h6>
@@ -86,7 +86,7 @@ const Nav = () => {
                   </li>
                   <li className="d-flex">
                     <div className="me-3">
-                      <img src="img/video-camera.png" alt="" />
+                      <img src="/img/video-camera.png" alt="" />
                     </div>
                     <div className="flex-grow-1">
                       <h6>
@@ -99,7 +99,7 @@ const Nav = () => {
                   </li>
                   <li className="d-flex">
                     <div className="me-3">
-                      <img src="img/document.png" alt="" />
+                      <img src="/img/document.png" alt="" />
                     </div>
                     <div className="flex-grow-1">
                       <h6>
@@ -112,7 +112,7 @@ const Nav = () => {
                   </li>
                   <li className="d-flex">
                     <div className="me-3">
-                      <img src="img/microphone.png" alt="" />
+                      <img src="/img/microphone.png" alt="" />
                     </div>
                     <div className="flex-grow-1">
                       <h6>
@@ -133,7 +133,7 @@ const Nav = () => {
         <li className="nav-author">
           <div className="dropdown-custom">
             <a href="" className="nav-item-toggle">
-              <img src="img/user-mas02.png" alt="" className="rounded-circle" />
+              <img src="/img/user-mas02.png" alt="" className="rounded-circle" />
               <span className="nav-item__title">
                 CONAPAM<i className="las la-angle-down nav-item__arrow"></i>
               </span>
@@ -143,7 +143,7 @@ const Nav = () => {
                 <div className="nav-author__info">
                   <div className="author-img">
                     <img
-                      src="img/user-mas02.png"
+                      src="/img/user-mas02.png"
                       alt=""
                       className="rounded-circle"
                     />
@@ -194,16 +194,16 @@ const Nav = () => {
       <div className="navbar-right__mobileAction d-md-none">
         <a href="#" className="btn-search">
           <img
-            src="img/svg/search.svg"
+            src="/img/svg/search.svg"
             alt="search"
             className="svg feather-search"
           />
-          <img src="img/svg/x.svg" alt="x" className="svg feather-x" />
+          <img src="/img/svg/x.svg" alt="x" className="svg feather-x" />
         </a>
         <a href="#" className="btn-author-action">
           <img
             className="svg"
-            src="img/svg/more-vertical.svg"
+            src="/img/svg/more-vertical.svg"
             alt="more-vertical"
           />
         </a>

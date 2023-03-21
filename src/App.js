@@ -16,7 +16,9 @@ import Login from "./pages/Login";
 import Registro from "./pages/Registro";
 import Listpam from "./pages/Listpam";
 import Addpam from "./pages/Addpam";
+import Detallepam from "./pages/Detallepam";
 import NotFound from "./pages/Error404";
+import Dashboard from "./pages/Dashboard";
 
 const estaAutenticado = () => {
   const token = localStorage.getItem("Token");
@@ -38,13 +40,16 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Login />} />
 
-          <Route
+          {/* <Route
             exact
             path="/index"
             element={estaAutenticado() ? <Index /> : <Navigate to="/" />}
-          />
+            element={estaAutenticado() ? <Dashboard/> : <Navigate to="/" />}
+            
+          /> */}
+          <Route path="/index" exact element={<Index />} />
 
-          <Route exact path="/login" element={<Login />} />
+          {/* <Route exact path="/login" element={<Login />} /> */}
           <Route exact path="/register" element={<Registro />} />
 
           {/* <Route exact path="/listpam" element={<Listpam />} /> */}
@@ -52,8 +57,10 @@ function App() {
 
           <Route exact path='/listpam/:id' element={estaAutenticado() ? <Listpam /> : <Navigate to="/" /> } />
           {/* <Route path="/agregarpam" element={<Addpam />} /> */}
-          <Route exact path="/agregarpam" element={estaAutenticado() ? <Addpam /> : <Navigate to="/" />}
-          />
+          <Route exact path="/agregarpam" element={estaAutenticado() ? <Addpam /> : <Navigate to="/" />}/>
+          <Route exact path='/detallepam/:id' element={estaAutenticado() ? <Detallepam /> : <Navigate to="/" />}/>
+          
+          
           {/* <Route exact path='/clients' element={<Client/>} />
         <Route exact path='/reports' element={<Reportes/>} />
         <Route exact path='/integrations' element={<Integraciones/>} />
