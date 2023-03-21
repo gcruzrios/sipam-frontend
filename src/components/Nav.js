@@ -5,6 +5,10 @@ import { Link } from "react-router-dom";
 const Nav = () => {
   const [menu, setMenu] = useState(false);
 
+  const idUsuario = localStorage.getItem('idUsuario');
+  const nombreUsuario = localStorage.getItem('nombreUsuario');
+  const rolUsuario = localStorage.getItem('rolUsuario');
+
   useEffect(() => {
     if (localStorage.getItem("Token")) {
       setMenu(true);
@@ -15,6 +19,11 @@ const Nav = () => {
     localStorage.clear();
     window.location.href = "/";
   };
+
+
+
+
+
 
   return (
     <div>
@@ -52,64 +61,16 @@ const Nav = () => {
                     <div className="flex-grow-1">
                       <h6>
                         <a href="" className="stretched-link">
-                          All Features
+                          Todas las caracteristicas
                         </a>
                       </h6>
-                      <p>Introducing Increment subscriptions </p>
+                      <p> </p>
                     </div>
                   </li>
-                  <li className="d-flex">
-                    <div className="me-3">
-                      <img src="/img/color-palette.png" alt="" />
-                    </div>
-                    <div className="flex-grow-1">
-                      <h6>
-                        <a href="" className="stretched-link">
-                          Themes
-                        </a>
-                      </h6>
-                      <p>Third party themes that are compatible</p>
-                    </div>
-                  </li>
-                  <li className="d-flex">
-                    <div className="me-3">
-                      <img src="/img/home.png" alt="" />
-                    </div>
-                    <div className="flex-grow-1">
-                      <h6>
-                        <a href="" className="stretched-link">
-                          Payments
-                        </a>
-                      </h6>
-                      <p>We handle billions of dollars</p>
-                    </div>
-                  </li>
-                  <li className="d-flex">
-                    <div className="me-3">
-                      <img src="/img/video-camera.png" alt="" />
-                    </div>
-                    <div className="flex-grow-1">
-                      <h6>
-                        <a href="" className="stretched-link">
-                          Design Mockups
-                        </a>
-                      </h6>
-                      <p>Share planning visuals with clients</p>
-                    </div>
-                  </li>
-                  <li className="d-flex">
-                    <div className="me-3">
-                      <img src="/img/document.png" alt="" />
-                    </div>
-                    <div className="flex-grow-1">
-                      <h6>
-                        <a href="" className="stretched-link">
-                          Content Planner
-                        </a>
-                      </h6>
-                      <p>Centralize content gethering and editing</p>
-                    </div>
-                  </li>
+                 
+                  
+                  
+                  
                   <li className="d-flex">
                     <div className="me-3">
                       <img src="/img/microphone.png" alt="" />
@@ -117,10 +78,10 @@ const Nav = () => {
                     <div className="flex-grow-1">
                       <h6>
                         <a href="" className="stretched-link">
-                          Diagram Maker
+                          Hacer diagramas
                         </a>
                       </h6>
-                      <p>Plan user flows & test scenarios</p>
+                      <p>Flujos de trabajo</p>
                     </div>
                   </li>
                 </ul>
@@ -135,7 +96,7 @@ const Nav = () => {
             <a href="" className="nav-item-toggle">
               <img src="/img/user-mas02.png" alt="" className="rounded-circle" />
               <span className="nav-item__title">
-                CONAPAM<i className="las la-angle-down nav-item__arrow"></i>
+                {nombreUsuario}<i className="las la-angle-down nav-item__arrow"></i>
               </span>
             </a>
             <div className="dropdown-parent-wrapper">
@@ -149,27 +110,27 @@ const Nav = () => {
                     />
                   </div>
                   <div>
-                    <h6>UFO CONAPAM</h6>
-                    <span>Administrador</span>
+                    <h6>{nombreUsuario}</h6>
+                    <span>{rolUsuario}</span>
                   </div>
                 </div>
                 <div className="nav-author__options">
                   <ul>
                     <li>
                       <a href="">
-                        <i className="uil uil-user"></i> Profile
+                        <i className="uil uil-user"></i> Perfil Usuario
                       </a>
                     </li>
                     <li>
                       <a href="">
                         <i className="uil uil-setting"></i>
-                        Settings
+                        Configuración
                       </a>
                     </li>
 
                     <li>
                       <a href="">
-                        <i className="uil uil-bell"></i> Help
+                        <i className="uil uil-bell"></i> Ayuda
                       </a>
                     </li>
                   </ul>

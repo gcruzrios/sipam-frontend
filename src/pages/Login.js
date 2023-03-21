@@ -63,10 +63,13 @@ export const Login = () => {
         const response= await axios.post(`/wsSIPAM/GetUsuario`,ingreso,{headers:{Authorization:'Bearer '+Token}})
         console.log(response);
 
-        //const mensaje ="000";
-        //const mensaje_alerta= "Bienvenido";
+      
         const mensaje = response.data.CodigoResultado;
         const mensaje_alerta= response.data.MensajeResultado;
+
+        const idUsuario = response.data.Resultado.idUsuario;
+        const nombreUsuario = response.data.Resultado.nombreCompleto;
+        const rolUsuario = response.data.Resultado.rol;
 
         console.log(mensaje);
         console.log(mensaje_alerta);
@@ -90,6 +93,10 @@ export const Login = () => {
                    
             const estado = 'activo';
             localStorage.setItem('Estado', estado);
+            localStorage.setItem('idUsuario',idUsuario );
+            localStorage.setItem('nombreUsuario',nombreUsuario );
+            localStorage.setItem('rolUsuario',rolUsuario );
+            
             window.location.href='/index'
             //window.location.href='/6767646'
         }
