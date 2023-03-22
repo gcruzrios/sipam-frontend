@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import axios from "axios";
 import GoogleMapsPam from "./GoogleMapsPam";
-import Mapa from "./Mapa";
+
 
 const FichaObs = () => {
   const [obsSeleccionado, setobsSeleccionado] = useState({
@@ -46,7 +46,7 @@ const FichaObs = () => {
     const cedula = { cedula: id };
     console.log(cedula);
     await axios
-      .post("/wsSIPAM/GetConsultaPAM", cedula, {
+      .post("/wsSIPAM/GetObsPorCodigo", cedula, {
         headers: { Authorization: "Bearer " + Token },
       })
       .then((response) => {
@@ -74,7 +74,7 @@ const FichaObs = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className="d-flex align-items-center user-member__title mb-30 mt-30">
-              <h4 className="text-capitalize">Detalle información de Obs</h4>
+              <h4 className="text-capitalize">Detalle información de OBS / GL</h4>
             </div>
           </div>
         </div>
@@ -105,23 +105,7 @@ const FichaObs = () => {
                       Información Personal
                     </a>
                   </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      id="v-pills-profile-tab"
-                      data-bs-toggle="pill"
-                      href="#v-pills-profile"
-                      role="tab"
-                      aria-selected="false"
-                    >
-                      <img
-                        src="/img/svg/profit2.svg"
-                        alt="briefcase"
-                        className="svg"
-                      />
-                      Información Socioeconómica
-                    </a>
-                  </li>
+                  
                   <li className="nav-item">
                     <a
                       className="nav-link"
@@ -136,7 +120,7 @@ const FichaObs = () => {
                         alt="share-2"
                         className="svg"
                       />
-                      Beneficios
+                      Beneficios disponibles
                     </a>
                   </li>
                   <li className="nav-item">

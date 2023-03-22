@@ -4,12 +4,16 @@ import { Link } from "react-router-dom";
 
 import Nav from "../components/Nav.js";
 import Footer from "../components/Footer.js";
-import Content from "../components/Content.js";
+
 
 import Sidebar from "../components/Sidebar";
 import MobileSearch from "../components/MobileSearch.js";
 
-const Listpam = () => {
+
+import FichaPam from "../components/FichaPam.js";
+import FichaObs from "../components/FichaObs.js";
+
+const Detalleobs = () => {
   return (
     <div>
      <MobileSearch />
@@ -53,7 +57,9 @@ const Listpam = () => {
 
         <div className="contents">
           {/* <!-- Home.js --> */}
-          <Content/>
+         
+          {/* <Detallepam/> */}
+          <FichaObs/>
         </div>
         <Footer />
         {/* <!-- Footer.js --> */}
@@ -74,5 +80,5 @@ const Listpam = () => {
   );
 };
 
-export default Listpam;
+export default Detalleobs;
 

@@ -2,7 +2,7 @@ import React from "react";
 import { GoogleMap, useJsApiLoader, LoadScript, Marker} from '@react-google-maps/api';
 
 
-const GoogleMapsPam = () => {
+const GoogleMapsObs = () => {
 
   const mapStyles = {        
     height: "100vh",
@@ -56,7 +56,10 @@ const GoogleMapsPam = () => {
   );
 };
 
-export default GoogleMapsPam;
+export default GoogleMapsObs;
+
+
+
 
 
 

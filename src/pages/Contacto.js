@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
-
 import Nav from "../components/Nav.js";
 import Footer from "../components/Footer.js";
-import Content from "../components/Content.js";
-
 import Sidebar from "../components/Sidebar";
 import MobileSearch from "../components/MobileSearch.js";
 
-const Listpam = () => {
+import Contactos from "../components/Contactos.js";
+
+const Contacto = () => {
   return (
     <div>
      <MobileSearch />
@@ -38,7 +37,7 @@ const Listpam = () => {
 
           <div className="navbar-right">
             {/* <!-- navigation nav.js --> */}
-            <Nav />
+            {/* <Nav /> */}
           </div>
           {/* <!-- ends: .navbar-right --> */}
         </nav>
@@ -46,14 +45,15 @@ const Listpam = () => {
       <main className="main-content">
         <div className="sidebar-wrapper">
           <div className="sidebar sidebar-collapse" id="sidebar">
-          <Sidebar />
+          {/* <Sidebar /> */}
           </div>
         </div>
        
 
         <div className="contents">
           {/* <!-- Home.js --> */}
-          <Content/>
+          
+          <Contactos/>
         </div>
         <Footer />
         {/* <!-- Footer.js --> */}
@@ -74,5 +74,5 @@ const Listpam = () => {
   );
 };
 
-export default Listpam;
+export default Contacto;
 

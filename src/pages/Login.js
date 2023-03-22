@@ -137,11 +137,11 @@ export const Login = () => {
                                 <form onSubmit={ login }>
                                     <div className="edit-profile__body">
                                         <div className="form-group mb-25">
-                                            <label for="username">Email</label>
+                                            <label htmlFor="username">Email</label>
                                             <input type="text" className="form-control" id="username" placeholder="ufo@conapam.go.cr" required onChange={(e)=>setUsuario(e.target.value)}/>
                                         </div>
                                         <div className="form-group mb-15">
-                                            <label for="password-field">contraseña</label>-
+                                            <label htmlFor="password-field">contraseña</label>-
                                             <div className="position-relative">
                                                 <input id="password-field" type="password" className="form-control" name="password" placeholder="Password" required onChange={(e)=>setPassword(e.target.value)} />
                                                 <div className="uil uil-eye-slash text-lighten fs-15 field-icon toggle-password2">
@@ -151,7 +151,7 @@ export const Login = () => {
                                         <div className="admin-condition">
                                             <div className="checkbox-theme-default custom-checkbox ">
                                                 <input className="checkbox" type="checkbox" id="check-1" />
-                                                <label for="check-1">
+                                                <label htmlFor="check-1">
                                                 <span className="checkbox-text">Mantenerme conectado</span>
                                                 </label>
                                             </div>

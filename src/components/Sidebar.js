@@ -34,7 +34,7 @@ const Sidebar = () => {
               </a>
               <ul>
                 <li className="">
-                  <Link  className="menu-text" to={`/index`}>  Buzón de Entrada </Link>
+                  <Link  className="menu-text" to={`/alertas`}>  Buzón de Entrada </Link>
             
                 </li>
                 {/* <li className="">
@@ -55,10 +55,10 @@ const Sidebar = () => {
                   <Link  className="menu-text" to={`/index`}>  Lista de OBS</Link>
                  
                 </li>
-                <li className="">
+                {/* <li className="">
                   <Link  className="menu-text" to={`/index`}>  Lista de PAM x OBS </Link>
                   
-                </li>
+                </li> */}
                 <li className="">
                   <Link  className="menu-text" to={`/agregarpam`}>  Agregar PAM </Link>
                  
@@ -67,11 +67,9 @@ const Sidebar = () => {
               </ul>
             </li>
             <li className="has-child">
-              <a href="calendar.html" className="">
+              <a href="#" className="">
                 <span className="nav-icon uil uil-calendar-alt"></span>
                 <span className="menu-text">Calendario</span>
-                
-                
               </a>
               <ul>
                 <li className="">
@@ -90,7 +88,7 @@ const Sidebar = () => {
               </a>
               <ul>
                 <li className="">
-                  <Link  className="menu-text" to={`/index`}>  Lista de Usuarios</Link>
+                  <Link  className="menu-text" to={`/usuarios`}>  Lista de Usuarios</Link>
                 </li>
                 <li className="">
                   <Link  className="menu-text" to={`/index`}>  Agregar Usuarios</Link>
@@ -110,7 +108,7 @@ const Sidebar = () => {
                               Grid</a>
                         </li> */}
                 <li className="">
-                  <Link  className="menu-text" to={`/index`}>  Lista Contactos OBS</Link>
+                  <Link  className="menu-text" to={`/contactos`}>  Lista Contactos OBS</Link>
            
                 </li>
                 <li className="">
@@ -127,28 +125,26 @@ const Sidebar = () => {
               </a>
               <ul>
                 <li className="">
-                  <Link  className="menu-text" to={`/index`}> Lista de Solicitudes</Link>
-                  <a href="support-ticket.html"></a>
+                  <Link  className="menu-text" to={`/solicitudes`}> Lista de Solicitudes</Link>
                 </li>
-               
                 <li className="">
-                  <Link  className="menu-text" to={`/index`}> Lista de Solicitudes</Link>
-                  {/* <a href="new-ticket.html">Agregar Solicitud</a> */}
+                  <Link  className="menu-text" to={`/index`}> Agregar Solicitud</Link>
+                  
                 </li>
               </ul>
             </li>
-            <li className="menu-title mt-30">
+            <li className="menu-title mt-10">
               <span>Ayuda</span>
             </li>
             <li className="has-child">
-              <a href="#" className="">
+              <a href="/ayuda" className="">
                 <span className="nav-icon uil uil-database"></span>
                 <span className="menu-text">Lista de Temas</span>
                 <span className="toggle-icon"></span>
               </a>
               <ul>
                 <li className="">
-                  <Link  className="menu-text" to={`/index`}>Ver todo</Link>
+                  <Link  className="menu-text" to={`/ayuda`}>Ver todo</Link>
                  
                 </li>
                 

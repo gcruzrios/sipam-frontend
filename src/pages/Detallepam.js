@@ -9,10 +9,9 @@ import Footer from "../components/Footer.js";
 import Sidebar from "../components/Sidebar";
 import MobileSearch from "../components/MobileSearch.js";
 
-import Detallepam from "../components/DetallePam.js";
 import FichaPam from "../components/FichaPam.js";
 
-const Index = () => {
+const Detallepam = () => {
   return (
     <div>
      <MobileSearch />
@@ -79,5 +78,5 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Detallepam;
 

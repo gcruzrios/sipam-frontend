@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import axios from "axios";
 import GoogleMapsPam from "./GoogleMapsPam";
+import ListBeneficios from "./ListBeneficios";
 
 
 const FichaPam = () => {
@@ -128,7 +129,7 @@ const FichaPam = () => {
                         alt="share-2"
                         className="svg"
                       />
-                      Beneficios
+                      Lista de Beneficios
                     </a>
                   </li>
                   <li className="nav-item">
@@ -298,9 +299,9 @@ const FichaPam = () => {
                               </div>
 
                               <div className="button-group d-flex pt-sm-25 justify-content-md-end justify-content-start ">
-                                <button className="btn btn-light btn-default btn-squared fw-400 text-capitalize radius-md btn-sm">
+                                {/* <button className="btn btn-light btn-default btn-squared fw-400 text-capitalize radius-md btn-sm">
                                   Cancelar
-                                </button>
+                                </button> */}
 
                                 <button className="btn btn-primary btn-default btn-squared text-capitalize radius-md shadow2 btn-sm">
                                   Guardar &amp; Siguiente
@@ -425,9 +426,9 @@ const FichaPam = () => {
                               </div>
                             </div>
                             <div className="button-group d-flex pt-20 justify-content-md-end justify-content-start">
-                              <button className="btn btn-light btn-default btn-squared fw-400 text-capitalize radius-md">
+                              {/* <button className="btn btn-light btn-default btn-squared fw-400 text-capitalize radius-md">
                                 Cancelar
-                              </button>
+                              </button> */}
 
                               <button className="btn btn-primary btn-default btn-squared text-capitalize radius-md shadow2">
                                 Guardar &amp; Siguiente
@@ -453,36 +454,15 @@ const FichaPam = () => {
                         </div>
                         <div className="edit-profile__body">
                           <form>
-                            {/* <div className=" mb-30">
-                              <label for="socialUrl">facebook</label>
-                              <div className="input-group flex-nowrap">
-                                <div className="input-group-prepend">
-                                  <span
-                                    className="input-group-text bg-facebook border-facebook text-white wh-44 radius-xs justify-content-center"
-                                    id="addon-wrapping1"
-                                  >
-                                    <i className="lab la-facebook-f fs-18"></i>
-                                  </span>
-                                </div>
-                                <input
-                                  type="text"
-                                  className="form-control form-control--social"
-                                  placeholder="Url"
-                                  aria-label="Username"
-                                  aria-describedby="addon-wrapping1"
-                                  id="socialUrl"
-                                />
-                              </div>
-                            </div> */}
                            
                            
-                            
+                            <ListBeneficios/>
                          
                             
                             <div className="button-group d-flex pt-20 justify-content-md-end justify-content-start">
-                              <button className="btn btn-light btn-default btn-squared fw-400 text-capitalize radius-md">
+                              {/* <button className="btn btn-light btn-default btn-squared fw-400 text-capitalize radius-md">
                                 Cancelar
-                              </button>
+                              </button> */}
 
                               <button className="btn btn-primary btn-default btn-squared text-capitalize radius-md shadow2">
                                 Guardar
@@ -543,9 +523,9 @@ const FichaPam = () => {
                             </div>
 
                             <div className="button-group d-flex pt-20 justify-content-md-end justify-content-start">
-                              <button className="btn btn-light btn-default btn-squared fw-400 text-capitalize radius-md">
+                              {/* <button className="btn btn-light btn-default btn-squared fw-400 text-capitalize radius-md">
                                 Regresar
-                              </button>
+                              </button> */}
 
                               <button className="btn btn-primary btn-default btn-squared text-capitalize radius-md shadow2">
                                 Guardar

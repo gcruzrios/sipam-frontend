@@ -10,7 +10,7 @@ import Home from "../components/Home.js";
 import Sidebar from "../components/Sidebar";
 import Content from "../components/Content.js";
 
-const Index = () => {
+const Addpam = () => {
   return (
     <div>
       <div className="mobile-search">
@@ -81,4 +81,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Addpam;

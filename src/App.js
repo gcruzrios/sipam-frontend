@@ -21,7 +21,13 @@ import NotFound from "./pages/Error404";
 import Dashboard from "./pages/Dashboard";
 import GoogleMapsPam from "./components/GoogleMapsPam";
 import AcercaDe from "./pages/AcercaDe";
-import Contactos from "./pages/Contactos";
+import Contacto from "./pages/Contacto";
+import Detalleobs from "./pages/Detalleobs";
+import ListSolicitudes from "./pages/ListSolicitudes";
+import ListUsers from "./pages/ListUsers";
+import ListContactos from "./pages/ListContactos";
+import ListAlertas from "./pages/ListAlertas";
+import Ayuda from "./pages/Ayuda";
 
 const estaAutenticado = () => {
   const token = localStorage.getItem("Token");
@@ -55,7 +61,7 @@ function App() {
           {/* <Route exact path="/login" element={<Login />} /> */}
           <Route exact path="/register" element={<Registro />} />
           <Route exact path="/acerca" element={<AcercaDe />} />
-          <Route exact path="/contactos" element={<Contactos />} />
+          <Route exact path="/contactos" element={<Contacto />} />
 
           {/* <Route exact path="/listpam" element={<Listpam />} /> */}
           {/* <Route exact path="/listpam" element={estaAutenticado() ? <Listpam /> : <Navigate to="/" />}/> */}
@@ -64,21 +70,16 @@ function App() {
           {/* <Route path="/agregarpam" element={<Addpam />} /> */}
           <Route exact path="/agregarpam" element={estaAutenticado() ? <Addpam /> : <Navigate to="/" />}/>
           <Route exact path='/detallepam/:id' element={estaAutenticado() ? <Detallepam /> : <Navigate to="/" />}/>
+          <Route exact path='/detalleobs/:id' element={estaAutenticado() ? <Detalleobs /> : <Navigate to="/" />}/>
           <Route exact path='/googlemaps/:id' element={estaAutenticado() ? <GoogleMapsPam/> : <Navigate to="/" />}/>
+          <Route exact path='/alertas/' element={estaAutenticado() ? <ListAlertas /> : <Navigate to="/" />}/>
+          <Route exact path='/usuarios/' element={estaAutenticado() ? <ListUsers /> : <Navigate to="/" />}/>
+          <Route exact path='/contactos/' element={estaAutenticado() ? <ListContactos /> : <Navigate to="/" />}/>
+          <Route exact path='/solicitudes/' element={estaAutenticado() ? <ListSolicitudes/> : <Navigate to="/" />}/>
           
+          <Route exact path='/ayuda/' element={estaAutenticado() ? <Ayuda/> : <Navigate to="/" />}/>
           
-          {/* <Route exact path='/clients' element={<Client/>} />
-        <Route exact path='/reports' element={<Reportes/>} />
-        <Route exact path='/integrations' element={<Integraciones/>} />
-        <Route exact path='/maps' element={<Mapas/>} /> 
-
-        <Route exact path='/clients/add-client' element={<FormClient/>} />
-        <Route exact path='/clients/edit-client' element={<FormClient/>} />
-        <Route exact path='/usuarios' element={<Usuarios/>} />
-        <Route exact path='/consulta' element={<Consulta/>} />
-        <Route exact path='/ejemplo' element={<Ejemplo/>} />
-        <Route exact path='/form-select' element={<FormSelect/>} />  */}
-
+         
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

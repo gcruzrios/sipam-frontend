@@ -1,19 +1,33 @@
 import React, { useState } from "react";
 
-import { Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Redirect,
+  Link,
+} from "react-router-dom";
+
 import Nav from "../components/Nav.js";
+import Header from "../components/Header.js";
 import Footer from "../components/Footer.js";
-import Content from "../components/Content.js";
-
+import Home from "../components/Home.js";
 import Sidebar from "../components/Sidebar";
-import MobileSearch from "../components/MobileSearch.js";
-import NotFound from "../components/NotFound.js";
-import Contactos from "../components/Contactos.js";
 
-const Index = () => {
+const ListAlertas = () => {
   return (
     <div>
-     <MobileSearch />
+      <div className="mobile-search">
+        <form action="/" className="search-form">
+          <img src="/img/svg/search.svg" alt="search" className="svg" />
+          <input
+            className="form-control me-sm-2 box-shadow-none"
+            type="search"
+            placeholder="Buscar..."
+            aria-label="Search"
+          />
+        </form>
+      </div>
+      <div className="mobile-author-actions"></div>
       <header className="header-top">
         <nav className="navbar navbar-light">
           <div className="navbar-left">
@@ -31,15 +45,13 @@ const Index = () => {
               </a>
             </div>
             <div className="top-menu">
-              <div className="hexadash-top-menu position-relative"></div>
-             
+              
             </div>
           </div>
           {/* <!-- ends: navbar-left --> */}
 
-          <div className="navbar-right">
-            {/* <!-- navigation nav.js --> */}
-            {/* <Nav /> */}
+          <div className="navbar-right">{/* <!-- navigation nav.js --> */}
+          <Nav />
           </div>
           {/* <!-- ends: .navbar-right --> */}
         </nav>
@@ -47,16 +59,11 @@ const Index = () => {
       <main className="main-content">
         <div className="sidebar-wrapper">
           <div className="sidebar sidebar-collapse" id="sidebar">
-          {/* <Sidebar /> */}
+            <Sidebar />
           </div>
         </div>
-       
 
-        <div className="contents">
-          {/* <!-- Home.js --> */}
-          
-          <Contactos/>
-        </div>
+        <div className="contents">{/* <!-- Home.js --> */}</div>
         <Footer />
         {/* <!-- Footer.js --> */}
       </main>
@@ -76,5 +83,4 @@ const Index = () => {
   );
 };
 
-export default Index;
-
+export default ListAlertas;

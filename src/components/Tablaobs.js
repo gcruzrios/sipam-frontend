@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
+import Swal from 'sweetalert2';
 
-import {
-  Link
-} from "react-router-dom";
-
+import { Link } from "react-router-dom";
 
 import axios from "axios";
 
@@ -44,18 +42,32 @@ const Tablaobs = () => {
 
   const peticionGet = async () => {
     //const idUsuario = localStorage.getItem('idUsuario');
-   
-    
+
     await axios
-      .get('/wsSIPAM/GetOrganizaciones', {
-        headers:{Authorization:'Bearer '+Token}
+      .get("/wsSIPAM/GetOrganizaciones", {
+        headers: { Authorization: "Bearer " + Token },
       })
       .then((response) => {
         //console.log(response.data.Resultado);
         setData(response.data.Resultado);
       });
-  }; 
- 
+  };
+
+  const eliminar = async (id) => {
+    const token = localStorage.getItem("Token");
+    // const respuesta = await axios.delete(`/empleado/eliminar/${id}`, {
+    //   headers: { token: token },
+    // });
+
+    //const mensaje = respuesta.data.mensaje;
+    Swal.fire({
+      icon: "success",
+      title: "Obs Borrada",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+    //obtenerEmpleados();
+  };
   const handleChange = (e) => {
     const { name, value } = e.target;
     setobsSeleccionado((prevState) => ({
@@ -105,57 +117,82 @@ const Tablaobs = () => {
           </tr>
         </thead>
         <tbody>
-          {data.map(obs=>(
-          <tr key={obs.idOrganizacion}>
-            {/* data */}
-            {/* <TableData /> */}
-            
-            <td>
-              
-              
-              <div className="userDatatable-content">
-              <Link  className="nav-author__signout" to={`/listpam/${obs.identificacion}`}>  <i className="uil uil-home-alt"></i> {obs.codigoInstitucion}</Link>
-              </div>
-            </td>
-            <td>
-              <div className="userDatatable-content">{obs.nombreCONAPAM.substring(40, obs.nombreCONAPAM)}</div>
-            </td>
-            <td>
-              <div className="userDatatable-content">{obs.identificacion}</div>
-            </td>
-            <td>
-              <div className="userDatatable-content">{obs.region}</div>
-            </td>
-            <td>
-              <div className="userDatatable-content">{obs.correoOrganizacion}</div>
-            </td>
-            <td>
-              <div className="userDatatable-content d-inline-block">
-                <span className="bg-opacity-success  color-success rounded-pill userDatatable-content-status active">
-                  activo
-                </span>
-              </div>
-            </td>
-            <td>
-              <ul className="orderDatatable_actions mb-0 d-flex flex-wrap">
-                <li>
-                  <a href="#" className="view">
-                    <i className="uil uil-eye"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="edit">
-                    <i className="uil uil-edit"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="remove">
-                    <i className="uil uil-trash-alt"></i>
-                  </a>
-                </li>
-              </ul>
-            </td>
-          </tr>
+          {data.map((obs) => (
+            <tr key={obs.idOrganizacion}>
+              {/* data */}
+              {/* <TableData /> */}
+
+              <td>
+                <div className="userDatatable-content">
+                  <Link
+                    className="nav-author__signout"
+                    to={`/listpam/${obs.identificacion}`}
+                  >
+                    {" "}
+                    <i className="uil uil-home-alt"></i> {obs.codigoInstitucion}
+                  </Link>
+                </div>
+              </td>
+              <td>
+                <div className="userDatatable-content">
+                  {obs.nombreCONAPAM.substring(40, obs.nombreCONAPAM)}
+                </div>
+              </td>
+              <td>
+                <div className="userDatatable-content">
+                  {obs.identificacion}
+                </div>
+              </td>
+              <td>
+                <div className="userDatatable-content">{obs.region}</div>
+              </td>
+              <td>
+                <div className="userDatatable-content">
+                  {obs.correoOrganizacion}
+                </div>
+              </td>
+              <td>
+                <div className="userDatatable-content d-inline-block">
+                  <span className="bg-opacity-success  color-success rounded-pill userDatatable-content-status active">
+                    activo
+                  </span>
+                </div>
+              </td>
+              <td>
+                <ul className="orderDatatable_actions mb-0 d-flex flex-wrap">
+                  <li>
+                    <Link
+                      className="view"
+                      to={`/detalleobs/${obs.identificacion}`}
+                    >
+                      {" "}
+                      <i className="uil uil-eye"></i>{" "}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="edit"
+                      to={`/detalleobs/${obs.identificacion}`}
+                    >
+                      {" "}
+                      <i className="uil uil-edit"></i>{" "}
+                    </Link>
+                  </li>
+                  <li>
+
+
+                   
+                     <Link  
+                      className="btn remove"
+                      to={`/removeobs/${obs.identificacion}`}
+                      >
+                      {" "}
+                      <i className="uil uil-trash-alt"></i>{" "}
+                    </Link> 
+                  </li>
+                </ul>
+              </td>
+            </tr>
           ))}
         </tbody>
       </table>
