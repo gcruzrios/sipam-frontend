@@ -1,5 +1,8 @@
 import React from 'react'
-
+import {
+   Link
+ } from "react-router-dom";
+ 
 const Footer = () => {
   return (
     <div>
@@ -17,10 +20,12 @@ const Footer = () => {
                      <div className="footer-menu text-end">
                         <ul>
                            <li>
-                              <a href="#">Acerca de..</a>
+                             
+                               <Link  className="menu-text" to={`/acerca`}>  Acerca de...</Link>
                            </li>
                            <li>
-                              <a href="#">Contactos</a>
+                              
+                              <Link  className="menu-text" to={`/contactos`}>  Contactos</Link>
                            </li>
                         </ul>
                      </div>

@@ -20,6 +20,8 @@ import Detallepam from "./pages/Detallepam";
 import NotFound from "./pages/Error404";
 import Dashboard from "./pages/Dashboard";
 import GoogleMapsPam from "./components/GoogleMapsPam";
+import AcercaDe from "./pages/AcercaDe";
+import Contactos from "./pages/Contactos";
 
 const estaAutenticado = () => {
   const token = localStorage.getItem("Token");
@@ -48,10 +50,12 @@ function App() {
             element={estaAutenticado() ? <Dashboard/> : <Navigate to="/" />}
             
           /> */}
-          <Route path="/index" exact element={<Index />} />
+          <Route path="/index" exact element={estaAutenticado() ? <Index /> : <Navigate to="/" />} />
 
           {/* <Route exact path="/login" element={<Login />} /> */}
           <Route exact path="/register" element={<Registro />} />
+          <Route exact path="/acerca" element={<AcercaDe />} />
+          <Route exact path="/contactos" element={<Contactos />} />
 
           {/* <Route exact path="/listpam" element={<Listpam />} /> */}
           {/* <Route exact path="/listpam" element={estaAutenticado() ? <Listpam /> : <Navigate to="/" />}/> */}

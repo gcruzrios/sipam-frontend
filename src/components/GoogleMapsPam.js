@@ -38,7 +38,7 @@ const GoogleMapsPam = () => {
 
      <GoogleMap
           mapContainerStyle={mapStyles}
-          zoom={14}
+          zoom={10}
           center={defaultCenter}>
          { 
          

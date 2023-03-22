@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import Swal from 'sweetalert2';
 import Footer from '../components/Footer.js';
 
+import { Link } from "react-router-dom";
 
 export const Login = () => {
 
@@ -154,7 +155,8 @@ export const Login = () => {
                                                 <span className="checkbox-text">Mantenerme conectado</span>
                                                 </label>
                                             </div>
-                                            <a href="forget-password.html">¿Olvido la contraseña?</a>
+                                            <Link  className="menu-text" to={`/recordarpassword`}>  ¿Olvido la contraseña?</Link>
+                                           
                                         </div>
                                 
                                         <div className="admin__button-group button-group d-flex pt-1 justify-content-md-start justify-content-center">
@@ -171,9 +173,9 @@ export const Login = () => {
                                 <div className="admin-topbar">
                                 <p className="mb-0">
                                     No tiene cuenta aún?
-                                    <a href="sign-up.html" className="color-primary">
-                                        Registrarse
-                                    </a>
+                                    
+                                    <Link  className="menu-text" to={`/registro`}>  Registrarse</Link>
+                                    
                                 </p>
                                 
                                 </div>
