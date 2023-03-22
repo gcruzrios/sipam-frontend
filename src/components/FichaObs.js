@@ -4,27 +4,35 @@ import { Link } from "react-router-dom";
 
 import axios from "axios";
 import GoogleMapsPam from "./GoogleMapsPam";
+import Mapa from "./Mapa";
 
-
-const FichaPam = () => {
-  const [pamSeleccionado, setpamSeleccionado] = useState({
-    tipoIdentificacion: "",
+const FichaObs = () => {
+  const [obsSeleccionado, setobsSeleccionado] = useState({
+    codigoInstitucion: "",
     identificacion: "",
-    nombre: "",
-    primerApellido: "",
-    segundoApellido: "",
-    fechaNacimiento: "",
-    sexo: "",
-    estadoCivil: "",
-    idNacionalidad: "",
+    razonSocial: "",
+    tipoRazonSocial: "",
+    nombreCONAPAM: "",
     idDistrito: "",
-    distrito: "",
-    idCanton: "",
-    canton: "",
-    idProvincia: "",
-    provincia: "",
-    idRegion: "",
     region: "",
+    otrasSenias: "",
+    geoLocalizacion: "",
+    cedulaRepresentanteLegal: "",
+    nombreRepresentanteLegal: "",
+    primerApellidoRepresentanteLegal: "",
+    segundoApellidoRepresentanteLegal: "",
+    correoRepresentante: "",
+    telefonoRepresentante: "",
+    cedulaCoordinador: "",
+    nombreCoordinador: "",
+    primerApellidoCoordinador: "",
+    segundoApellidoCoordinador: "",
+    correoCoordinador: "",
+    telefonoCoordinador: "",
+    capacidadAtencionPAM: "",
+    correoOrganizacion: "",
+    estado: "",
+    modalidadAtencion: "",
   });
 
   const { id } = useParams();
@@ -49,11 +57,11 @@ const FichaPam = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setpamSeleccionado((prevState) => ({
+    setobsSeleccionado((prevState) => ({
       ...prevState,
       [name]: value,
     }));
-    console.log(pamSeleccionado);
+    console.log(obsSeleccionado);
   };
 
   useEffect(() => {
@@ -66,7 +74,7 @@ const FichaPam = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className="d-flex align-items-center user-member__title mb-30 mt-30">
-              <h4 className="text-capitalize">Detalle información de PAM</h4>
+              <h4 className="text-capitalize">Detalle información de Obs</h4>
             </div>
           </div>
         </div>
@@ -151,7 +159,7 @@ const FichaPam = () => {
                 </ul>
               </div>
               <div className="tab-content" id="v-pills-tabContent">
-                {data.map((pam) => (
+                {data.map((obs) => (
                   <div
                     class="tab-pane fade  show active"
                     id="v-pills-home"
@@ -202,7 +210,7 @@ const FichaPam = () => {
                                   type="text"
                                   className="form-control"
                                   id="name1"
-                                  value={pam.identificacion}
+                                  value={obs.identificacion}
                                 />
                               </div>
                               <div className="form-group mb-25">
@@ -211,7 +219,7 @@ const FichaPam = () => {
                                   type="text"
                                   className="form-control"
                                   id="name1"
-                                  value={pam.nombre}
+                                  value={obs.nombre}
                                 />
                               </div>
                               <div className="form-group mb-25">
@@ -220,7 +228,7 @@ const FichaPam = () => {
                                   type="email"
                                   className="form-control"
                                   id="name2"
-                                  value={pam.primerApellido}
+                                  value={obs.primerApellido}
                                 />
                               </div>
                               <div className="form-group mb-25">
@@ -229,7 +237,7 @@ const FichaPam = () => {
                                   type="email"
                                   className="form-control"
                                   id="name2"
-                                  value={pam.segundoApellido}
+                                  value={obs.segundoApellido}
                                 />
                               </div>
                               <div className="form-group mb-25">
@@ -274,7 +282,7 @@ const FichaPam = () => {
                                     type="tel"
                                     className="form-control"
                                     id="phoneNumber5"
-                                    value={pam.provincia}
+                                    value={obs.provincia}
                                   />
                                 </div>
                               </div>
@@ -284,7 +292,7 @@ const FichaPam = () => {
                                   type="text"
                                   className="form-control"
                                   id="name3"
-                                  value={pam.canton}
+                                  value={obs.canton}
                                 />
                               </div>
                               <div className="form-group mb-25">
@@ -293,7 +301,7 @@ const FichaPam = () => {
                                   type="text"
                                   className="form-control"
                                   id="name3"
-                                  value={pam.distrito}
+                                  value={obs.distrito}
                                 />
                               </div>
 
@@ -569,5 +577,5 @@ const FichaPam = () => {
   );
 };
 
-export default FichaPam;
+export default FichaObs;
 

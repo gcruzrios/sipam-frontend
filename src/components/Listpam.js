@@ -1,5 +1,5 @@
 import React from "react";
-import Addobs from "./Addobs";
+import Addobs from "./ModalAddobs";
 import Paginator from "./Paginator";
 import SearchName from "./SearchName";
 import Tablapam from "./Tablapam";

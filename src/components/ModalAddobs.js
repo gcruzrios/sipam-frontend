@@ -1,6 +1,6 @@
 import React from "react";
 
-const Addobs = () => {
+const ModalAddobs = () => {
   return (
     <div>
       {/* <!-- Modal --> */}
@@ -170,5 +170,5 @@ const Addobs = () => {
   );
 };
 
-export default Addobs;
+export default ModalAddobs;
 

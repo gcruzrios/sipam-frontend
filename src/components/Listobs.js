@@ -1,5 +1,5 @@
 import React from "react";
-import Addobs from "./Addobs";
+import ModalAddobs from "./ModalAddobs";
 import Paginator from "./Paginator";
 import SearchName from "./SearchName";
 import Tablaobs from "./Tablaobs";
@@ -19,7 +19,7 @@ const Listobs = () => {
             >
               <i className="las la-plus fs-16"></i>Agregar OBS / GL
             </a>
-            <Addobs />
+            <ModalAddobs />
           </div>
         </div>
       </div>
