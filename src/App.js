@@ -19,6 +19,7 @@ import Addpam from "./pages/Addpam";
 import Detallepam from "./pages/Detallepam";
 import NotFound from "./pages/Error404";
 import Dashboard from "./pages/Dashboard";
+import GoogleMapsPam from "./components/GoogleMapsPam";
 
 const estaAutenticado = () => {
   const token = localStorage.getItem("Token");
@@ -59,6 +60,7 @@ function App() {
           {/* <Route path="/agregarpam" element={<Addpam />} /> */}
           <Route exact path="/agregarpam" element={estaAutenticado() ? <Addpam /> : <Navigate to="/" />}/>
           <Route exact path='/detallepam/:id' element={estaAutenticado() ? <Detallepam /> : <Navigate to="/" />}/>
+          <Route exact path='/googlemaps/:id' element={estaAutenticado() ? <GoogleMapsPam/> : <Navigate to="/" />}/>
           
           
           {/* <Route exact path='/clients' element={<Client/>} />

@@ -67,9 +67,13 @@ export const Login = () => {
         const mensaje = response.data.CodigoResultado;
         const mensaje_alerta= response.data.MensajeResultado;
 
-        const idUsuario = response.data.Resultado.idUsuario;
-        const nombreUsuario = response.data.Resultado.nombreCompleto;
-        const rolUsuario = response.data.Resultado.rol;
+        const idUsuario = response.data.Resultado[0].idUsuario;
+        const nombreUsuario = response.data.Resultado[0].nombreCompleto;
+        const rolUsuario = response.data.Resultado[0].nombreRol;
+
+        // const idUsuario = response.data.Resultado.idUsuario;
+        // const nombreUsuario = response.data.Resultado.nombreCompleto;
+        // const rolUsuario = response.data.Resultado.nombreRol;
 
         console.log(mensaje);
         console.log(mensaje_alerta);

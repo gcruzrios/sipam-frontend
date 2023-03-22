@@ -8,11 +8,7 @@ import {
 
 
 import axios from "axios";
-import TabsPam from "./TabsPam";
-import InfoDetallePam from "./InfoDetallePam";
-import InfoDetallePamEco from "./InfoDetallePamEco";
-import InfoDetallePamSocial from "./InfoDetallePamSocial";
-import InfoDetallePamMap from "./InfoDetallePamMap";
+
 
 
 
@@ -81,13 +77,9 @@ const Datospam = () => {
   return (
     <>
       <div className="user-info-tab w-100 bg-white global-shadow radius-xl mb-50">
-      <TabsPam/>
+     
       {data.map(pam=>(
         <div className="tab-content" id="v-tabContent">
-        <InfoDetallePam />
-        <InfoDetallePamEco />
-        <InfoDetallePamSocial />
-        <InfoDetallePamMap />
           
       </div>
    

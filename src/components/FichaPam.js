@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import axios from "axios";
 import GoogleMapsPam from "./GoogleMapsPam";
+import Mapa from "./Mapa";
 
 const FichaPam = () => {
   const [pamSeleccionado, setpamSeleccionado] = useState({
@@ -158,7 +159,7 @@ const FichaPam = () => {
                     aria-labelledby="v-pills-home-tab"
                   >
                     <div className="row justify-content-center">
-                      <div className="col-xxl-4 col-10">
+                      <div className="col-xxl-10 col-10">
                         <div className="mt-sm-40 mb-sm-50 mt-20 mb-20">
                           <div className="user-tab-info-title mb-sm-40 mb-20 text-capitalize">
                             <h5 className="fw-500">Información Personal</h5>
@@ -319,7 +320,7 @@ const FichaPam = () => {
                   aria-labelledby="v-pills-profile-tab"
                 >
                   <div className="row justify-content-center">
-                    <div className="col-xxl-4 col-10">
+                    <div className="col-xxl-10 col-10">
                       <div className="mt-40 mb-50">
                         <div className="user-tab-info-title mb-35 text-capitalize">
                           <h5 className="fw-500">Información Socioeconómica</h5>
@@ -445,14 +446,14 @@ const FichaPam = () => {
                   aria-labelledby="v-pills-messages-tab"
                 >
                   <div className="row justify-content-center">
-                    <div className="col-xxl-4 col-10">
+                    <div className="col-xxl-10 col-10">
                       <div className="user-social-profile mt-40 mb-50">
                         <div className="user-tab-info-title mb-40 text-capitalize">
                           <h5>Beneficios de Modalidad</h5>
                         </div>
                         <div className="edit-profile__body">
                           <form>
-                            <div className=" mb-30">
+                            {/* <div className=" mb-30">
                               <label for="socialUrl">facebook</label>
                               <div className="input-group flex-nowrap">
                                 <div className="input-group-prepend">
@@ -472,29 +473,9 @@ const FichaPam = () => {
                                   id="socialUrl"
                                 />
                               </div>
-                            </div>
+                            </div> */}
                            
-                            <div className=" mb-30">
-                              <label for="webUrl">Website</label>
-                              <div className="input-group flex-nowrap">
-                                <div className="input-group-prepend">
-                                  <span
-                                    className="input-group-text bg-ruby border-ruby text-white wh-44 radius-xs justify-content-center"
-                                    id="addon-wrapping3"
-                                  >
-                                    <i className="las la-basketball-ball fs-18"></i>
-                                  </span>
-                                </div>
-                                <input
-                                  type="text"
-                                  className="form-control form-control--social"
-                                  placeholder="Url"
-                                  aria-label="Username"
-                                  aria-describedby="addon-wrapping3"
-                                  id="webUrl"
-                                />
-                              </div>
-                            </div>
+                           
                             
                          
                             
@@ -522,7 +503,7 @@ const FichaPam = () => {
                   aria-labelledby="v-pills-map-tab"
                 >
                   <div className="row justify-content-center">
-                    <div className="col-xxl-4 col-10">
+                    <div className="col-xxl-10 col-10">
                       <div className="user-social-profile mt-40 mb-50">
                         <div className="user-tab-info-title mb-40 text-capitalize">
                           <h5>Ubicación Geográfica</h5>
@@ -532,25 +513,11 @@ const FichaPam = () => {
                             <div className=" mb-30">
                               <label for="socialUrl">Google Maps</label>
 
-                              {/* <div className="input-group flex-nowrap">
-                                
-                                <GoogleMapsPam />
-
-
-
-
-                              </div> */}
-
-                              <div className="col-lg-12">
-                                <div className="card card-default card-md mb-4">
-                                  <div className="card-header">
-                                    <h6>Leaflet Basic Map</h6>
-                                  </div>
-                                  <div className="card-body">
-                                    <div id="leaflet-basic"></div>
-                                  </div>
-                                </div>
-                              </div>
+                                <GoogleMapsPam /> 
+                                {/* <Mapa/> */}
+                              
+                              
+                             
                             </div>
 
                             <div className=" mb-30">
@@ -577,11 +544,11 @@ const FichaPam = () => {
 
                             <div className="button-group d-flex pt-20 justify-content-md-end justify-content-start">
                               <button className="btn btn-light btn-default btn-squared fw-400 text-capitalize radius-md">
-                                back
+                                Regresar
                               </button>
 
                               <button className="btn btn-primary btn-default btn-squared text-capitalize radius-md shadow2">
-                                Save profile
+                                Guardar
                               </button>
                             </div>
                           </form>
