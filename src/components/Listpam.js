@@ -1,7 +1,8 @@
 import React from "react";
 import Addobs from "./ModalAddobs";
 import Paginator from "./Paginator";
-import SearchName from "./SearchName";
+
+import SearchNamePam from "./SearchNamePam";
 import Tablapam from "./Tablapam";
 
 const Listpam = () => {
@@ -9,7 +10,7 @@ const Listpam = () => {
     <>
       <div className="col-lg-12">
         <div className="breadcrumb-main user-member justify-content-sm-between ">
-          <SearchName />
+          <SearchNamePam />
           <div className="action-btn">
             <a
               href="#"
