@@ -12,6 +12,9 @@ import Header from "../components/Header.js";
 import Footer from "../components/Footer.js";
 import Home from "../components/Home.js";
 import Sidebar from "../components/Sidebar";
+import TitleList from "../components/TitleUsuarios";
+import ListaUsers from "../components/ListaUsers.js";
+
 
 const ListUsers = () => {
   return (
@@ -61,7 +64,33 @@ const ListUsers = () => {
           </div>
         </div>
 
-        <div className="contents">{/* <!-- Home.js --> */}</div>
+        <div className="contents">
+          
+          {/* <!-- Home.js --> */}
+
+
+          <div class="crm mb-25">
+            <div class="container-fluid">
+               <div class="row ">
+
+                                 
+
+                  <div class="col-lg-12">
+
+                    <TitleList/>
+
+                  </div>
+                  
+                  <div class="col-lg-12">
+                    <ListaUsers/>
+                  </div>
+                 
+               </div>
+              
+            </div>
+         </div>
+          
+          </div>
         <Footer />
         {/* <!-- Footer.js --> */}
       </main>
