@@ -163,7 +163,7 @@ const Tablaobs = () => {
                   <li>
                     <Link
                       className="view"
-                      to={`/detalleobs/${obs.identificacion}`}
+                      to={`/detalleobs/${obs.codigoInstitucion}`}
                     >
                       {" "}
                       <i className="uil uil-eye"></i>{" "}
@@ -172,7 +172,7 @@ const Tablaobs = () => {
                   <li>
                     <Link
                       className="edit"
-                      to={`/detalleobs/${obs.identificacion}`}
+                      to={`/detalleobs/${obs.codigoInstitucion}`}
                     >
                       {" "}
                       <i className="uil uil-edit"></i>{" "}

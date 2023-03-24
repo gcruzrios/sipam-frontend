@@ -4,7 +4,10 @@ import { GoogleMap, useJsApiLoader, LoadScript, Marker} from '@react-google-maps
 
 const GoogleMapsPam = () => {
 
-  const [markerPosition, setMarkerPosition] = useState(null);
+  //const [markerPosition, setMarkerPosition] = useState(null);
+  const [markerPosition, setMarkerPosition] = useState({
+    lat: 10, lng: -84
+  });
 
   const mapStyles = {        
     height: "100vh",
@@ -24,6 +27,8 @@ const GoogleMapsPam = () => {
     });
     console.log(markerPosition.lat);
     console.log(markerPosition.lng);
+
+    localStorage.setItem('Coordenadas', markerPosition);
 }
  
     

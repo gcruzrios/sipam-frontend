@@ -6,33 +6,44 @@ import axios from "axios";
 import GoogleMapsPam from "./GoogleMapsPam";
 
 
+
 const FichaObs = () => {
   const [obsSeleccionado, setobsSeleccionado] = useState({
+
+    idOrganizacion: "",
     codigoInstitucion: "",
     identificacion: "",
     razonSocial: "",
-    tipoRazonSocial: "",
+    tipoRazonSocial: null,
     nombreCONAPAM: "",
+    idProvincia: "",
+    provincia: "",
+    idCanton: "",
+    canton: "",
     idDistrito: "",
+    distrito: "",
+    idRegion: "",
     region: "",
     otrasSenias: "",
     geoLocalizacion: "",
-    cedulaRepresentanteLegal: "",
-    nombreRepresentanteLegal: "",
-    primerApellidoRepresentanteLegal: "",
-    segundoApellidoRepresentanteLegal: "",
-    correoRepresentante: "",
+    cedulaRepresentanteLegal: null,
+    nombreRepresentanteLegal: null,
+    primerApellidoRepresentanteLegal: null,
+    segundoApellidoRepresentanteLegal: null,
+    correoRepresentante: null,
     telefonoRepresentante: "",
-    cedulaCoordinador: "",
-    nombreCoordinador: "",
-    primerApellidoCoordinador: "",
-    segundoApellidoCoordinador: "",
-    correoCoordinador: "",
-    telefonoCoordinador: "",
-    capacidadAtencionPAM: "",
+    cedulaCoordinador: null,
+    nombreCoordinador: null,
+    primerApellidoCoordinador: null,
+    segundoApellidoCoordinador: null,
+    correoCoordinador: null,
+    telefonoCoordinador: null,
+    capacidadAtencionPAM: null,
     correoOrganizacion: "",
-    estado: "",
-    modalidadAtencion: "",
+    estado: null,
+    idOBSModalidad: "",
+    idModalidad: "",
+    modalidadAtencion: ""
   });
 
   const { id } = useParams();
@@ -43,7 +54,7 @@ const FichaObs = () => {
   const [data, setData] = useState([]);
 
   const peticionGet = async () => {
-    const cedula = { cedula: id };
+    const cedula = { "codigoInstitucion" : id };
     console.log(cedula);
     await axios
       .post("/wsSIPAM/GetObsPorCodigo", cedula, {
@@ -102,7 +113,7 @@ const FichaObs = () => {
                         alt="user"
                         className="svg"
                       />
-                      Información Personal
+                      Información Organización
                     </a>
                   </li>
                   
@@ -189,39 +200,30 @@ const FichaObs = () => {
                           <div className="edit-profile__body">
                             <form>
                               <div className="form-group mb-25">
-                                <label for="name1">identificación</label>
+                                <label for="name1">Código CONAPAM</label>
                                 <input
                                   type="text"
                                   className="form-control"
                                   id="name1"
+                                  value={obs.codigoInstitucion}
+                                />
+                              </div>
+                              <div className="form-group mb-25">
+                                <label for="name1">Nombre de OBS </label>
+                                <input
+                                  type="text"
+                                  className="form-control"
+                                  id="name1"
+                                  value={obs.nombreCONAPAM}
+                                />
+                              </div>
+                              <div className="form-group mb-25">
+                                <label for="name2">Cédula Jurídica</label>
+                                <input
+                                  type="email"
+                                  className="form-control"
+                                  id="name2"
                                   value={obs.identificacion}
-                                />
-                              </div>
-                              <div className="form-group mb-25">
-                                <label for="name1">Nombre</label>
-                                <input
-                                  type="text"
-                                  className="form-control"
-                                  id="name1"
-                                  value={obs.nombre}
-                                />
-                              </div>
-                              <div className="form-group mb-25">
-                                <label for="name2">Apellido 1</label>
-                                <input
-                                  type="email"
-                                  className="form-control"
-                                  id="name2"
-                                  value={obs.primerApellido}
-                                />
-                              </div>
-                              <div className="form-group mb-25">
-                                <label for="name2">Apellido 2</label>
-                                <input
-                                  type="email"
-                                  className="form-control"
-                                  id="name2"
-                                  value={obs.segundoApellido}
                                 />
                               </div>
                               <div className="form-group mb-25">
@@ -236,58 +238,60 @@ const FichaObs = () => {
                                 />
                               </div>
                               <div className="form-group mb-25">
+                                <label for="name2">Provincia</label>
+                                <input
+                                  type="email"
+                                  className="form-control"
+                                  id="name2"
+                                  value={obs.provincia}
+                                />
+                              </div>
+                              <div className="form-group mb-25">
+                                <label for="name2">Cantón</label>
+                                <input
+                                  type="email"
+                                  className="form-control"
+                                  id="name2"
+                                  value={obs.canton}
+                                />
+                              </div>
+                              <div className="form-group mb-25">
+                                <label for="name2">Distrito</label>
+                                <input
+                                  type="email"
+                                  className="form-control"
+                                  id="name2"
+                                  value={obs.distrito}
+                                />
+                              </div>
+                              <div className="form-group mb-25">
+                                <label for="name2">Otras señas</label>
+                                <input
+                                  type="email"
+                                  className="form-control"
+                                  id="name2"
+                                  value={obs.otrasSenias}
+                                />
+                              </div>
+                             
+                              <div className="form-group mb-25">
                                 <div className="countryOption">
                                   <label for="countryOption">
-                                    Nacionalidad
+                                    Modalidad
                                   </label>
                                   <select
                                     className="js-example-basic-single js-states form-control"
                                     id="countryOption"
                                   >
-                                    <option value="JAN">Costarricense</option>
-                                    <option value="FBR">Extranjero</option>
+                                    <option value="H">Hogar de Larga Estancia</option>
+                                    <option value="CD">Centro Diurno</option>
+                                    <option value="RD">Red de Cuido</option>
+                                    <option value="A">Centro Abandonados</option>
+                                    <option value="E">Proyectos Especificos</option>
                                   </select>
                                 </div>
                               </div>
-                              <div className="form-group mb-25">
-                                <div className="cityOption">
-                                  <label for="cityOption">Provincia</label>
-
-                                  {/* <select
-                          className="js-example-basic-single js-states form-control"
-                          id="cityOption"
-                        >
-                          <option value="JAN">San José</option>
-                          <option value="FBR">Alajuela</option>
-                          <option value="JAN">Cartago</option>
-                          <option value="FBR">Heredia</option>
-                        </select> */}
-                                  <input
-                                    type="tel"
-                                    className="form-control"
-                                    id="phoneNumber5"
-                                    value={obs.provincia}
-                                  />
-                                </div>
-                              </div>
-                              <div className="form-group mb-25">
-                                <label for="name3">Cantón</label>
-                                <input
-                                  type="text"
-                                  className="form-control"
-                                  id="name3"
-                                  value={obs.canton}
-                                />
-                              </div>
-                              <div className="form-group mb-25">
-                                <label for="name3">Distrito</label>
-                                <input
-                                  type="text"
-                                  className="form-control"
-                                  id="name3"
-                                  value={obs.distrito}
-                                />
-                              </div>
+                             
 
                               <div className="button-group d-flex pt-sm-25 justify-content-md-end justify-content-start ">
                                 <button className="btn btn-light btn-default btn-squared fw-400 text-capitalize radius-md btn-sm">
@@ -315,12 +319,12 @@ const FichaObs = () => {
                     <div className="col-xxl-10 col-10">
                       <div className="mt-40 mb-50">
                         <div className="user-tab-info-title mb-35 text-capitalize">
-                          <h5 className="fw-500">Información Socioeconómica</h5>
+                          <h5 className="fw-500">Información Legal</h5>
                         </div>
                         <div className="edit-profile__body">
                           <form>
                             <div className="form-group mb-25">
-                              <label for="name4">Tipo de pensión</label>
+                              <label for="name4">Tipo de OBS</label>
                               <input
                                 type="text"
                                 className="form-control"
@@ -329,7 +333,7 @@ const FichaObs = () => {
                               />
                             </div>
                             <div className="form-group mb-25">
-                              <label for="phoneNumber1">Monto pensión</label>
+                              <label for="phoneNumber1">Modalidad</label>
                               <input
                                 type="text"
                                 className="form-control"
@@ -338,12 +342,21 @@ const FichaObs = () => {
                               />
                             </div>
                             <div className="form-group mb-25">
-                              <label for="phoneNumber">Designación</label>
+                              <label for="phoneNumber">Coordinador</label>
                               <input
                                 type="text"
                                 className="form-control"
                                 id="phoneNumber"
-                                placeholder="Nominal"
+                                placeholder="Juan Perez"
+                              />
+                            </div>
+                            <div className="form-group mb-25">
+                              <label for="phoneNumber">Cédula Coordinador</label>
+                              <input
+                                type="text"
+                                className="form-control"
+                                id="phoneNumber"
+                                placeholder="10992823"
                               />
                             </div>
                             <div className="form-group mb-25 form-group-calender">
@@ -527,6 +540,7 @@ const FichaObs = () => {
                                   type="text"
                                   className="form-control form-control--social"
                                   placeholder="Coordenadas"
+
                                   aria-label="Username"
                                   aria-describedby="addon-wrapping1"
                                   id="socialUrl"
