@@ -497,7 +497,7 @@ const FichaPam = () => {
                                 {/* <Mapa/> */}
                               </div>
 
-                              <div className=" mb-30">
+                              {/* <div className=" mb-30">
                                 <label for="socialUrl">Google Maps</label>
                                 <div className="input-group flex-nowrap">
                                   <div className="input-group-prepend">
@@ -517,7 +517,7 @@ const FichaPam = () => {
                                     id="socialUrl"
                                   />
                                 </div>
-                              </div>
+                              </div> */}
 
                               <div className="button-group d-flex pt-20 justify-content-md-end justify-content-start">
                                 {/* <button className="btn btn-light btn-default btn-squared fw-400 text-capitalize radius-md">

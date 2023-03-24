@@ -525,28 +525,7 @@ const FichaObs = () => {
                              
                             </div>
 
-                            <div className=" mb-30">
-                              <label for="socialUrl">Google Maps</label>
-                              <div className="input-group flex-nowrap">
-                                <div className="input-group-prepend">
-                                  <span
-                                    className="input-group-text bg-google border-google text-white wh-44 radius-xs justify-content-center"
-                                    id="addon-wrapping1"
-                                  >
-                                    <i className="lab la-google-f fs-18"></i>
-                                  </span>
-                                </div>
-                                <input
-                                  type="text"
-                                  className="form-control form-control--social"
-                                  placeholder="Coordenadas"
-
-                                  aria-label="Username"
-                                  aria-describedby="addon-wrapping1"
-                                  id="socialUrl"
-                                />
-                              </div>
-                            </div>
+                            
 
                             <div className="button-group d-flex pt-20 justify-content-md-end justify-content-start">
                               <button className="btn btn-light btn-default btn-squared fw-400 text-capitalize radius-md">
