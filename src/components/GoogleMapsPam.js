@@ -1,8 +1,10 @@
-import React from "react";
+import React,{ useState } from "react";
 import { GoogleMap, useJsApiLoader, LoadScript, Marker} from '@react-google-maps/api';
 
 
 const GoogleMapsPam = () => {
+
+  const [markerPosition, setMarkerPosition] = useState(null);
 
   const mapStyles = {        
     height: "100vh",
@@ -12,26 +14,19 @@ const GoogleMapsPam = () => {
     lat: 10, lng: -84
   }
 
-  const locations = [
-    {
-      name: "Location 1",
-      location: { 
-        lat: 10.2,
-        lng: -83.5 
-      },
-    },
-    {
-      name: "Location 2",
-      location: { 
-        lat: 10.5,
-        lng: -83
-
-      },
-    },
+  function handleMapClick(event) {
+    markerPosition.lat=10
+    markerPosition.lat=-84
     
+    setMarkerPosition({
+        lat: event.latLng.lat(),
+        lng: event.latLng.lng()
+    });
+    console.log(markerPosition.lat);
+    console.log(markerPosition.lng);
+}
  
     
-  ];
   return (
     <div>
      
@@ -39,16 +34,20 @@ const GoogleMapsPam = () => {
      <GoogleMap
           mapContainerStyle={mapStyles}
           zoom={10}
-          center={defaultCenter}>
+          center={defaultCenter}
+          onClick={handleMapClick}
+          >
          { 
+
+          markerPosition && (
+          <Marker position={markerPosition} />
+          // <Marker title={markerPosition.lat.toString() +","+markerPosition.lng.toString()} position={markerPosition} />
+          // 
+          )
+          
+            }
          
-            locations.map(item => {
-              return (
-              <Marker key={item.name} position={item.location}/>
-              )
-            })
          
-         }
          
      </GoogleMap>
 
