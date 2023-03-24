@@ -11,6 +11,8 @@ const center = {
     lng: -84
 };
 
+
+//prueba de mapa
 function Map() {
     const [markerPosition, setMarkerPosition] = useState(null);
 
@@ -23,7 +25,7 @@ function Map() {
 
     return (
         <LoadScript
-            googleMapsApiKey="AIzaSyBgYKHZB_QKKLWfIRaYPCadza3nhTAbv7c"//"AIzaSyBgYKHZB_QKKLWfIRaYPCadza3nhTAbv7c" //"AIzaSyCbVAN4JyheZw7_PjJ5deOrTmySOWUCPjg"
+            googleMapsApiKey="AIzaSyCbVAN4JyheZw7_PjJ5deOrTmySOWUCPjg"//"AIzaSyBgYKHZB_QKKLWfIRaYPCadza3nhTAbv7c" //"AIzaSyCbVAN4JyheZw7_PjJ5deOrTmySOWUCPjg"
         >
             <GoogleMap
                 mapContainerStyle={containerStyle}
