@@ -24,8 +24,7 @@ const GoogleMapsPam = () => {
   };
 
   function handleMapClick(event) {
-    markerPosition.lat = 10;
-    markerPosition.lat = -84;
+  
 
     setMarkerPosition({
       lat: event.latLng.lat(),
@@ -70,7 +69,7 @@ const GoogleMapsPam = () => {
       </div> */}
 
       <div className=" mb-30">
-        <label for="socialUrl">Google Maps</label>
+        <label for="socialUrl">Coordenadas</label>
         <div className="input-group flex-nowrap">
           <div className="input-group-prepend">
             <span
@@ -88,13 +87,7 @@ const GoogleMapsPam = () => {
             aria-describedby="addon-wrapping1"
             id="coordenadas"
             name="coordenadas"
-            defaultValue={`${
-              markerPosition === null
-                ? ""
-                : markerPosition.lat.toString() +
-                  "," +
-                  markerPosition.lng.toString()
-            }`}
+            value={markerPosition.lat+","+markerPosition.lng}
           />
         </div>
       </div>
