@@ -11,8 +11,9 @@ import Sidebar from "../components/Sidebar";
 import Content from "../components/Content.js";
 import ContentPam from "../components/ContentPam.js";
 import FichaAddPam from "../components/FichaAddPam.js";
+import FichaAddObs from "../components/FichaAddObs.js";
 
-const Addpam = () => {
+const Addobs = () => {
   return (
     <div>
       <div className="mobile-search">
@@ -62,8 +63,8 @@ const Addpam = () => {
 
         <div className="contents">{/* <!-- Home.js --> */}
        
-        <ContentPam/>
-        <FichaAddPam/>
+     
+        <FichaAddObs/>
 
         </div>
         <Footer />
@@ -85,4 +86,4 @@ const Addpam = () => {
   );
 };
 
-export default Addpam;
+export default Addobs;

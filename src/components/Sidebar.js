@@ -26,7 +26,7 @@ i
           <li className="menu-title mt-30">
               <span>Operaciones</span>
             </li>
-            <li className="has-child">
+            {/* <li className="has-child">
               <a href="#" className="">
                 <span className="nav-icon uil uil-envelope"></span>
                 <span className="menu-text">Alertas</span>
@@ -37,12 +37,9 @@ i
                   <Link  className="menu-text" to={`/alertas`}>  Buzón de Entrada </Link>
             
                 </li>
-                {/* <li className="">
-                           <a href="read-email.html">Read
-                              Email</a>
-                        </li> */}
+               
               </ul>
-            </li>
+            </li> */}
 
             <li className="has-child">
               <a href="#" className="">
@@ -59,6 +56,10 @@ i
                   <Link  className="menu-text" to={`/index`}>  Lista de PAM x OBS </Link>
                   
                 </li> */}
+                <li className="">
+                  <Link  className="menu-text" to={`/agregarobs`}>  Agregar OBS / GL </Link>
+                 
+                </li>
                 <li className="">
                   <Link  className="menu-text" to={`/agregarpam`}>  Agregar PAM </Link>
                  
