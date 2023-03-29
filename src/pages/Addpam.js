@@ -62,7 +62,7 @@ const Addpam = () => {
 
         <div className="contents">{/* <!-- Home.js --> */}
        
-        <ContentPam/>
+        {/* <ContentPam/> */}
         <FichaAddPam/>
 
         </div>
