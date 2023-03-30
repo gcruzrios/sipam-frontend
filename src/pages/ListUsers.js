@@ -35,7 +35,7 @@ const ListUsers = () => {
         <nav className="navbar navbar-light">
           <div className="navbar-left">
             <div className="logo-area">
-              <a className="navbar-brand" href="/">
+              <a className="navbar-brand" href="/index">
                 <img className="dark" src="/img/logo-white.png" alt="logo" />
                 <img className="light" src="/img/logo-white.png" alt="logo" />
               </a>
