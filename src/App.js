@@ -29,6 +29,8 @@ import ListContactos from "./pages/ListContactos";
 import ListAlertas from "./pages/ListAlertas";
 import Ayuda from "./pages/Ayuda";
 import Addobs from "./pages/Addobs";
+import ConsultaPam from "./pages/Consultapam";
+
 
 const estaAutenticado = () => {
   const token = localStorage.getItem("Token");
@@ -78,6 +80,7 @@ function App() {
           <Route exact path='/usuarios/' element={estaAutenticado() ? <ListUsers /> : <Navigate to="/" />}/>
           <Route exact path='/contactos/' element={estaAutenticado() ? <ListContactos /> : <Navigate to="/" />}/>
           <Route exact path='/solicitudes/' element={estaAutenticado() ? <ListSolicitudes/> : <Navigate to="/" />}/>
+          <Route exact path='/consultapam/' element={estaAutenticado() ? <ConsultaPam/> : <Navigate to="/" />}/>
           
           <Route exact path='/ayuda/' element={estaAutenticado() ? <Ayuda/> : <Navigate to="/" />}/>
           

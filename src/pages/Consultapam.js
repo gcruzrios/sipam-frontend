@@ -1,17 +1,33 @@
 import React, { useState } from "react";
 
-import { Link } from "react-router-dom";
+import {
+  Link
+} from "react-router-dom";
 import Nav from "../components/Nav.js";
 import Footer from "../components/Footer.js";
+import Home from "../components/Home.js";
+
 import Sidebar from "../components/Sidebar";
-import MobileSearch from "../components/MobileSearch.js";
+import Content from "../components/Content.js";
+import ContentPam from "../components/ContentPam.js";
+import FichaAddPam from "../components/FichaAddPam.js";
+import ConsultaPam from "../components/ConsultaPam.js";
 
-import Contactos from "../components/Contactos.js";
-
-const Contacto = () => {
+const Consultapam = () => {
   return (
     <div>
-     <MobileSearch />
+      <div className="mobile-search">
+        <form action="/" className="search-form">
+          <img src="/img/svg/search.svg" alt="search" className="svg" />
+          <input
+            className="form-control me-sm-2 box-shadow-none"
+            type="search"
+            placeholder="Buscar..."
+            aria-label="Search"
+          />
+        </form>
+      </div>
+      <div className="mobile-author-actions"></div>
       <header className="header-top">
         <nav className="navbar navbar-light">
           <div className="navbar-left">
@@ -29,31 +45,26 @@ const Contacto = () => {
               </a>
             </div>
             <div className="top-menu">
-              <div className="hexadash-top-menu position-relative"></div>
              
             </div>
           </div>
           {/* <!-- ends: navbar-left --> */}
 
-          <div className="navbar-right">
-            {/* <!-- navigation nav.js --> */}
-            {/* <Nav /> */}
-          </div>
-          {/* <!-- ends: .navbar-right --> */}
+          <div className="navbar-right">{/* <!-- navigation nav.js --> */}</div>
+          {/* <!-- ends: .navbar-right --> */} <Nav />
         </nav>
       </header>
       <main className="main-content">
         <div className="sidebar-wrapper">
           <div className="sidebar sidebar-collapse" id="sidebar">
-          {/* <Sidebar /> */}
+          <Sidebar />
           </div>
         </div>
-       
 
-        <div className="contents">
-          {/* <!-- Home.js --> */}
-          
-          <Contactos/>
+        <div className="contents">{/* <!-- Home.js --> */}
+       
+      <ConsultaPam/>
+
         </div>
         <Footer />
         {/* <!-- Footer.js --> */}
@@ -74,5 +85,4 @@ const Contacto = () => {
   );
 };
 
-export default Contacto;
-
+export default Consultapam;
