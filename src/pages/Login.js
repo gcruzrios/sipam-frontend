@@ -40,27 +40,13 @@ export const Login = () => {
         
         const ingreso = {usuario, password}
         
-        // {
-        //     "usuario": "aanchia@conapam.go.cr",
-        //     "password": "123456"
-        // }
-
         const Token = localStorage.getItem('Token');
 
-        const headers= {
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearer '+Token
-            //'Authorization': Token
-        }  
 
-        console.log (headers);
-     
 
         console.log(ingreso);
 
-        
-
-        //const response= await axios.post(`/wsSIPAM/GetUsuario`,ingreso,headers);
+          
         const response= await axios.post(`/wsSIPAM/GetUsuario`,ingreso,{headers:{Authorization:'Bearer '+Token}})
         console.log(response);
 
@@ -72,16 +58,12 @@ export const Login = () => {
         const nombreUsuario = response.data.Resultado[0].nombreCompleto;
         const rolUsuario = response.data.Resultado[0].nombreRol;
 
-        // const idUsuario = response.data.Resultado.idUsuario;
-        // const nombreUsuario = response.data.Resultado.nombreCompleto;
-        // const rolUsuario = response.data.Resultado.nombreRol;
-
+      
         console.log(mensaje);
         console.log(mensaje_alerta);
         
 
-        //"CodError": "OK",
-
+      
         if(mensaje !=='200'){
                      
             Swal.fire({
@@ -103,7 +85,7 @@ export const Login = () => {
             localStorage.setItem('rolUsuario',rolUsuario );
             
             window.location.href='/index'
-            //window.location.href='/6767646'
+           
         }
 
     }

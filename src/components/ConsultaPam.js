@@ -1,71 +1,73 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Swal from 'sweetalert2';
 
 const ConsultaPam = () => {
+
   const [consulta, setConsulta] = useState([]);
   const [data, setData] = useState([]);
+  
+  const [cedula, setCedula] = useState("");
+  const [mensaje, setMensaje] = useState("");
 
   const [usuarioSeleccionado, setUsuarioSeleccionado] = useState({
-    identificacion: "",
-    nombre: "",
-    papellido: "",
-    sapellido: "",
-    sexo: "",
-    puesto: "",
-    tcontrato: "",
-    tipoIdentificacion: "",
-    identificacion: "",
-    nombre: "",
-    primerApellido: "",
-    segundoApellido: "",
-    fechaNacimiento: "",
-    sexo: "",
-    estadoCivil: "",
-    idNacionalidad: "",
-    idDistrito: "",
-    distrito: "",
-    idCanton: "",
-    canton: "",
-    idProvincia: "",
-    provincia: "",
-    idRegion: "",
-    region: "",
+    CEDULA: "",
+    FECHACADUC: "",
+    NOMBRE: "",
+    PRIMER_APELLIDO: "",
+    SEGUNDO_APELLIDO: ""
   });
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const getDataPam = async (e) => {
+    e.preventDefault();
 
-    const idUsuario = localStorage.getItem("idUsuario");
+ 
     const Token = localStorage.getItem("Token");
-    //const cedula: data.get('cedula')
+    console.log(Token);
+    console.log(cedula);
 
-    const datos = new FormData(event.currentTarget);
-    console.log(datos)
-    const cedula = datos.get("cedula");
-
-    await axios
+   await axios
       .post("/wsSIPAM/GetPersonaPadron", cedula, {
         headers: { Authorization: "Bearer " + Token },
       })
 
       .then((response) => {
+        setMensaje(response.data.CodigoResultado);
+        console.log(mensaje);
+        
         console.log(response.data.Resultado);
-        setData(response.data.Resultado);
-        console.log(response.data.Resultado);
-        //  setConsulta(response.data);
-        //  console.log(response.data);
-        setUsuarioSeleccionado(response.data.Resultado[0]);
-
-        //   document.getElementById("nombre").value = usuarioSeleccionado.nombre;
-        //   document.getElementById("papellido").value = usuarioSeleccionado.papellido;
-        //   document.getElementById("sapellido").value = usuarioSeleccionado.sapellido;
+        
+      //   setData(response.data.Resultado);
+      //    console.log(data);
+      //   
+           setUsuarioSeleccionado(response.data.Resultado);
+      //   document.getElementById("identificacion").value = usuarioSeleccionado.identificacion;
+      //   document.getElementById("nombre").value = usuarioSeleccionado.nombre;
+      //   document.getElementById("papellido").value = usuarioSeleccionado.primerApellido;
+      //   document.getElementById("sapellido").value = usuarioSeleccionado.segundoApellido;
       });
 
     console.log(usuarioSeleccionado);
+
+    
+
+    if (mensaje !== "200") {
+      Swal.fire({
+        icon: "error",
+        title:"No aparece en BD de TSE",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    } else {
+    
+    }
   };
 
+
+
   useEffect(() => {
-    handleSubmit();
+    //getDataPam();
+    
   }, []);
 
   return (
@@ -103,70 +105,70 @@ const ConsultaPam = () => {
               <div className="card-body py-md-30">
                 <div className="horizontal-form">
                   {/* <form action="#"> */}
-                    <div className="mb-3">
-                   
-                      <div class="radio-theme-default custom-radio ">
-                        <input
-                          class="radio"
-                          type="radio"
-                          name="radio-default"
-                          value="0"
-                          id="radio-un4"
-                          checked
-                        />
-                        <label for="radio-un4">
-                          <span class="radio-text">Número de Cédula</span>
-                        </label>
-                      </div>
-                      <div className="radio-theme-default custom-radio ">
-                        <input
-                          className="radio"
-                          type="radio"
-                          name="radio-default"
-                          value="1"
-                          id="radio-un2"
-                        />
-                        <label for="radio-un2">
-                          <span className="radio-text">Número DIMEX </span>
-                        </label>
-                      </div>
+                  <form onSubmit={ getDataPam }>
+                  <div className="mb-3">
+                    <div class="radio-theme-default custom-radio ">
+                      <input
+                        class="radio"
+                        type="radio"
+                        name="radio-default"
+                        value="0"
+                        id="radio-un4"
+                        checked
+                      />
+                      <label for="radio-un4">
+                        <span class="radio-text">Número de Cédula</span>
+                      </label>
                     </div>
-                    <div className="form-group row mb-25">
-                      <div className="col-sm-3 d-flex aling-items-center ">
-                        <label
-                          for="inputName"
-                          className=" col-form-label color-dark fs-14 fw-500 align-center"
-                        >
-                          Número de Cédula / DIMEX
-                        </label>
-                      </div>
-                      <div className="col-sm-4">
-                        <input
-                          type="text"
-                          className="form-control ih-medium ip-gray radius-xs b-light px-15"
-                          
-                          id="cedula"
-                          name="cedula"
-                          placeholder="Número de cédula con ceros sin guiones"
-                        />
-                      </div>
+                    <div className="radio-theme-default custom-radio ">
+                      <input
+                        className="radio"
+                        type="radio"
+                        name="radio-default"
+                        value="1"
+                        id="radio-un2"
+                      />
+                      <label for="radio-un2">
+                        <span className="radio-text">Número DIMEX </span>
+                      </label>
                     </div>
+                  </div>
+                  <div className="form-group row mb-25">
+                    <div className="col-sm-3 d-flex aling-items-center ">
+                      <label
+                        for="inputName"
+                        className=" col-form-label color-dark fs-14 fw-500 align-center"
+                      >
+                        Número de Cédula / DIMEX
+                      </label>
+                    </div>
+                    <div className="col-sm-4">
+                      <input
+                        type="text"
+                        className="form-control ih-medium ip-gray radius-xs b-light px-15"
+                        id="cedula"
+                        name="cedula"
+                        onChange={(e)=>setCedula(e.target.value)}
+                        placeholder="Número de cédula con ceros sin guiones"
+                      />
+                    </div>
+                  </div>
 
-                    <div className="form-group row mb-0">
-                      <div className="col-sm-4">
-                        <div className="layout-button mt-25 ">
+                  <div className="form-group row mb-0">
+                    <div className="col-sm-4">
+                      <div className="layout-button mt-25 ">
+                        <button
+                          type="submit"
+                          className="btn btn-primary btn-default btn-squared px-30"
                           
-                          <button
-                            type="submit"
-                            className="btn btn-primary btn-default btn-squared px-30"
-                            onSubmit={handleSubmit}
-                          >
-                            Consultar
-                          </button>
-                        </div>
+                        >
+                          Consultar
+                        </button>
                       </div>
                     </div>
+                  </div>
                   {/* </form> */}
+                  </form>
                 </div>
               </div>
             </div>
@@ -185,6 +187,9 @@ const ConsultaPam = () => {
                         type="text"
                         className="form-control ih-medium ip-gray radius-xs b-light px-15"
                         placeholder="Número de Cédula"
+                        value={usuarioSeleccionado.identificacion}
+                   
+
                       />
                     </div>
                     <div className="col-md-6 mb-25">
@@ -192,6 +197,7 @@ const ConsultaPam = () => {
                         type="text"
                         className="form-control ih-medium ip-gray radius-xs b-light px-15"
                         placeholder="Nombre"
+                        value={usuarioSeleccionado.nombre}
                       />
                     </div>
                     <div className="col-md-6 mb-25">
@@ -199,6 +205,7 @@ const ConsultaPam = () => {
                         type="text"
                         className="form-control ih-medium ip-gray radius-xs b-light px-15"
                         placeholder="Apellido 1"
+                        value={usuarioSeleccionado.primerApellido}
                       />
                     </div>
                     <div className="col-md-6 mb-25">
@@ -206,6 +213,7 @@ const ConsultaPam = () => {
                         type="text"
                         className="form-control ih-medium ip-gray radius-xs b-light px-15"
                         placeholder="Apellido 2"
+                        value={usuarioSeleccionado.segundoApellido}
                       />
                     </div>
                     <div className="col-md-6 mb-25">
