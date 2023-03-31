@@ -30,6 +30,7 @@ import ListAlertas from "./pages/ListAlertas";
 import Ayuda from "./pages/Ayuda";
 import Addobs from "./pages/Addobs";
 import ConsultaPam from "./pages/Consultapam";
+import ListaModalidadObs from "./pages/ListaModalidadObs";
 
 
 const estaAutenticado = () => {
@@ -81,6 +82,7 @@ function App() {
           <Route exact path='/contactos/' element={estaAutenticado() ? <ListContactos /> : <Navigate to="/" />}/>
           <Route exact path='/solicitudes/' element={estaAutenticado() ? <ListSolicitudes/> : <Navigate to="/" />}/>
           <Route exact path='/consultapam/' element={estaAutenticado() ? <ConsultaPam/> : <Navigate to="/" />}/>
+          <Route exact path='/modalidadesobs/' element={estaAutenticado() ? <ListaModalidadObs/> : <Navigate to="/" />}/>
           
           <Route exact path='/ayuda/' element={estaAutenticado() ? <Ayuda/> : <Navigate to="/" />}/>
           

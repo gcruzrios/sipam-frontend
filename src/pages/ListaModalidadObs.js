@@ -13,7 +13,8 @@ import Footer from '../components/Footer.js';
 import Home from '../components/Home.js';
 import Sidebar from '../components/Sidebar';
 
-const Index = () => {
+
+const ListaModalidadObs = () => {
   return (
     <div>
 
@@ -53,15 +54,14 @@ const Index = () => {
           </header>
           <main className="main-content">
 
-              <div className="sidebar-wrapper">
-                {/* <!-- Sidebar --> */}
-                <Sidebar /> 
-              </div>
-
+          <div className="sidebar-wrapper">
+          <div className="sidebar sidebar-collapse" id="sidebar">
+            <Sidebar />
+          </div>
+        </div>
               <div className="contents">
-
-              {/* <!-- Home.js --> */}
-
+              <ListaModalidadObs/>
+              
               </div>
                 <Footer />  
               {/* <!-- Footer.js --> */}
@@ -84,4 +84,4 @@ const Index = () => {
   )
 }
 
-export default Index
+export default ListaModalidadObs

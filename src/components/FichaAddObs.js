@@ -153,7 +153,7 @@ const FichaAddObs = () => {
                   </ul>
                 </div>
                 <div className="tab-content" id="v-pills-tabContent">
-                  {data.map((obs) => (
+                  {/* {data.map((obs) => ( */}
                     <div
                       class="tab-pane fade  show active"
                       id="v-pills-home"
@@ -204,7 +204,7 @@ const FichaAddObs = () => {
                                     type="text"
                                     className="form-control"
                                     id="name1"
-                                    value={obs.codigoInstitucion}
+                                    // value={obs.codigoInstitucion}
                                   />
                                 </div>
                                 <div className="form-group mb-25">
@@ -213,7 +213,7 @@ const FichaAddObs = () => {
                                     type="text"
                                     className="form-control"
                                     id="name1"
-                                    value={obs.nombreCONAPAM}
+                                    // value={obs.nombreCONAPAM}
                                   />
                                 </div>
                                 <div className="form-group mb-25">
@@ -222,7 +222,7 @@ const FichaAddObs = () => {
                                     type="email"
                                     className="form-control"
                                     id="name2"
-                                    value={obs.identificacion}
+                                    // value={obs.identificacion}
                                   />
                                 </div>
                                 <div className="form-group mb-25">
@@ -233,7 +233,7 @@ const FichaAddObs = () => {
                                     type="tel"
                                     className="form-control"
                                     id="phoneNumber5"
-                                    placeholder="+440 2546 5236"
+                                    placeholder="+506"
                                   />
                                 </div>
                                 <div className="form-group mb-25">
@@ -242,7 +242,7 @@ const FichaAddObs = () => {
                                     type="email"
                                     className="form-control"
                                     id="name2"
-                                    value={obs.provincia}
+                                    // value={obs.provincia}
                                   />
                                 </div>
                                 <div className="form-group mb-25">
@@ -251,7 +251,7 @@ const FichaAddObs = () => {
                                     type="email"
                                     className="form-control"
                                     id="name2"
-                                    value={obs.canton}
+                                    // value={obs.canton}
                                   />
                                 </div>
                                 <div className="form-group mb-25">
@@ -260,7 +260,7 @@ const FichaAddObs = () => {
                                     type="email"
                                     className="form-control"
                                     id="name2"
-                                    value={obs.distrito}
+                                    // value={obs.distrito}
                                   />
                                 </div>
                                 <div className="form-group mb-25">
@@ -269,7 +269,7 @@ const FichaAddObs = () => {
                                     type="email"
                                     className="form-control"
                                     id="name2"
-                                    value={obs.otrasSenias}
+                                    // value={obs.otrasSenias}
                                   />
                                 </div>
 
@@ -310,7 +310,7 @@ const FichaAddObs = () => {
                         </div>
                       </div>
                     </div>
-                  ))}
+                  {/* ))} */}
                   <div
                     class="tab-pane fade"
                     id="v-pills-profile"

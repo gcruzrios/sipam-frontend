@@ -52,10 +52,10 @@ i
                   <Link  className="menu-text" to={`/index`}>  Lista de OBS</Link>
                  
                 </li>
-                {/* <li className="">
-                  <Link  className="menu-text" to={`/index`}>  Lista de PAM x OBS </Link>
+                <li className="">
+                  <Link  className="menu-text" to={`/modalidadesobs`}>  Lista de Beneficios OBS </Link>
                   
-                </li> */}
+                </li> 
                 <li className="">
                   <Link  className="menu-text" to={`/agregarobs`}>  Agregar OBS / GL </Link>
                  
