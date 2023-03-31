@@ -146,17 +146,17 @@ const TablaModObs = () => {
                     to={`/modalidadobs/${obs.idOBS}`}
                   >
                     {" "}
-                    <i className="uil uil-home-alt"></i>  {obs.OBS.substring(40, obs.OBS)} 
+                    <i className="uil uil-home-alt"></i>  {obs.OBS.substring(70, obs.OBS)} 
                   </Link>
                 </div>
               </td>
               <td>
-                <div className="userDatatable-content text-end">
+                <div className="userDatatable-content text-center">
                     {obs.mes}
                 </div>
               </td>
               <td>
-                <div className="userDatatable-content text-end">
+                <div className="userDatatable-content text-center">
                   {obs.annio}
                 </div>
               </td>
@@ -175,23 +175,27 @@ const TablaModObs = () => {
                 </div>
               </td>
               <td>
-                <div className="userDatatable-content text-end">
+                <div className="userDatatable-content text-center">
+                  {obs.CantPAMAprobados.substring(8, obs.CantPAMAprobados)} 
                   {obs.CantPAMAprobados}
+                  
                 </div>
               </td>
               <td>
-                <div className="userDatatable-content text-end">
-                  {obs.cantidadAdmitidos}
+                <div className="userDatatable-content text-center">
+                {obs.cantidadAdmitidos.substring(10, obs.cantidadAdmitidos)} 
+                {obs.cantidadAdmitidos}
                 </div>
               </td>
               <td>
-                <div className="userDatatable-content text-end">
-                  {obs.cantidadNoCubierta}
+                <div className="userDatatable-content text-center">
+                {obs.cantidadNoCubierta.substring(10, obs.cantidadNoCubierta)} 
+                {obs.cantidadNoCubierta}
                 </div>
               </td>
               <td>
-                <div className="userDatatable-content text-end">
-                  {obs.cantidadExcedente}
+                <div className="userDatatable-content text-center">
+                {obs.cantidadExcedente.substring(10, obs.cantidadExcedente)} 
                 </div>
               </td>
              
