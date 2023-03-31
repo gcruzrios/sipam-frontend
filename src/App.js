@@ -34,6 +34,8 @@ import ListaModalidadObs from "./pages/ListaModalidadObs";
 import ListObs from "./pages/ListObs";
 import ListaFactores from "./pages/ListaFactores";
 import ListaFactoresRc from "./pages/ListaFactoresRc";
+import Calendario from "./pages/Calendario";
+import Adduser from "./pages/Adduser";
 
 
 const estaAutenticado = () => {
@@ -76,18 +78,21 @@ function App() {
           {/* <Route path="/agregarpam" element={<Addpam />} /> */}
           <Route exact path="/agregarpam" element={estaAutenticado() ? <Addpam /> : <Navigate to="/" />}/>
           <Route exact path="/agregarobs" element={estaAutenticado() ? <Addobs /> : <Navigate to="/" />}/>
+          <Route exact path="/agregaruser" element={estaAutenticado() ? <Adduser /> : <Navigate to="/" />}/>
+
           <Route exact path='/detallepam/:id' element={estaAutenticado() ? <Detallepam /> : <Navigate to="/" />}/>
           <Route exact path='/detalleobs/:id' element={estaAutenticado() ? <Detalleobs /> : <Navigate to="/" />}/>
           <Route exact path='/googlemaps/:id' element={estaAutenticado() ? <GoogleMapsPam/> : <Navigate to="/" />}/>
           <Route exact path='/alertas' element={estaAutenticado() ? <ListAlertas /> : <Navigate to="/" />}/>
           <Route exact path='/usuarios' element={estaAutenticado() ? <ListUsers /> : <Navigate to="/" />}/>
-          <Route exact path='/contactos' element={estaAutenticado() ? <ListContactos /> : <Navigate to="/" />}/>
+          <Route exact path='/contactosobs' element={estaAutenticado() ? <ListContactos /> : <Navigate to="/" />}/>
           <Route exact path='/solicitudes' element={estaAutenticado() ? <ListSolicitudes/> : <Navigate to="/" />}/>
           <Route exact path='/consultapam' element={estaAutenticado() ? <ConsultaPam/> : <Navigate to="/" />}/>
           <Route exact path='/modalidadesobs' element={estaAutenticado() ? <ListaModalidadObs/> : <Navigate to="/" />}/>
           <Route exact path='/factores' element={estaAutenticado() ? <ListaFactores/> : <Navigate to="/" />}/>
           <Route exact path='/factoresrc' element={estaAutenticado() ? <ListaFactoresRc/> : <Navigate to="/" />}/>
-          <Route exact path='/ayuda/' element={estaAutenticado() ? <Ayuda/> : <Navigate to="/" />}/>
+          <Route exact path='/calendario' element={estaAutenticado() ? <Calendario/> : <Navigate to="/" />}/>
+          <Route exact path='/ayuda' element={estaAutenticado() ? <Ayuda/> : <Navigate to="/" />}/>
           
          
           <Route path="*" element={<NotFound />} />

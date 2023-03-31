@@ -1,20 +1,17 @@
 import React, { useState } from "react";
 
 import {
-  BrowserRouter as Router,
-  Route,
-  Redirect,
-  Link,
+  Link
 } from "react-router-dom";
-
 import Nav from "../components/Nav.js";
-import Header from "../components/Header.js";
 import Footer from "../components/Footer.js";
 import Home from "../components/Home.js";
+
 import Sidebar from "../components/Sidebar";
-import ListaContactos from "../components/ListaContactos.js";
-import TitleList from "../components/TitleUsuarios";
-const ListContactos = () => {
+import Addusuario from "../components/Addusuario.js";
+
+
+const Adduser = () => {
   return (
     <div>
       <div className="mobile-search">
@@ -51,40 +48,24 @@ const ListContactos = () => {
           </div>
           {/* <!-- ends: navbar-left --> */}
 
-          <div className="navbar-right">{/* <!-- navigation nav.js --> */} <Nav /></div>
+          <div className="navbar-right">{/* <!-- navigation nav.js --> */}
+          <Nav />
+          </div>
           {/* <!-- ends: .navbar-right --> */}
         </nav>
       </header>
       <main className="main-content">
         <div className="sidebar-wrapper">
           <div className="sidebar sidebar-collapse" id="sidebar">
-            <Sidebar />
+          <Sidebar />
           </div>
         </div>
-        <div className="contents">
-          {/* <!-- Home.js --> */}
-          <div class="crm mb-25">
-            <div class="container-fluid">
-               <div class="row ">
 
-                                 
-
-                  <div class="col-lg-12">
-
-                    <TitleList/>
-
-                  </div>
-                  
-                  <div class="col-lg-12">
-                   <ListaContactos/>
-                  </div>
-                 
-               </div>
-              
-            </div>
-         </div>
-
+        <div className="contents">{/* <!-- Home.js --> */}
+       
+        {/* <FichaUser/> */}
         
+        <Addusuario/>
         </div>
         <Footer />
         {/* <!-- Footer.js --> */}
@@ -105,4 +86,4 @@ const ListContactos = () => {
   );
 };
 
-export default ListContactos;
+export default Adduser;

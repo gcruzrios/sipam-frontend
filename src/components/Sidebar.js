@@ -86,7 +86,7 @@ i
               </a>
               <ul>
                 <li className="">
-                  <Link  className="menu-text" to={`/index`}>  Eventos programados</Link>
+                  <Link  className="menu-text" to={`/calendario`}>  Eventos programados</Link>
                  
                 </li>
                
@@ -104,7 +104,7 @@ i
                   <Link  className="menu-text" to={`/usuarios`}>  Lista de Usuarios</Link>
                 </li>
                 <li className="">
-                  <Link  className="menu-text" to={`/index`}>  Agregar Usuarios</Link>
+                  <Link  className="menu-text" to={`/agregaruser`}>  Agregar Usuarios</Link>
                 </li>
                
               </ul>
@@ -121,11 +121,11 @@ i
                               Grid</a>
                         </li> */}
                 <li className="">
-                  <Link  className="menu-text" to={`/contactos`}>  Lista Contactos OBS</Link>
+                  <Link  className="menu-text" to={`/contactosobs`}>  Lista Contactos OBS</Link>
            
                 </li>
                 <li className="">
-                   <Link  className="menu-text" to={`/index`}> Agregar Contacto OBS</Link>
+                   <Link  className="menu-text" to={`/agregaruser`}> Agregar Contacto OBS</Link>
                   
                 </li>
               </ul>
