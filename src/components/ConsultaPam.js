@@ -4,8 +4,7 @@ import Swal from 'sweetalert2';
 
 const ConsultaPam = () => {
 
-  const [consulta, setConsulta] = useState([]);
-  const [data, setData] = useState([]);
+  
   
   const [cedula, setCedula] = useState("");
   const [mensaje, setMensaje] = useState("");
@@ -21,13 +20,18 @@ const ConsultaPam = () => {
   const getDataPam = async (e) => {
     e.preventDefault();
 
+    // {
+    //   "cedula": "109120518"
+    // }
+
+    const cedula_pam = { cedula: cedula };
  
     const Token = localStorage.getItem("Token");
     console.log(Token);
     console.log(cedula);
 
    await axios
-      .post("/wsSIPAM/GetPersonaPadron", cedula, {
+      .post("/wsSIPAM/GetPersonaPadron", cedula_pam, {
         headers: { Authorization: "Bearer " + Token },
       })
 
@@ -41,10 +45,10 @@ const ConsultaPam = () => {
       //    console.log(data);
       //   
            setUsuarioSeleccionado(response.data.Resultado);
-      //   document.getElementById("identificacion").value = usuarioSeleccionado.identificacion;
-      //   document.getElementById("nombre").value = usuarioSeleccionado.nombre;
-      //   document.getElementById("papellido").value = usuarioSeleccionado.primerApellido;
-      //   document.getElementById("sapellido").value = usuarioSeleccionado.segundoApellido;
+           document.getElementById("identificacion").value = usuarioSeleccionado.CEDULA;
+           document.getElementById("nombre").value = usuarioSeleccionado.NOMBRE;
+           document.getElementById("papellido").value = usuarioSeleccionado.PRIMER_APELLIDO;
+           document.getElementById("sapellido").value = usuarioSeleccionado.SEGUNDO_APELLIDO;
       });
 
     console.log(usuarioSeleccionado);
@@ -187,6 +191,7 @@ const ConsultaPam = () => {
                         type="text"
                         className="form-control ih-medium ip-gray radius-xs b-light px-15"
                         placeholder="Número de Cédula"
+                        id="identificacion"
                         value={usuarioSeleccionado.identificacion}
                    
 
@@ -197,6 +202,7 @@ const ConsultaPam = () => {
                         type="text"
                         className="form-control ih-medium ip-gray radius-xs b-light px-15"
                         placeholder="Nombre"
+                        id="nombre"
                         value={usuarioSeleccionado.nombre}
                       />
                     </div>
@@ -205,6 +211,7 @@ const ConsultaPam = () => {
                         type="text"
                         className="form-control ih-medium ip-gray radius-xs b-light px-15"
                         placeholder="Apellido 1"
+                        id="papellido"
                         value={usuarioSeleccionado.primerApellido}
                       />
                     </div>
@@ -213,6 +220,7 @@ const ConsultaPam = () => {
                         type="text"
                         className="form-control ih-medium ip-gray radius-xs b-light px-15"
                         placeholder="Apellido 2"
+                        id="sapellido"
                         value={usuarioSeleccionado.segundoApellido}
                       />
                     </div>

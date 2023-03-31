@@ -61,6 +61,10 @@ i
                  
                 </li>
                 <li className="">
+                  <Link  className="menu-text" to={`/consultapam`}>  Consultar PAM </Link>
+                 
+                </li>
+                <li className="">
                   <Link  className="menu-text" to={`/agregarpam`}>  Agregar PAM </Link>
                  
                 </li>
