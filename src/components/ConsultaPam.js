@@ -156,6 +156,16 @@ const ConsultaPam = () => {
                         placeholder="Número de cédula con ceros sin guiones"
                       />
                     </div>
+                    <div className="col-sm-4">
+                      <input
+                        type="text"
+                        className="form-control ih-medium ip-gray radius-xs b-light px-15"
+                        id="cedula"
+                        name="cedula"
+                       
+                        placeholder="Número de cédula con ceros sin guiones"
+                      />
+                    </div>
                   </div>
 
                   <div className="form-group row mb-0">
@@ -186,7 +196,7 @@ const ConsultaPam = () => {
               <div className="card-body py-md-30">
                 <form>
                   <div className="row">
-                    <div className="col-md-6 mb-25">
+                    <div className="col-md-3 mb-25">
                       <input
                         type="text"
                         className="form-control ih-medium ip-gray radius-xs b-light px-15"
@@ -197,7 +207,7 @@ const ConsultaPam = () => {
 
                       />
                     </div>
-                    <div className="col-md-6 mb-25">
+                    <div className="col-md-9 mb-25">
                       <input
                         type="text"
                         className="form-control ih-medium ip-gray radius-xs b-light px-15"
@@ -226,32 +236,48 @@ const ConsultaPam = () => {
                     </div>
                     <div className="col-md-6 mb-25">
                       <input
+                        type="email"
+                        className="form-control ih-medium ip-gray radius-xs b-light px-15"
+                        placeholder="Correo Electrónico"
+                      />
+                    </div>
+                    <h3>Dirección PAM</h3>
+                    <div className="col-md-3 mt-25 mb-25">
+                      <input
                         type="text"
                         className="form-control ih-medium ip-gray radius-xs b-light px-15"
                         placeholder="Provincia"
                       />
                     </div>
-                    <div className="col-md-6 mb-25">
+                    <div className="col-md-3 mt-25 mb-25">
                       <input
                         type="text"
                         className="form-control ih-medium ip-gray radius-xs b-light px-15"
                         placeholder="Cantón"
                       />
                     </div>
-                    <div className="col-md-6 mb-25">
+                    <div className="col-md-3 mt-25 mb-25">
                       <input
                         type="text"
                         className="form-control ih-medium ip-gray radius-xs b-light px-15"
                         placeholder="Distrito"
                       />
                     </div>
-                    <div className="col-md-6 mb-25">
+                    <div className="col-md-3 mt-25 mb-25">
                       <input
-                        type="email"
+                        type="text"
                         className="form-control ih-medium ip-gray radius-xs b-light px-15"
-                        placeholder="Correo Electrónico"
+                        placeholder="Barrio"
                       />
                     </div>
+                    <div className="col-md-12  mb-25">
+                      <input
+                        type="text"
+                        className="form-control ih-medium ip-gray radius-xs b-light px-15"
+                        placeholder="Otras señas"
+                      />
+                    </div>
+                    
                     <div className="col-md-6">
                       <div className="layout-button mt-0">
                         <button
