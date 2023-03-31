@@ -86,11 +86,11 @@ const TablaFactores = () => {
             </th>
 
             <th>
-              <span className="userDatatable-title float-end">Monto</span>
+              <span className="userDatatable-title float-center">Monto</span>
             </th>
-            {/* <th>
-              <span className="userDatatable-title">Presupuesto</span>
-            </th> */}
+            <th>
+              <span className="userDatatable-title float-center">Nuevo Monto</span>
+            </th> 
 
             <th>
               <span className="userDatatable-title float-end">Acciones</span>
@@ -123,10 +123,26 @@ const TablaFactores = () => {
               </td>
               <td>
                 <div className="userDatatable-content text-end">
+                <div class="input-group mb-1">
+                  {/* <span class="input-group-text">¢</span> */}
                   {obs.montoFactor}
                 </div>
+                </div>
               </td>
-
+              <td>
+                <div className="form-group mb-10">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">¢</span>
+                      <input
+                        type="text"
+                        className="form-control"
+                        id="name1"
+                        placeholder="0.0"
+                      />
+                      {/* <span class="input-group-text">.00</span> */}
+                      </div>
+                  </div>
+              </td>
               <td>
                 <ul className="orderDatatable_actions mb-0 d-flex flex-wrap">
                   <li>
