@@ -91,7 +91,7 @@ const TablaModObs = () => {
 
   return (
     <div>
-      <table className="table mb-0 table-borderless">
+       <table className="table mb-0 table-borderless">
         <thead>
           <tr className="userDatatable-header">
             {/* header */}
@@ -115,6 +115,9 @@ const TablaModObs = () => {
             </th>
             <th>
               <span className="userDatatable-title">Monto</span>
+            </th>
+            <th>
+              <span className="userDatatable-title">Presupuesto</span>
             </th>
             <th>
               <span className="userDatatable-title float-end">Cant Aprobada</span>
@@ -170,10 +173,16 @@ const TablaModObs = () => {
                 </div>
               </td>
               <td>
-                <div className="userDatatable-content text-center">
+                <div className="userDatatable-content text-end">
                   {obs.Factor}
                 </div>
               </td>
+              <td>
+                <div className="userDatatable-content text-end">
+                  {obs.totalPresupuesto}
+                </div>
+              </td>
+              
               <td>
                 <div className="userDatatable-content text-center">
                   {obs.CantPAMAprobados.substring(8, obs.CantPAMAprobados)} 
@@ -189,7 +198,7 @@ const TablaModObs = () => {
               </td>
               <td>
                 <div className="userDatatable-content text-center">
-                {obs.cantidadNoCubierta.substring(10, obs.cantidadNoCubierta)} 
+                
                 {obs.cantidadNoCubierta}
                 </div>
               </td>

@@ -57,6 +57,14 @@ i
                   
                 </li> 
                 <li className="">
+                  <Link  className="menu-text" to={`/factores`}>  Lista de Montos Aprobados (H-CD-A) </Link>
+                  
+                </li> 
+                <li className="">
+                  <Link  className="menu-text" to={`/factoresrc`}>  Lista de Montos Aprobados (RC) </Link>
+                  
+                </li> 
+                <li className="">
                   <Link  className="menu-text" to={`/agregarobs`}>  Agregar OBS / GL </Link>
                  
                 </li>
