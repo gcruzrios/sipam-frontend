@@ -12,9 +12,9 @@ import Header from '../components/Header.js';
 import Footer from '../components/Footer.js';
 import Home from '../components/Home.js';
 import Sidebar from '../components/Sidebar';
-import ModalidadesObs from '../components/ModalidadesObs';
+import TablaObs from '../components/TablaObs';
 
-const ListaModalidadObs = () => {
+const ListObs = () => {
   return (
     <div>
 
@@ -60,7 +60,7 @@ const ListaModalidadObs = () => {
           </div>
         </div>
               <div className="contents">
-              <ModalidadesObs/>
+              <TablaObs/>
 
               
               </div>
@@ -85,4 +85,4 @@ const ListaModalidadObs = () => {
   )
 }
 
-export default ListaModalidadObs
+export default ListObs

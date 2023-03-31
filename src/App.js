@@ -31,6 +31,7 @@ import Ayuda from "./pages/Ayuda";
 import Addobs from "./pages/Addobs";
 import ConsultaPam from "./pages/Consultapam";
 import ListaModalidadObs from "./pages/ListaModalidadObs";
+import ListObs from "./pages/ListObs";
 
 
 const estaAutenticado = () => {
@@ -57,8 +58,7 @@ function App() {
             exact
             path="/index"
             element={estaAutenticado() ? <Index /> : <Navigate to="/" />}
-            element={estaAutenticado() ? <Dashboard/> : <Navigate to="/" />}
-            
+                       
           /> */}
           <Route path="/index" exact element={estaAutenticado() ? <Index /> : <Navigate to="/" />} />
 
@@ -69,7 +69,7 @@ function App() {
 
           {/* <Route exact path="/listpam" element={<Listpam />} /> */}
           {/* <Route exact path="/listpam" element={estaAutenticado() ? <Listpam /> : <Navigate to="/" />}/> */}
-
+          <Route exact path='/listobs' element={estaAutenticado() ? <ListObs /> : <Navigate to="/" /> } />
           <Route exact path='/listpam/:id' element={estaAutenticado() ? <Listpam /> : <Navigate to="/" /> } />
           {/* <Route path="/agregarpam" element={<Addpam />} /> */}
           <Route exact path="/agregarpam" element={estaAutenticado() ? <Addpam /> : <Navigate to="/" />}/>
@@ -77,12 +77,12 @@ function App() {
           <Route exact path='/detallepam/:id' element={estaAutenticado() ? <Detallepam /> : <Navigate to="/" />}/>
           <Route exact path='/detalleobs/:id' element={estaAutenticado() ? <Detalleobs /> : <Navigate to="/" />}/>
           <Route exact path='/googlemaps/:id' element={estaAutenticado() ? <GoogleMapsPam/> : <Navigate to="/" />}/>
-          <Route exact path='/alertas/' element={estaAutenticado() ? <ListAlertas /> : <Navigate to="/" />}/>
-          <Route exact path='/usuarios/' element={estaAutenticado() ? <ListUsers /> : <Navigate to="/" />}/>
-          <Route exact path='/contactos/' element={estaAutenticado() ? <ListContactos /> : <Navigate to="/" />}/>
-          <Route exact path='/solicitudes/' element={estaAutenticado() ? <ListSolicitudes/> : <Navigate to="/" />}/>
-          <Route exact path='/consultapam/' element={estaAutenticado() ? <ConsultaPam/> : <Navigate to="/" />}/>
-          <Route exact path='/modalidadesobs/' element={estaAutenticado() ? <ListaModalidadObs/> : <Navigate to="/" />}/>
+          <Route exact path='/alertas' element={estaAutenticado() ? <ListAlertas /> : <Navigate to="/" />}/>
+          <Route exact path='/usuarios' element={estaAutenticado() ? <ListUsers /> : <Navigate to="/" />}/>
+          <Route exact path='/contactos' element={estaAutenticado() ? <ListContactos /> : <Navigate to="/" />}/>
+          <Route exact path='/solicitudes' element={estaAutenticado() ? <ListSolicitudes/> : <Navigate to="/" />}/>
+          <Route exact path='/consultapam' element={estaAutenticado() ? <ConsultaPam/> : <Navigate to="/" />}/>
+          <Route exact path='/modalidadesobs' element={estaAutenticado() ? <ListaModalidadObs/> : <Navigate to="/" />}/>
           
           <Route exact path='/ayuda/' element={estaAutenticado() ? <Ayuda/> : <Navigate to="/" />}/>
           

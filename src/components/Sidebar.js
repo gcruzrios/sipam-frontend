@@ -49,7 +49,7 @@ i
               </a>
               <ul>
                 <li className="">
-                  <Link  className="menu-text" to={`/index`}>  Lista de OBS</Link>
+                  <Link  className="menu-text" to={`/listobs`}>  Lista de OBS</Link>
                  
                 </li>
                 <li className="">

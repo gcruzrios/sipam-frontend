@@ -151,7 +151,7 @@ const FichaAddPam = () => {
                   </ul>
                 </div>
                 <div className="tab-content" id="v-pills-tabContent">
-                  {data.map((pam) => (
+                  {/* {data.map((pam) => ( */}
                     <div
                       class="tab-pane fade  show active"
                       id="v-pills-home"
@@ -201,8 +201,8 @@ const FichaAddPam = () => {
                                   <input
                                     type="text"
                                     className="form-control"
-                                    id="name1"
-                                    value={pam.identificacion}
+                                    id="identificacion"
+                                    //value={pam.identificacion}
                                   />
                                 </div>
                                 <div className="form-group mb-25">
@@ -210,8 +210,8 @@ const FichaAddPam = () => {
                                   <input
                                     type="text"
                                     className="form-control"
-                                    id="name1"
-                                    value={pam.nombre}
+                                    id="nombre"
+                                    //value={pam.nombre}
                                   />
                                 </div>
                                 <div className="form-group mb-25">
@@ -219,8 +219,8 @@ const FichaAddPam = () => {
                                   <input
                                     type="email"
                                     className="form-control"
-                                    id="name2"
-                                    value={pam.primerApellido}
+                                    id="papellido"
+                                    //value={pam.primerApellido}
                                   />
                                 </div>
                                 <div className="form-group mb-25">
@@ -228,8 +228,8 @@ const FichaAddPam = () => {
                                   <input
                                     type="email"
                                     className="form-control"
-                                    id="name2"
-                                    value={pam.segundoApellido}
+                                    id="sapellido"
+                                    //value={pam.segundoApellido}
                                   />
                                 </div>
                                 <div className="form-group mb-25">
@@ -240,7 +240,7 @@ const FichaAddPam = () => {
                                     type="tel"
                                     className="form-control"
                                     id="phoneNumber5"
-                                    placeholder="+440 2546 5236"
+                                    placeholder="+506 2546 5236"
                                   />
                                 </div>
                                 <div className="form-group mb-25">
@@ -261,21 +261,20 @@ const FichaAddPam = () => {
                                   <div className="cityOption">
                                     <label for="cityOption">Provincia</label>
 
-                                    {/* <select
+                                  <select
                           className="js-example-basic-single js-states form-control"
                           id="cityOption"
                         >
-                          <option value="JAN">San José</option>
-                          <option value="FBR">Alajuela</option>
-                          <option value="JAN">Cartago</option>
-                          <option value="FBR">Heredia</option>
-                        </select> */}
-                                    <input
-                                      type="tel"
-                                      className="form-control"
-                                      id="phoneNumber5"
-                                      value={pam.provincia}
-                                    />
+                          <option value="1">San José</option>
+                          <option value="2">Alajuela</option>
+                          <option value="3">Cartago</option>
+                          <option value="4">Heredia</option>
+                          <option value="5">Guanacaste</option>
+                          <option value="6">Puntarenas</option>
+                          <option value="7">Limón</option>
+                          
+                        </select> 
+                                    
                                   </div>
                                 </div>
                                 <div className="form-group mb-25">
@@ -284,7 +283,7 @@ const FichaAddPam = () => {
                                     type="text"
                                     className="form-control"
                                     id="name3"
-                                    value={pam.canton}
+                                   // value={pam.canton}
                                   />
                                 </div>
                                 <div className="form-group mb-25">
@@ -293,7 +292,7 @@ const FichaAddPam = () => {
                                     type="text"
                                     className="form-control"
                                     id="name3"
-                                    value={pam.distrito}
+                                    //value={pam.distrito}
                                   />
                                 </div>
 
@@ -312,7 +311,7 @@ const FichaAddPam = () => {
                         </div>
                       </div>
                     </div>
-                  ))}
+                  {/* ))} */}
                   <div
                     class="tab-pane fade"
                     id="v-pills-profile"

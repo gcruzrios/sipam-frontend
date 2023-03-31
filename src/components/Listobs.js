@@ -2,7 +2,8 @@ import React from "react";
 import ModalAddobs from "./ModalAddobs";
 import Paginator from "./Paginator";
 import SearchName from "./SearchName";
-import Tablaobs from "./Tablaobs";
+import TablaObs from "./TablaObs";
+
 
 const Listobs = () => {
   return (
@@ -26,7 +27,7 @@ const Listobs = () => {
       <div className="col-lg-12">
         <div className="userDatatable global-shadow border-light-0 p-30 bg-white radius-xl w-100 mb-30">
           <div className="table-responsive">
-           <Tablaobs /> 
+           <TablaObs /> 
            
         </div>
           <Paginator />
