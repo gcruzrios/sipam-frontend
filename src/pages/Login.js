@@ -24,11 +24,6 @@ export const Login = () => {
         const auth_user = {Username:"c0n4p4n$AppSIPAMUser", Password:"c0n4p4n$AppSIPAMpass"}
         const respuesta= await axios.post(`/wsSIPAM/Authenticate`, auth_user);
 
-       // console.log(respuesta);
-
-        const mensaje = respuesta.data.CodError;
-        const mensaje_alerta= respuesta.data.CodRespuesta;
-
         const token = respuesta.data.Token;
                   
         localStorage.setItem('Token', token);

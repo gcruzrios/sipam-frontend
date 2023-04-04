@@ -25,7 +25,7 @@ const Paginator = () => {
                 <span className="page-number">...</span>
               </a>
               <a href="#" className="dm-pagination__link">
-                <span className="page-number">12</span>
+                <span className="page-number">10</span>
               </a>
               <a href="#" className="dm-pagination__link pagination-control">
                 <span className="la la-angle-right"></span>
@@ -35,9 +35,8 @@ const Paginator = () => {
             <li className="dm-pagination__item">
               <div className="paging-option">
                 <select name="page-number" className="page-selection">
-                  <option value="20">20/page</option>
-                  <option value="40">40/page</option>
-                  <option value="60">60/page</option>
+                  <option value="20">25 Registros</option>
+                  <option value="40">50 Registros</option>
                 </select>
               </div>
             </li>

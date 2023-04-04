@@ -124,14 +124,14 @@ const Nav = () => {
                       </a>
                     </li>
                     <li>
-                      <a href="">
+                      <a href="/settings">
                         <i className="uil uil-setting"></i>
                         Configuración
                       </a>
                     </li>
 
                     <li>
-                      <a href="">
+                      <a href="/ayuda">
                         <i className="uil uil-bell"></i> Ayuda
                       </a>
                     </li>

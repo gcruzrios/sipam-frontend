@@ -129,7 +129,7 @@ const TablapamObs = () => {
               <div className="userDatatable-content">{pam.segundoApellido}</div>
             </td>
             <td>
-              <div className="userDatatable-content">{pam.sexo}</div>
+              <div className="userDatatable-content">{pam.sexo===1?'Masculino':'Femenino'} </div>
             </td>
             <td>
               <div className="userDatatable-content">{pam.fechaNacimiento}</div>

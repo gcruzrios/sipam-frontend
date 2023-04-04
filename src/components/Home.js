@@ -16,23 +16,18 @@ import Listpamxobs from './Listpamxobs';
 const Home = () => {
 
     const [esObs, setEsObs] = useState(true);
-  
     const TipoOBS = ()=>{
-
-    //const idOrganizacion = localStorage.getItem('id_organizacion');
-    //const nombreOrganizacion = localStorage.getItem('organizacion');
     const rolUsuario = localStorage.getItem('rolUsuario');
-
     console.log (rolUsuario);
-    if (rolUsuario ==='Coordinador'){
-        setEsObs(true)
-    }else{
-        setEsObs(false)
+      if (rolUsuario ==='Coordinador'){
+          setEsObs(true)
+      }else{
+          setEsObs(false)
+      }
+
+      console.log(esObs);
+
     }
-
-    console.log(esObs);
-
-  }
 
   useEffect(() => {
     TipoOBS();
