@@ -57,7 +57,8 @@ export const Login = () => {
         const idUsuario = response.data.Resultado[0].idUsuario;
         const nombreUsuario = response.data.Resultado[0].nombreCompleto;
         const rolUsuario = response.data.Resultado[0].nombreRol;
-
+        const idOrganizacion = response.data.Resultado[0].idOrganizacion;
+        const organizacion = response.data.Resultado[0].organizacion;
       
         console.log(mensaje);
         console.log(mensaje_alerta);
@@ -83,6 +84,8 @@ export const Login = () => {
             localStorage.setItem('idUsuario',idUsuario );
             localStorage.setItem('nombreUsuario',nombreUsuario );
             localStorage.setItem('rolUsuario',rolUsuario );
+            localStorage.setItem('id_organizacion',idOrganizacion );
+            localStorage.setItem('organizacion',organizacion );
             
             window.location.href='/index'
            

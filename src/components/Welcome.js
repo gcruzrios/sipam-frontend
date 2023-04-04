@@ -13,17 +13,19 @@ const Welcome = () => {
                     Bienvenido a SIPAM
                   </h1>
                   <p class="banner-feature__para color-white">
-                    Sistema de Manejo de Información de las Persona Adulta Mayor
-                    de la Unidad de Fiscalización Operativa (UFO) del CONAPAM
+                    Sistema de Manejo de Información de los Beneficiarios Personas Adulta Mayor
+                    de la Unidad de Fiscalización Operativa (UFO) del CONAPAM.
                     Más información en nuestro sitio web : www.conapam.go.cr
                   </p>
                   <div class="d-flex justify-content-sm-start justify-content-center">
-                    <button
+                    {/* <button
                       class="banner-feature__btn btn btn-primary color-white btn-md px-20 radius-xs fs-15"
                       type="button"
                     >
                       Ver más
-                    </button>
+                    </button> */}
+
+                   <a href="https://conapam.go.cr/acerca-sipam" target="_blank" class="banner-feature__btn btn btn-primary color-white btn-md px-20 radius-xs fs-15" role="button">Ver más</a>
                   </div>
                 </div>
               </div>

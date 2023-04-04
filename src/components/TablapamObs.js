@@ -7,7 +7,7 @@ import {
 
 import axios from "axios";
 
-const Tablapam = () => {
+const TablapamObs = () => {
   const [pamSeleccionado, setpamSeleccionado] = useState({
     
 
@@ -169,5 +169,5 @@ const Tablapam = () => {
   );
 };
 
-export default Tablapam;
+export default TablapamObs;
 

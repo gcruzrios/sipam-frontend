@@ -4,7 +4,7 @@ import Listpam from './Listpam';
 
 import TitleHome from './TitleHome';
 
-const LitsPamxObs = () => {
+const ListPamxObs = () => {
   return (
     <div>
 
@@ -32,4 +32,4 @@ const LitsPamxObs = () => {
   )
 }
 
-export default LitsPamxObs
+export default ListPamxObs

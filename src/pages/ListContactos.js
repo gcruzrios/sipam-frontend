@@ -14,6 +14,7 @@ import Home from "../components/Home.js";
 import Sidebar from "../components/Sidebar";
 import ListaContactos from "../components/ListaContactos.js";
 import TitleList from "../components/TitleUsuarios";
+import TitleContactos from "../components/TitleContactos.js";
 const ListContactos = () => {
   return (
     <div>
@@ -71,7 +72,7 @@ const ListContactos = () => {
 
                   <div class="col-lg-12">
 
-                    <TitleList/>
+                    <TitleContactos/>
 
                   </div>
                   

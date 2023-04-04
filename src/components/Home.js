@@ -1,9 +1,44 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Welcome from "./Welcome";
 import Listobs from './Listobs';
+import ListPam from './Listpam';
 import TitleHome from './TitleHome';
+import ListPamxObs from './ListPamxObs';
+import TitleHomeObs from './TitleHomeObs';
+
+
+
+
+//const esObs = true;
+
 
 const Home = () => {
+
+    const [esObs, setEsObs] = useState(true);
+  
+    const TipoOBS = ()=>{
+
+    //const idOrganizacion = localStorage.getItem('id_organizacion');
+    //const nombreOrganizacion = localStorage.getItem('organizacion');
+    const rolUsuario = localStorage.getItem('rolUsuario');
+
+    console.log (rolUsuario);
+    if (rolUsuario ==='Coordinador'){
+        setEsObs(true)
+    }else{
+        setEsObs(false)
+    }
+
+    console.log(esObs);
+
+  }
+
+  useEffect(() => {
+    TipoOBS();
+
+
+  }, [])
+
   return (
     <div>
 
@@ -16,13 +51,23 @@ const Home = () => {
                  
 
                   <div class="col-lg-12">
-
-                    <TitleHome/>
+                  {esObs ? (
+                      <TitleHomeObs/>
+                    ) : (
+                      <TitleHome/>
+                    )}
+                   
 
                   </div>
                   
                   <div class="col-lg-12">
-                     <Listobs/>
+
+                    {esObs ? (
+                      <ListPamxObs/>
+                    ) : (
+                      <Listobs/>
+                    )}
+                   
                   </div>
                  
                </div>

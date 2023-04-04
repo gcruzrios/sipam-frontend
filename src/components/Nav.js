@@ -8,6 +8,8 @@ const Nav = () => {
   const idUsuario = localStorage.getItem('idUsuario');
   const nombreUsuario = localStorage.getItem('nombreUsuario');
   const rolUsuario = localStorage.getItem('rolUsuario');
+ 
+  
 
   useEffect(() => {
     if (localStorage.getItem("Token")) {
