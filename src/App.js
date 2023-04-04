@@ -37,6 +37,8 @@ import ListaFactoresRc from "./pages/ListaFactoresRc";
 import Calendario from "./pages/Calendario";
 import Adduser from "./pages/Adduser";
 import Configuracion from "./pages/Configuracion";
+import Profile from "./pages/Profile";
+
 
 
 const estaAutenticado = () => {
@@ -94,7 +96,7 @@ function App() {
           <Route exact path='/factoresrc' element={estaAutenticado() ? <ListaFactoresRc/> : <Navigate to="/" />}/>
           <Route exact path='/calendario' element={estaAutenticado() ? <Calendario/> : <Navigate to="/" />}/>
           <Route exact path='/ayuda' element={estaAutenticado() ? <Ayuda/> : <Navigate to="/" />}/>
-          
+          <Route exact path='/profile' element={estaAutenticado() ? <Profile/> : <Navigate to="/" />}/>
           <Route exact path='/settings' element={estaAutenticado() ? <Configuracion/> : <Navigate to="/" />}/>
 
           <Route path="*" element={<NotFound />} />

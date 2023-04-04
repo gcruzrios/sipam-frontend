@@ -119,7 +119,7 @@ const Nav = () => {
                 <div className="nav-author__options">
                   <ul>
                     <li>
-                      <a href="">
+                      <a href="/profile">
                         <i className="uil uil-user"></i> Perfil Usuario
                       </a>
                     </li>

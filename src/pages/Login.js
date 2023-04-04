@@ -69,6 +69,9 @@ export const Login = () => {
 
             const idUsuario = response.data.Resultado[0].idUsuario;
             const nombreUsuario = response.data.Resultado[0].nombreCompleto;
+            const Usuario = response.data.Resultado[0].usuario;
+            const correoUsuario = response.data.Resultado[0].correo;
+            
             const rolUsuario = response.data.Resultado[0].nombreRol;
             const idOrganizacion = response.data.Resultado[0].idOrganizacion;
             const organizacion = response.data.Resultado[0].organizacion;
@@ -77,7 +80,11 @@ export const Login = () => {
             const estado = 'activo';
             localStorage.setItem('Estado', estado);
             localStorage.setItem('idUsuario',idUsuario );
+            localStorage.setItem('Usuario',Usuario );
+            localStorage.setItem('correoUsuario',correoUsuario );
+
             localStorage.setItem('nombreUsuario',nombreUsuario );
+
             localStorage.setItem('rolUsuario',rolUsuario );
             localStorage.setItem('idOrganizacion',idOrganizacion );
             localStorage.setItem('organizacion',organizacion );
