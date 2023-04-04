@@ -43,20 +43,15 @@ export const Login = () => {
 
           
         const response= await axios.post(`/wsSIPAM/GetUsuario`,ingreso,{headers:{Authorization:'Bearer '+Token}})
-        console.log(response);
+        //console.log(response);
 
       
         const mensaje = response.data.CodigoResultado;
         const mensaje_alerta= response.data.MensajeResultado;
-
-        const idUsuario = response.data.Resultado[0].idUsuario;
-        const nombreUsuario = response.data.Resultado[0].nombreCompleto;
-        const rolUsuario = response.data.Resultado[0].nombreRol;
-        const idOrganizacion = response.data.Resultado[0].idOrganizacion;
-        const organizacion = response.data.Resultado[0].organizacion;
-      
         console.log(mensaje);
         console.log(mensaje_alerta);
+
+                 
         
 
       
@@ -71,7 +66,12 @@ export const Login = () => {
             })
 
         }else{
-            
+
+            const idUsuario = response.data.Resultado[0].idUsuario;
+            const nombreUsuario = response.data.Resultado[0].nombreCompleto;
+            const rolUsuario = response.data.Resultado[0].nombreRol;
+            const idOrganizacion = response.data.Resultado[0].idOrganizacion;
+            const organizacion = response.data.Resultado[0].organizacion;
            
                    
             const estado = 'activo';
