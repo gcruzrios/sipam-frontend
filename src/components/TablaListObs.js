@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Swal from 'sweetalert2';
-import Tablaobs from "./TablaObs";
+import Tablaobs from "./Tablaobs";
 
 
-const TablaObs = () => {
+const TablaListObs = () => {
 
   
   
@@ -125,4 +125,4 @@ const TablaObs = () => {
   );
 };
 
-export default TablaObs;
+export default TablaListObs;

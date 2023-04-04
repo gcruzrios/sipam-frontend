@@ -12,7 +12,9 @@ import Header from '../components/Header.js';
 import Footer from '../components/Footer.js';
 import Home from '../components/Home.js';
 import Sidebar from '../components/Sidebar';
-import TablaObs from '../components/TablaObs';
+import Tablaobs from '../components/Tablaobs';
+import ContentObs from '../components/ContentObs.js';
+import Listobs from '../components/Listobs.js';
 
 const ListObs = () => {
   return (
@@ -60,7 +62,8 @@ const ListObs = () => {
           </div>
         </div>
               <div className="contents">
-              <TablaObs/>
+
+              <Listobs/>
 
               
               </div>

@@ -1,12 +1,15 @@
 import React from "react";
 
-const SearchName = () => {
+const SearchNameObs = () => {
+
+  const nombreObs = localStorage.getItem("organizacion");
+
   return (
     <div>
       <div className=" d-flex flex-wrap justify-content-center breadcrumb-main__wrapper">
         <div className="d-flex align-items-center user-member__title justify-content-center me-sm-25">
           <h4 className="text-capitalize fw-500 breadcrumb-title">
-            Listado PAM
+            Listado PAM de ( {nombreObs})
           </h4>
           <span className="sub-title ms-sm-25 ps-sm-25">INICIO</span>
         </div>
@@ -28,5 +31,5 @@ const SearchName = () => {
   );
 };
 
-export default SearchName;
+export default SearchNameObs;
 

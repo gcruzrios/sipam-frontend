@@ -84,7 +84,7 @@ export const Login = () => {
             localStorage.setItem('idUsuario',idUsuario );
             localStorage.setItem('nombreUsuario',nombreUsuario );
             localStorage.setItem('rolUsuario',rolUsuario );
-            localStorage.setItem('id_organizacion',idOrganizacion );
+            localStorage.setItem('idOrganizacion',idOrganizacion );
             localStorage.setItem('organizacion',organizacion );
             
             window.location.href='/index'

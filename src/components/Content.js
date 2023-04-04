@@ -14,14 +14,10 @@ const Content = () => {
 
                                  
 
-                  <div class="col-lg-12">
-
-                    {/* <TitleContent/> */}
-
-                  </div>
+                
                   
                   <div class="col-lg-12">
-                    <Listpamxobs/>
+                     <Listpamxobs/> 
                   </div>
                  
                </div>

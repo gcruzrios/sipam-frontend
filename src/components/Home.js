@@ -3,8 +3,9 @@ import Welcome from "./Welcome";
 import Listobs from './Listobs';
 import ListPam from './Listpam';
 import TitleHome from './TitleHome';
-import ListPamxObs from './ListPamxObs';
+//import ListPamxObs from './ListPamxObs';
 import TitleHomeObs from './TitleHomeObs';
+import Listpamxobs from './Listpamxobs';
 
 
 
@@ -63,7 +64,7 @@ const Home = () => {
                   <div class="col-lg-12">
 
                     {esObs ? (
-                      <ListPamxObs/>
+                      <Listpamxobs/>
                     ) : (
                       <Listobs/>
                     )}

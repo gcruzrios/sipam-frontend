@@ -1,10 +1,11 @@
 import React from 'react'
+import ListpamObs from './ListpamObs';
 
-import Listpam from './Listpam';
+//import Listpam from './Listpam';
 
 import TitleHome from './TitleHome';
 
-const LitsPamxObs = () => {
+const Listpamxobs = () => {
   return (
     <div>
 
@@ -20,7 +21,7 @@ const LitsPamxObs = () => {
                   </div>
                   
                   <div class="col-lg-12">
-                     <Listpam/>
+                  <ListpamObs/>
                   </div>
                  
                </div>
@@ -32,4 +33,4 @@ const LitsPamxObs = () => {
   )
 }
 
-export default LitsPamxObs
+export default Listpamxobs
