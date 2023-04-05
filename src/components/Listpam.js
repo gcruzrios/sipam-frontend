@@ -30,7 +30,7 @@ const Listpam = () => {
            <Tablapam /> 
            
         </div>
-          <Paginator />
+         
         </div>
       </div>
     </>

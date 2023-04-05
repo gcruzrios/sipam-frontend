@@ -33,7 +33,7 @@ const ListpamObs = () => {
            {/* <Tablapam />  */}
            <TablapamxObs />
         </div>
-          <Paginator />
+          
         </div>
       </div>
     </>
