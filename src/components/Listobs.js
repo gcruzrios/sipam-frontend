@@ -30,7 +30,7 @@ const Listobs = () => {
            <Tablaobs /> 
            
         </div>
-          <Paginator />
+         
         </div>
       </div>
     </>
