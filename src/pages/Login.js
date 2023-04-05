@@ -158,12 +158,12 @@ export const Login = () => {
                                 </div>
                             
                                 <div className="admin-topbar">
-                                <p className="mb-0">
+                                {/* <p className="mb-0">
                                     No tiene cuenta aún?
                                     
                                     <Link  className="menu-text" to={`/registro`}>  Registrarse</Link>
                                     
-                                </p>
+                                </p> */}
                                 
                                 </div>
                                 
