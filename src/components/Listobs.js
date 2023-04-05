@@ -29,7 +29,7 @@ const Listobs = () => {
            <Tablaobs /> 
            
         </div>
-          <Paginator />
+          {/*<Paginator />*/}
         </div>
       </div>
     </>

@@ -4,6 +4,8 @@ import Swal from 'sweetalert2';
 import { Link } from "react-router-dom";
 
 import axios from "axios";
+import ReactPaginate from 'react-paginate';
+
 
 const Tablaobs = () => {
   const [obsSeleccionado, setobsSeleccionado] = useState({
@@ -77,6 +79,7 @@ const Tablaobs = () => {
     console.log(obsSeleccionado);
   };
 
+
   useEffect(() => {
     peticionGet();
   }, []);
@@ -85,8 +88,20 @@ const Tablaobs = () => {
   //   await peticionGet();
   // }, []);
 
+  const [currentPage, setCurrentPage] = useState(0);
+
+  const itemsPerPage = 10;
+
+  const handlePageChange = ({ selected }) => {
+    setCurrentPage(selected);
+  };
+
+  const startIndex = currentPage * itemsPerPage;
+  const selectedItems = data.slice(startIndex, startIndex + itemsPerPage);
+
   return (
     <div>
+
       <table className="table mb-0 table-borderless">
         <thead>
           <tr className="userDatatable-header">
@@ -117,7 +132,7 @@ const Tablaobs = () => {
           </tr>
         </thead>
         <tbody>
-          {data.map((obs) => (
+          {selectedItems.map((obs) => (
             <tr key={obs.idOrganizacion}>
               {/* data */}
               {/* <TableData /> */}
@@ -181,14 +196,14 @@ const Tablaobs = () => {
                   <li>
 
 
-                   
-                     <Link  
+
+                    <Link
                       className="btn remove"
                       to={`/removeobs/${obs.identificacion}`}
-                      >
+                    >
                       {" "}
                       <i className="uil uil-trash-alt"></i>{" "}
-                    </Link> 
+                    </Link>
                   </li>
                 </ul>
               </td>
@@ -196,6 +211,18 @@ const Tablaobs = () => {
           ))}
         </tbody>
       </table>
+
+      <ReactPaginate
+        pageCount={Math.ceil(data.length / itemsPerPage)}
+        marginPagesDisplayed={2}
+        pageRangeDisplayed={5}
+        onPageChange={handlePageChange}
+        containerClassName={'pagination'}
+        activeClassName={'active'}
+        previousLabel={'Anterior'}
+        nextLabel={'Siguiente'}
+      />
+
     </div>
   );
 };
