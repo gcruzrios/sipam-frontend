@@ -17919,7 +17919,7 @@ td.order-summery .total > div {
   }
 }
 .wizard10 .payment-success-modal .modal-dialog {
-  width: 420px;
+  width: 620px;
 }
 .wizard10 .payment-success-modal p {
   font-size: 14px;
@@ -21891,7 +21891,7 @@ table.table-rounded tbody tr td:last-child {
 
 @media (min-width: 576px) {
   .fileM-sidebar .modal-dialog {
-    max-width: 390px;
+    max-width: 590px;
     margin: 1.75rem auto;
   }
 }
@@ -21953,7 +21953,7 @@ table.table-rounded tbody tr td:last-child {
   padding-left: 60px;
 }
 .exportDatatable .modal-dialog {
-  max-width: 390px;
+  max-width: 490px;
 }
 .exportDatatable .fileM-Modal-overlay .modal-body input {
   border: 1px solid var(--border-color);
@@ -23461,7 +23461,7 @@ table.table-rounded tbody tr td:last-child {
 }
 @media (min-width: 576px) {
   .task-modal .modal-dialog {
-    max-width: 390px;
+    max-width: 490px;
     margin: 1.75rem auto;
   }
 }

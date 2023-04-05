@@ -1,5 +1,6 @@
 import React from "react";
-import Addobs from "./ModalAddobs";
+
+import ModalAddpam from "./ModalAddpam";
 import Paginator from "./Paginator";
 import SearchNameObs from "./SearchNameObs";
 
@@ -22,7 +23,7 @@ const ListpamObs = () => {
             >
               <i className="las la-plus fs-16"></i>Agregar PAM
             </a>
-            <Addobs />
+            <ModalAddpam />
           </div>
         </div>
       </div>
