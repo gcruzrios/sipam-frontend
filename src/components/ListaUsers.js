@@ -32,7 +32,7 @@ const ListaUsers = () => {
            <TablaUsers/> 
            
         </div>
-          <Paginator />
+          
         </div>
       </div>
     </>

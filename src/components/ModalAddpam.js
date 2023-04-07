@@ -148,7 +148,7 @@ const ModalAddpam = () => {
                       </div>
                     </div>
                     <div className="mb-3"></div>
-                    <form onSubmit={ getDataPam }>
+                    {/* <form onSubmit={ getDataPam }> */}
                     {/* <div class="col-md-6 form-group mb-20">
                     <input
                       type="text"
@@ -167,7 +167,7 @@ const ModalAddpam = () => {
                       <input
                         type="text"
                         class="form-control"
-                        placeholder="Cédula"
+                        placeholder="Cédula con ceros sin guiones"
                         id="cedula"
                         name="cedula"
                         onChange={(e)=>setCedula(e.target.value)}
@@ -176,6 +176,7 @@ const ModalAddpam = () => {
                         <div className="layout-button mt-10 ">
                           <button
                             type="submit"
+                            onSubmit={getDataPam} 
                             className="btn btn-primary btn-default btn-squared px-30"
                           >
                             Consultar
@@ -183,7 +184,7 @@ const ModalAddpam = () => {
                         </div>
                       </div>
                     </div>
-                    </form>
+                    {/* </form> */}
                     <div class="form-group mb-20">
                       <input
                         type="text"
