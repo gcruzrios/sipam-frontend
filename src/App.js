@@ -38,6 +38,7 @@ import Calendario from "./pages/Calendario";
 import Adduser from "./pages/Adduser";
 import Configuracion from "./pages/Configuracion";
 import Profile from "./pages/Profile";
+import RecordarPass from "./pages/RecodarPass";
 
 
 
@@ -73,7 +74,7 @@ function App() {
           <Route exact path="/register" element={<Registro />} />
           <Route exact path="/acerca" element={<AcercaDe />} />
           <Route exact path="/contactos" element={<Contacto />} />
-
+          <Route exact path='/recordarpassword' element={<RecordarPass/> }/>
           {/* <Route exact path="/listpam" element={<Listpam />} /> */}
           {/* <Route exact path="/listpam" element={estaAutenticado() ? <Listpam /> : <Navigate to="/" />}/> */}
           <Route exact path='/listobs' element={estaAutenticado() ? <ListObs /> : <Navigate to="/" /> } />
@@ -98,6 +99,8 @@ function App() {
           <Route exact path='/ayuda' element={estaAutenticado() ? <Ayuda/> : <Navigate to="/" />}/>
           <Route exact path='/profile' element={estaAutenticado() ? <Profile/> : <Navigate to="/" />}/>
           <Route exact path='/settings' element={estaAutenticado() ? <Configuracion/> : <Navigate to="/" />}/>
+          
+         
 
           <Route path="*" element={<NotFound />} />
         </Routes>

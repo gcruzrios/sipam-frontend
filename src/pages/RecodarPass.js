@@ -10,8 +10,9 @@ import MobileSearch from "../components/MobileSearch.js";
 import NotFound from "../components/NotFound.js";
 
 import AcercaDe from "../components/AcercaDe.js";
+import FormRecordarpassword from "../components/FormRecordarpassword.js";
 
-const Acerca = () => {
+const RecordarPass = () => {
   return (
     <div>
      <MobileSearch />
@@ -56,7 +57,7 @@ const Acerca = () => {
         <div className="contents">
           {/* <!-- Home.js --> */}
           
-          <AcercaDe/>
+          <FormRecordarpassword/>
         </div>
         <Footer />
         {/* <!-- Footer.js --> */}
@@ -77,5 +78,5 @@ const Acerca = () => {
   );
 };
 
-export default Acerca;
+export default RecordarPass;
 
