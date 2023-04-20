@@ -44,13 +44,14 @@ const Addpam = () => {
               </a>
             </div>
             <div className="top-menu">
-              <Nav />
+              
             </div>
           </div>
           {/* <!-- ends: navbar-left --> */}
 
           <div className="navbar-right">{/* <!-- navigation nav.js --> */}</div>
           {/* <!-- ends: .navbar-right --> */}
+          <Nav />
         </nav>
       </header>
       <main className="main-content">
