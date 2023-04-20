@@ -39,6 +39,8 @@ import Adduser from "./pages/Adduser";
 import Configuracion from "./pages/Configuracion";
 import Profile from "./pages/Profile";
 import RecordarPass from "./pages/RecodarPass";
+import Addsolicitud from "./pages/Addsolicitud";
+import IndiceInec from "./pages/IndiceInec";
 
 
 
@@ -83,7 +85,7 @@ function App() {
           <Route exact path="/agregarpam" element={estaAutenticado() ? <Addpam /> : <Navigate to="/" />}/>
           <Route exact path="/agregarobs" element={estaAutenticado() ? <Addobs /> : <Navigate to="/" />}/>
           <Route exact path="/agregaruser" element={estaAutenticado() ? <Adduser /> : <Navigate to="/" />}/>
-
+          <Route exact path="/agregarsolicitud" element={estaAutenticado() ? <Addsolicitud /> : <Navigate to="/" />}/>
           <Route exact path='/detallepam/:id' element={estaAutenticado() ? <Detallepam /> : <Navigate to="/" />}/>
           <Route exact path='/detalleobs/:id' element={estaAutenticado() ? <Detalleobs /> : <Navigate to="/" />}/>
           <Route exact path='/googlemaps/:id' element={estaAutenticado() ? <GoogleMapsPam/> : <Navigate to="/" />}/>
@@ -99,6 +101,7 @@ function App() {
           <Route exact path='/ayuda' element={estaAutenticado() ? <Ayuda/> : <Navigate to="/" />}/>
           <Route exact path='/profile' element={estaAutenticado() ? <Profile/> : <Navigate to="/" />}/>
           <Route exact path='/settings' element={estaAutenticado() ? <Configuracion/> : <Navigate to="/" />}/>
+          <Route exact path='/indiceinec' element={estaAutenticado() ? <IndiceInec/> : <Navigate to="/" />}/>
           
          
 
