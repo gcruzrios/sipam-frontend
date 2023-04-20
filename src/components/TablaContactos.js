@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import {
   Link
 } from "react-router-dom";
+import ReactPaginate from 'react-paginate';
 
 
 import axios from "axios";
@@ -67,9 +68,17 @@ const TablaContactos = () => {
     peticionGet();
   }, []);
 
-  // useEffect(async () => {
-  //   await peticionGet();
-  // }, []);
+  const [currentPage, setCurrentPage] = useState(0);
+
+  const itemsPerPage = 20;
+
+  const handlePageChange = ({ selected }) => {
+    setCurrentPage(selected);
+  };
+
+  const startIndex = currentPage * itemsPerPage;
+  const selectedItems = data.slice(startIndex, startIndex + itemsPerPage);
+
 
   return (
     <div>
@@ -101,7 +110,7 @@ const TablaContactos = () => {
           </tr>
         </thead>
         <tbody>
-          {data.map(usuario=>(
+          {selectedItems.map(usuario=>(
           <tr key={usuario.CODIGO}>
             {/* data */}
             {/* <TableData /> */}
@@ -153,6 +162,18 @@ const TablaContactos = () => {
           ))}
         </tbody>
       </table>
+      <div className="d-flex justify-content-center pt-30">
+        <ReactPaginate
+          pageCount={Math.ceil(data.length / itemsPerPage)}
+          marginPagesDisplayed={2}
+          pageRangeDisplayed={5}
+          onPageChange={handlePageChange}
+          containerClassName={'pagination'}
+          activeClassName={'active'}
+          previousLabel={'Anterior'}
+          nextLabel={'Siguiente'}
+        />
+        </div>
     </div>
   );
 };

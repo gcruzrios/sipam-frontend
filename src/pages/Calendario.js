@@ -62,7 +62,7 @@ const Calendario = () => {
           </div>
         </div>
               <div className="contents">
-             {/* <Calendar/>  */}
+             <Calendar/> 
 
               
               </div>

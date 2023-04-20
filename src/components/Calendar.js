@@ -210,7 +210,8 @@ const Calendar = () => {
                             className="svg"
                             src="/img/svg/chevron-right.svg"
                             alt="chevron-right.svg"
-                          />
+                          >
+                          </img>
                         </span>
                         <input
                           type="text"
@@ -225,7 +226,8 @@ const Calendar = () => {
                             className="svg"
                             src="/img/svg/clock.svg"
                             alt="clock"
-                          />
+                          >
+                          </img>
                         </span>
                         <input
                           type="text"
@@ -248,7 +250,8 @@ const Calendar = () => {
                             className="svg"
                             src="/img/svg/chevron-right.svg"
                             alt="chevron-right.svg"
-                          />
+                          >
+                          </img>
                         </span>
                         <input
                           type="text"
@@ -263,7 +266,8 @@ const Calendar = () => {
                             className="svg"
                             src="/img/svg/clock.svg"
                             alt="clock"
-                          />
+                          >
+                          </img>
                         </span>
                         <input
                           type="text"
@@ -325,13 +329,13 @@ const Calendar = () => {
               <h6 className="modal-title e-info-title">Project Update</h6>
               <div className="e-info-action">
                 <button className="btn-icon">
-                  <img className="svg" src="/img/svg/edit.svg" alt="edit" />
+                  <img className="svg" src="/img/svg/edit.svg" alt="edit" ></img>
                 </button>
                 <button className="btn-icon">
-                  <img className="svg" src="/img/svg/mail.svg" alt="mail" />
+                  <img className="svg" src="/img/svg/mail.svg" alt="mail"></img>
                 </button>
                 <button className="btn-icon">
-                  <img className="svg" src="/img/svg/trash-2.svg" alt="trash" />
+                  <img className="svg" src="/img/svg/trash-2.svg" alt="trash" ></img>
                 </button>
                 <button
                   type="button"
@@ -351,8 +355,7 @@ const Calendar = () => {
                     src="/img/svg/chevron-right.svg"
                     alt="chevron-right.svg"
                   >
-                    {" "}
-                    /
+                                        
                   </img>
                   <span className="list-line">
                     <span className="list-label">Date :</span>
@@ -360,7 +363,7 @@ const Calendar = () => {
                   </span>
                 </li>
                 <li>
-                  <img className="svg" src="/img/svg/clock.svg" alt="clock" />
+                  <img className="svg" src="/img/svg/clock.svg" alt="clock" ></img>
                   <span className="list-line">
                     <span className="list-label">Time :</span>
                     <span className="list-meta"> 23⋅5:00 – 6:00 am</span>
@@ -371,7 +374,7 @@ const Calendar = () => {
                     className="svg"
                     src="/img/svg/align-left.svg"
                     alt="align-left"
-                  />
+                  ></img>
                   <span className="list-line">
                     <span className="list-text">
                       {" "}

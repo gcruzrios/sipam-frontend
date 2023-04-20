@@ -10,11 +10,18 @@ const ConsultaPam = () => {
   const [mensaje, setMensaje] = useState("");
 
   const [usuarioSeleccionado, setUsuarioSeleccionado] = useState({
-    CEDULA: "",
-    FECHACADUC: "",
-    NOMBRE: "",
-    PRIMER_APELLIDO: "",
-    SEGUNDO_APELLIDO: ""
+    Identificacion: "",
+    Nombre: "",
+    Apellido1: "",
+    Apellido2: "",
+    Fecha_Caducidad: "",
+    Fecha_Defuncion: "",
+    Fecha_Nacimiento: "",
+    Genero: "",
+    Indice_Estado_Civil: "",
+    Nacionalidad: "COSTARRICENSE",
+    indicadorFallecido: "0",
+    Edad: ""
   });
 
   const getDataPam = async (e) => {
@@ -31,7 +38,7 @@ const ConsultaPam = () => {
     console.log(cedula);
 
    await axios
-      .post("/wsSIPAM/GetPersonaPadron", cedula_pam, {
+      .post("/wsSIPAM/ConsultarWSTSE", cedula_pam, {
         headers: { Authorization: "Bearer " + Token },
       })
 
@@ -45,10 +52,14 @@ const ConsultaPam = () => {
       //    console.log(data);
       //   
            setUsuarioSeleccionado(response.data.Resultado);
-           document.getElementById("identificacion").value = usuarioSeleccionado.CEDULA;
-           document.getElementById("nombre").value = usuarioSeleccionado.NOMBRE;
-           document.getElementById("papellido").value = usuarioSeleccionado.PRIMER_APELLIDO;
-           document.getElementById("sapellido").value = usuarioSeleccionado.SEGUNDO_APELLIDO;
+           document.getElementById("identificacion").value = usuarioSeleccionado.Identificacion;
+           document.getElementById("nombre").value = usuarioSeleccionado.Nombre;
+           document.getElementById("papellido").value = usuarioSeleccionado.Apellido1;
+           document.getElementById("sapellido").value = usuarioSeleccionado.Apellido2;
+           document.getElementById("Nacionlidad").value = usuarioSeleccionado.Nacionalidad;
+           document.getElementById("Indice_Estado_Civil").value = usuarioSeleccionado.Indice_Estado_Civil;
+           document.getElementById("Fecha_Nacimiento").value = usuarioSeleccionado.Fecha_Nacimiento;
+           document.getElementById("Edad").value = usuarioSeleccionado.Edad;
       });
 
     console.log(usuarioSeleccionado);
@@ -196,7 +207,7 @@ const ConsultaPam = () => {
               <div className="card-body py-md-30">
                 <form>
                   <div className="row">
-                    <div className="col-md-3 mb-25">
+                    <div className="col-md-2 mb-25">
                       <input
                         type="text"
                         className="form-control ih-medium ip-gray radius-xs b-light px-15"
@@ -207,7 +218,7 @@ const ConsultaPam = () => {
 
                       />
                     </div>
-                    <div className="col-md-9 mb-25">
+                    <div className="col-md-6 mb-25">
                       <input
                         type="text"
                         className="form-control ih-medium ip-gray radius-xs b-light px-15"
@@ -236,11 +247,41 @@ const ConsultaPam = () => {
                     </div>
                     <div className="col-md-6 mb-25">
                       <input
-                        type="email"
+                        type="text"
                         className="form-control ih-medium ip-gray radius-xs b-light px-15"
-                        placeholder="Correo Electrónico"
+                        placeholder="Nacionalidad"
+                        id="nacionalidad"
+                        value={usuarioSeleccionado.Nacionalidad}
                       />
                     </div>
+                    <div className="col-md-6 mb-25">
+                      <input
+                        type="text"
+                        className="form-control ih-medium ip-gray radius-xs b-light px-15"
+                        placeholder="Estado Civil"
+                        id="Indice_Estado_Civil"
+                        value={usuarioSeleccionado.Indice_Estado_Civil}
+                      />
+                    </div>
+                    <div className="col-md-6 mb-25">
+                      <input
+                        type="text"
+                        className="form-control ih-medium ip-gray radius-xs b-light px-15"
+                        placeholder="Fecha_Nacimiento"
+                        id="Fecha_Nacimiento"
+                        value={usuarioSeleccionado.Fecha_Nacimiento}
+                      />
+                    </div>
+                    <div className="col-md-2 mb-25">
+                      <input
+                        type="text"
+                        className="form-control ih-medium ip-gray radius-xs b-light px-15"
+                        placeholder="Edad"
+                        id="Edad"
+                        value={usuarioSeleccionado.Edad}
+                      />
+                    </div>
+
                     <h3>Dirección PAM</h3>
                     <div className="col-md-3 mt-25 mb-25">
                       <input
