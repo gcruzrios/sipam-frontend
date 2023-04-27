@@ -117,6 +117,9 @@ const Tablaobs = () => {
               <span className="userDatatable-title">Region</span>
             </th>
             <th>
+              <span className="userDatatable-title">Modalidad</span>
+            </th>
+            <th>
               <span className="userDatatable-title">correo Organizacion</span>
             </th>
             <th>
@@ -157,6 +160,10 @@ const Tablaobs = () => {
               <td>
                 <div className="userDatatable-content">{obs.region}</div>
               </td>
+              <td>
+                <div className="userDatatable-content">{obs.modalidadAtencion}</div>
+              </td>
+              
               <td>
                 <div className="userDatatable-content">
                   {obs.correoOrganizacion}

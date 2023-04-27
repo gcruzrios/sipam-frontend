@@ -76,7 +76,8 @@ export const Login = () => {
             const idOrganizacion = response.data.Resultado[0].idOrganizacion;
             const organizacion = response.data.Resultado[0].organizacion;
            
-                   
+            const estadoUsuario = response.data.Resultado[0].estado;
+
             const estado = 'activo';
             localStorage.setItem('Estado', estado);
             localStorage.setItem('idUsuario',idUsuario );
@@ -84,7 +85,7 @@ export const Login = () => {
             localStorage.setItem('correoUsuario',correoUsuario );
 
             localStorage.setItem('nombreUsuario',nombreUsuario );
-
+            localStorage.setItem('estadoUsuario',estadoUsuario );
             localStorage.setItem('rolUsuario',rolUsuario );
             localStorage.setItem('idOrganizacion',idOrganizacion );
             localStorage.setItem('organizacion',organizacion );

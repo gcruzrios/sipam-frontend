@@ -25,9 +25,6 @@ const FormProfile = () => {
   const getDataPam = async (e) => {
     e.preventDefault();
 
-    // {
-    //   "cedula": "109120518"
-    // }
 
     const cedula_pam = { cedula: cedula };
  

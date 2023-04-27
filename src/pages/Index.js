@@ -56,6 +56,9 @@ const Index = () => {
 
         <div className="contents">
           {/* <!-- Home.js --> */}
+
+
+          
           <Home />
         </div>
         <Footer />

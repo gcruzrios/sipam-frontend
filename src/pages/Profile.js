@@ -10,7 +10,7 @@ import MobileSearch from "../components/MobileSearch.js";
 import NotFound from "../components/NotFound.js";
 
 
-import FormProfile from "../components/FormProfile.js";
+import FormProfileNuevo from "../components/FormProfileNuevo.js";
 
 const Configuracion = () => {
   return (
@@ -57,7 +57,7 @@ const Configuracion = () => {
         <div className="contents">
           {/* <!-- Home.js --> */}
           
-          <FormProfile/>
+          <FormProfileNuevo/>
         </div>
         <Footer />
         {/* <!-- Footer.js --> */}

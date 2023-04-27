@@ -6,7 +6,9 @@ import TitleHome from './TitleHome';
 //import ListPamxObs from './ListPamxObs';
 import TitleHomeObs from './TitleHomeObs';
 import Listpamxobs from './Listpamxobs';
-
+import ModalChangePassword from './ModaChangePassword';
+import NoModal from './NoModal';
+import Swal from 'sweetalert2';
 
 
 
@@ -14,26 +16,72 @@ import Listpamxobs from './Listpamxobs';
 
 
 const Home = () => {
-
-    const [esObs, setEsObs] = useState(true);
-    const TipoOBS = ()=>{
     const rolUsuario = localStorage.getItem('rolUsuario');
-    console.log (rolUsuario);
-      if (rolUsuario ==='Coordinador'){
-          setEsObs(true)
-      }else{
-          setEsObs(false)
-      }
+    const estadoUsuario = localStorage.getItem('estadoUsuario');
+    const [esObs, setEsObs] = useState(true);
+    const [changePassword, setChangePassword] = useState(false);
+    console.log(changePassword);
+    
+    
 
-      console.log(esObs);
+    console.log (rolUsuario);
+
+    const ChangePassword = ()=>{
+    
+  
+      if (estadoUsuario ==='A'){
+          setChangePassword(true)
+        }else{
+          setChangePassword(false)
+        }
+
+        console.log(changePassword);
 
     }
 
-  useEffect(() => {
-    TipoOBS();
 
+
+  
+    
+    
+    const TipoOBS = ()=>{
+    
+  
+      if (rolUsuario ==='Coordinador'){
+            setEsObs(true)
+        }else{
+            setEsObs(false)
+        }
+
+        //console.log(esObs);
+
+    }
+
+    
+
+    useEffect(() => {
+    
+      TipoOBS();
+      ChangePassword();
+
+      if (changePassword){
+
+        Swal.fire({
+               
+          icon: 'error',
+          title: 'Cambiar Password',
+          showConfirmButton: false,
+          timer: 1500
+      })
+        // <ModalChangePassword/>
+
+      }
+      
 
   }, [])
+
+
+
 
   return (
     <div>
@@ -47,6 +95,12 @@ const Home = () => {
                  
 
                   <div class="col-lg-12">
+
+                  
+                   
+
+
+
                   {esObs ? (
                       <TitleHomeObs/>
                     ) : (
