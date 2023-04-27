@@ -69,7 +69,7 @@ const Home = () => {
         Swal.fire({
                
           icon: 'error',
-          title: 'Cambiar Password',
+          title: 'Por Favor Cambiar el Password',
           showConfirmButton: false,
           timer: 1500
       })
