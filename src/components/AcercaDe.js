@@ -16,6 +16,11 @@ const AcercaDe = () => {
                 to={`/index`}
                 className="btn btn-primary btn-default btn-squared px-30"
               >
+                ACERCA DE SIPAM Versión 2.0.0
+
+                El sistema de Información de la Persona Adulta Mayor de CONAPAM
+
+
                 Regresar al inicio{" "}
               </Link>
             </div>
