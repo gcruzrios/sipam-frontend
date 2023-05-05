@@ -24,7 +24,7 @@ const Home = () => {
     
     
 
-    console.log (rolUsuario);
+    //console.log (rolUsuario);
 
     const ChangePassword = ()=>{
     
