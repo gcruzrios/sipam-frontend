@@ -36,7 +36,7 @@ export const Login = () => {
 
         console.log(Token);
 
-        const response = await axios.post(`/wsSIPAM/GetUsuario`, ingreso, { headers: { Authorization: 'Bearer ' + Token } }, false)
+        const response = await axios.post(`/wsSIPAM/GetUsuario`, ingreso, { headers: { Authorization: 'Bearer ' + Token } })
 
         const mensaje = response.data.CodigoResultado;
         const mensaje_alerta = response.data.MensajeResultado;
@@ -51,12 +51,19 @@ export const Login = () => {
             const idUsuario = response.data.Resultado[0].idUsuario;
             const nombreUsuario = response.data.Resultado[0].nombreCompleto;
             const rolUsuario = response.data.Resultado[0].nombreRol;
+            const estadoUsuario = response.data.Resultado[0].estado;
+
+
+            console.log("EstadoLogin: " + estadoUsuario)
+
+
 
             const estado = 'activo';
-            localStorage.setItem('Estado', estado);
+            localStorage.setItem('Estado', estadoUsuario);
             localStorage.setItem('idUsuario', idUsuario);
             localStorage.setItem('nombreUsuario', nombreUsuario);
             localStorage.setItem('rolUsuario', rolUsuario);
+            
 
             window.location.href = '/index'
 

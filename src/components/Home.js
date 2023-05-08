@@ -16,67 +16,83 @@ import Swal from 'sweetalert2';
 
 
 const Home = () => {
-    const rolUsuario = localStorage.getItem('rolUsuario');
-    const estadoUsuario = localStorage.getItem('estadoUsuario');
-    const [esObs, setEsObs] = useState(true);
-    const [changePassword, setChangePassword] = useState(false);
+  const rolUsuario = localStorage.getItem('rolUsuario');
+  const estadoUsuario = localStorage.getItem('Estado');
+
+  const [esObs, setEsObs] = useState(true);
+  const [changePassword, setChangePassword] = useState(false);
+  console.log(changePassword);
+
+
+
+  //console.log (rolUsuario);
+
+  const ChangePassword = () => {
+
+    console.log("EstadoUser: " + estadoUsuario);
+    if (estadoUsuario === 'A') {
+      setChangePassword(true)
+    } else {
+      setChangePassword(false)
+    }
+
     console.log(changePassword);
-    
-    
 
-    //console.log (rolUsuario);
+  }
 
-    const ChangePassword = ()=>{
-    
-  
-      if (estadoUsuario ==='A'){
-          setChangePassword(true)
-        }else{
-          setChangePassword(false)
-        }
 
-        console.log(changePassword);
+
+
+
+
+  const TipoOBS = () => {
+
+
+    if (rolUsuario === 'Coordinador') {
+      setEsObs(true)
+    } else {
+      setEsObs(false)
+    }
+
+    //console.log(esObs);
+
+  }
+
+
+
+  useEffect(() => {
+
+    ChangePassword();
+    console.log("cambiar Pass: " + changePassword);
+
+
+    TipoOBS();
+
+
+
+
+
+    if (!changePassword) {
+
+      Swal.fire({
+
+        icon: 'error',
+        title: 'Por Favor Cambiar el Password',
+        showConfirmButton: false,
+        //timer: 1500,
+        timer: 5000,
+        timerProgressBar: true,
+        didOpen: () => {
+          Swal.showLoading();
+        },
+        willClose: () => {
+          window.location.href = '/Profile';
+        },
+      });
+      // <ModalChangePassword/>
 
     }
 
-
-
-  
-    
-    
-    const TipoOBS = ()=>{
-    
-  
-      if (rolUsuario ==='Coordinador'){
-            setEsObs(true)
-        }else{
-            setEsObs(false)
-        }
-
-        //console.log(esObs);
-
-    }
-
-    
-
-    useEffect(() => {
-    
-      TipoOBS();
-      ChangePassword();
-
-      if (changePassword){
-
-        Swal.fire({
-               
-          icon: 'error',
-          title: 'Por Favor Cambiar el Password',
-          showConfirmButton: false,
-          timer: 1500
-      })
-        // <ModalChangePassword/>
-
-      }
-      
 
   }, [])
 
@@ -86,44 +102,44 @@ const Home = () => {
   return (
     <div>
 
-        <div class="crm mb-25">
-            <div class="container-fluid">
-               <div class="row ">
+      <div class="crm mb-25">
+        <div class="container-fluid">
+          <div class="row ">
 
-                 <Welcome/>
-
-                 
-
-                  <div class="col-lg-12">
-
-                  
-                   
+            <Welcome />
 
 
 
-                  {esObs ? (
-                      <TitleHomeObs/>
-                    ) : (
-                      <TitleHome/>
-                    )}
-                   
+            <div class="col-lg-12">
 
-                  </div>
-                  
-                  <div class="col-lg-12">
 
-                    {esObs ? (
-                      <Listpamxobs/>
-                    ) : (
-                      <Listobs/>
-                    )}
-                   
-                  </div>
-                 
-               </div>
-              
+
+
+
+
+              {esObs ? (
+                <TitleHomeObs />
+              ) : (
+                <TitleHome />
+              )}
+
+
             </div>
-         </div>
+
+            <div class="col-lg-12">
+
+              {esObs ? (
+                <Listpamxobs />
+              ) : (
+                <Listobs />
+              )}
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
 
     </div>
   )
