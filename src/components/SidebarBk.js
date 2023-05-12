@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Sidebar = () => {
+const SidebarBk = () => {
   return (
     <div>
 
@@ -64,18 +64,18 @@ i
                   <Link  className="menu-text" to={`/factoresrc`}>  Lista de Montos Aprobados (RC) </Link>
                   
                 </li> 
-                {/* <li className="">
+                <li className="">
                   <Link  className="menu-text" to={`/indiceinec`}>  Indice pobreza INEC </Link>
                   
-                </li>  */}
-                {/* <li className="">
+                </li> 
+                <li className="">
                   <Link  className="menu-text" to={`/agregarobs`}>  Agregar OBS / GL </Link>
                  
-                </li> */}
-                {/* <li className="">
+                </li>
+                <li className="">
                   <Link  className="menu-text" to={`/consultapam`}>  Consultar PAM </Link>
                  
-                </li> */}
+                </li>
                 {/* <li className="">
                   <Link  className="menu-text" to={`/agregarpam`}>  Agregar PAM </Link>
                  
@@ -83,7 +83,7 @@ i
                 
               </ul>
             </li>
-            {/* <li className="has-child">
+            <li className="has-child">
               <a href="#" className="">
                 <span className="nav-icon uil uil-calendar-alt"></span>
                 <span className="menu-text">Calendario</span>
@@ -96,7 +96,7 @@ i
                
                 
               </ul>
-            </li> */}
+            </li>
             <li className="has-child">
               <a href="#" className="">
                 <span className="nav-icon uil uil-users-alt"></span>
@@ -113,14 +113,17 @@ i
                
               </ul>
             </li>
-            {/* <li className="has-child">
+            <li className="has-child">
               <a href="#" className="">
                 <span className="nav-icon uil uil-at"></span>
                 <span className="menu-text">OBS Contactos</span>
                 <span className="toggle-icon"></span>
               </a>
               <ul>
-               
+                {/* <li className="">
+                           <a href="contact-2.html">Contact
+                              Grid</a>
+                        </li> */}
                 <li className="">
                   <Link  className="menu-text" to={`/contactosobs`}>  Lista Contactos OBS</Link>
            
@@ -146,8 +149,8 @@ i
                   
                 </li>
               </ul>
-            </li> */}
-            {/* <li className="menu-title mt-10">
+            </li>
+            <li className="menu-title mt-10">
               <span>Ayuda</span>
             </li>
             <li className="has-child">
@@ -163,12 +166,12 @@ i
                 </li>
                 
               </ul>
-            </li> */}
+            </li>
         </ul>
       </div>
     </div>
   );
 };
 
-export default Sidebar;
+export default SidebarBk;
 
