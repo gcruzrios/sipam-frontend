@@ -68,12 +68,8 @@ const Home = () => {
 
     TipoOBS();
 
-
-
-
-
     if (!changePassword) {
-
+      //Cambio de Alerta
       Swal.fire({
 
         icon: 'error',
@@ -95,8 +91,6 @@ const Home = () => {
 
 
   }, [])
-
-
 
 
   return (
