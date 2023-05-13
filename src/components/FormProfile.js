@@ -6,6 +6,8 @@ const FormProfile = () => {
 
   
   
+  const [password, setPassword] = useState('');
+  const [cpassword, setCpassword] = useState('');
   const [cedula, setCedula] = useState("");
   const [mensaje, setMensaje] = useState("");
 
@@ -22,20 +24,95 @@ const FormProfile = () => {
     SEGUNDO_APELLIDO: ""
   });
 
+
+  const [passwordError, setPasswordErr] = useState("");
+  const [confirmPasswordError, setConfirmPasswordError] = useState("");
+  const [passwordInput, setPasswordInput]= useState({
+      password:'',
+      confirmPassword:''
+  })
+
+
+  const handlePasswordChange =(evnt)=>{
+    const passwordInputValue = evnt.target.value.trim();
+    const passwordInputFieldName = evnt.target.name;
+    const NewPasswordInput = {...passwordInput,[passwordInputFieldName]:passwordInputValue}
+    setPasswordInput(NewPasswordInput);
+    
+}
+const handleValidation= (evnt)=>{
+    const passwordInputValue = evnt.target.value.trim();
+    const passwordInputFieldName = evnt.target.name;
+        //for password 
+if(passwordInputFieldName==='password'){
+    const uppercaseRegExp   = /(?=.*?[A-Z])/;
+    const lowercaseRegExp   = /(?=.*?[a-z])/;
+    const digitsRegExp      = /(?=.*?[0-9])/;
+    const specialCharRegExp = /(?=.*?[#?!@$%^&*-])/;
+    const minLengthRegExp   = /.{8,}/;
+    const passwordLength =      passwordInputValue.length;
+    const uppercasePassword =   uppercaseRegExp.test(passwordInputValue);
+    const lowercasePassword =   lowercaseRegExp.test(passwordInputValue);
+    const digitsPassword =      digitsRegExp.test(passwordInputValue);
+    const specialCharPassword = specialCharRegExp.test(passwordInputValue);
+    const minLengthPassword =   minLengthRegExp.test(passwordInputValue);
+    let errMsg ="";
+    if(passwordLength===0){
+            errMsg="Password is empty";
+    }else if(!uppercasePassword){
+            errMsg="At least one Uppercase";
+    }else if(!lowercasePassword){
+            errMsg="At least one Lowercase";
+    }else if(!digitsPassword){
+            errMsg="At least one digit";
+    }else if(!specialCharPassword){
+            errMsg="At least one Special Characters";
+    }else if(!minLengthPassword){
+            errMsg="At least minumum 8 characters";
+    }else{
+        errMsg="";
+    }
+    setPasswordErr(errMsg);
+    }
+    // for confirm password
+    if(passwordInputFieldName=== "confirmPassword" || (passwordInputFieldName==="password" && passwordInput.confirmPassword.length>0) ){
+            
+        if(passwordInput.confirmPassword!==passwordInput.password)
+        {
+        setConfirmPasswordError("Confirm password is not matched");
+        }else{
+        setConfirmPasswordError("");
+        }
+        
+    }
+}
+
+  //
+   
+ 
   const getDataPam = async (e) => {
     e.preventDefault();
 
 
     const cedula_pam = { cedula: cedula };
+
+    const id_coordinador = { idUsuario: idUsuario };
+
+  
  
     const Token = localStorage.getItem("Token");
     console.log(Token);
     console.log(cedula);
 
    await axios
-      .post("/wsSIPAM/GetPersonaPadron", cedula_pam, {
+
+      .post("/WSSIPAM/wsSIPAM/GetUsuario_X_Id",id_coordinador,{
         headers: { Authorization: "Bearer " + Token },
       })
+
+      // .post("/wsSIPAM/GetPersonaPadron", cedula_pam, {
+      //   headers: { Authorization: "Bearer " + Token },
+      // })
 
       .then((response) => {
         setMensaje(response.data.CodigoResultado);
@@ -70,7 +147,61 @@ const FormProfile = () => {
     }
   };
 
+  const handleChange = async (e) => {
+    e.preventDefault();
 
+
+    const ingreso = { idUsuario, correoUsuario, password }
+
+    console.log(ingreso);
+    // {
+    //   "idUsuario": "string",
+    //   "correo": "string",
+    //   "clave": "string"
+    // }
+
+    const Token = localStorage.getItem('Token');
+
+    console.log(Token);
+
+    const response = await axios.post(`/wsSIPAM/ModifUsuarioPassword`, ingreso, { headers: { Authorization: 'Bearer ' + Token } })
+    
+
+    //const response = await axios.post(`/wsSIPAM/GetUsuario`, ingreso, { headers: { Authorization: 'Bearer ' + Token } })
+
+    const mensaje = response.data.CodigoResultado;
+    const mensaje_alerta = response.data.MensajeResultado;
+
+    if (mensaje !== '200') {
+        Swal.fire({
+            text: 'Usuario o contraseña incorrectas..',
+            icon: 'error'
+        })
+    }
+    else {
+        const idUsuario = response.data.Resultado[0].idUsuario;
+        const nombreUsuario = response.data.Resultado[0].nombreCompleto;
+        const rolUsuario = response.data.Resultado[0].nombreRol;
+        const estadoUsuario = response.data.Resultado[0].estado;
+
+
+        console.log("EstadoLogin: " + estadoUsuario)
+
+
+
+        const estado = 'activo';
+        localStorage.setItem('Estado', estadoUsuario);
+        localStorage.setItem('idUsuario', idUsuario);
+        localStorage.setItem('nombreUsuario', nombreUsuario);
+        localStorage.setItem('rolUsuario', rolUsuario);
+        
+
+        window.location.href = '/index'
+
+
+    }
+
+}
 
   useEffect(() => {
     //getDataPam();
@@ -155,6 +286,7 @@ const FormProfile = () => {
                         className="form-control ih-medium ip-gray radius-xs b-light px-15"
                         placeholder="Contraseña"
                         id="password"
+                        required onChange={(e) => setPassword(e.target.value)}
                         value=""
                       />
                     </div>
@@ -165,6 +297,7 @@ const FormProfile = () => {
                         className="form-control ih-medium ip-gray radius-xs b-light px-15"
                         placeholder="Confirmar Password"
                         id="cpassword"
+                        required onChange={(e) => setCpassword(e.target.value)}
                         value=""
                       />
                     </div>
@@ -182,7 +315,8 @@ const FormProfile = () => {
                           cancelar
                         </button>
                         <button
-                          type="button"
+                          // type="button"
+                          onClick={handleChange}
                           className="btn btn-primary btn-default btn-squared px-30"
                         >
                           Guardar
