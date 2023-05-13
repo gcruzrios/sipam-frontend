@@ -174,7 +174,7 @@ if(passwordInputFieldName==='password'){
 
     if (mensaje !== '200') {
         Swal.fire({
-            text: 'Usuario o contraseña incorrectas..',
+            text: 'Error en el proceso..',
             icon: 'error'
         })
     }
