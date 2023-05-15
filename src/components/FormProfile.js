@@ -14,6 +14,7 @@ const FormProfile = () => {
   const idUsuario = localStorage.getItem('idUsuario');
   const nombreUsuario = localStorage.getItem('nombreUsuario');
   const correoUsuario = localStorage.getItem('correoUsuario');
+  const correo = localStorage.getItem('correoUsuario');
   const rolUsuario = localStorage.getItem('rolUsuario');
 
   const [usuarioSeleccionado, setUsuarioSeleccionado] = useState({
@@ -151,7 +152,7 @@ if(passwordInputFieldName==='password'){
     e.preventDefault();
 
 
-    const ingreso = { idUsuario, correoUsuario, password }
+    const ingreso = { idUsuario, correo, clave }
 
     console.log(ingreso);
     // {
@@ -162,8 +163,7 @@ if(passwordInputFieldName==='password'){
 
     const Token = localStorage.getItem('Token');
 
-    console.log(Token);
-
+   
     const response = await axios.post(`/wsSIPAM/ModifUsuarioPassword`, ingreso, { headers: { Authorization: 'Bearer ' + Token } })
     
 
@@ -244,7 +244,7 @@ if(passwordInputFieldName==='password'){
           <div className="col-lg-12">
             <div className="card card-Vertical card-default card-md mb-4">
               <div className="card-header">
-                <h6>Usuario SIMAP de la OBS </h6>
+                <h6>Usuario SIPAM de la OBS </h6>
               </div>
               <div className="card-body py-md-30">
                 <form>
@@ -286,7 +286,7 @@ if(passwordInputFieldName==='password'){
                         className="form-control ih-medium ip-gray radius-xs b-light px-15"
                         placeholder="Contraseña"
                         id="password"
-                        required onChange={(e) => setPassword(e.target.value)}
+                        required onChange={(e) => setClave(e.target.value)}
                         value=""
                       />
                     </div>
@@ -297,7 +297,7 @@ if(passwordInputFieldName==='password'){
                         className="form-control ih-medium ip-gray radius-xs b-light px-15"
                         placeholder="Confirmar Password"
                         id="cpassword"
-                        required onChange={(e) => setCpassword(e.target.value)}
+                        required onChange={(e) => setCclave(e.target.value)}
                         value=""
                       />
                     </div>
