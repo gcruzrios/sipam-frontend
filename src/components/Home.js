@@ -10,10 +10,7 @@ import ModalChangePassword from './ModaChangePassword';
 import NoModal from './NoModal';
 import Swal from 'sweetalert2';
 
-
-
 //const esObs = true;
-
 
 const Home = () => {
   const rolUsuario = localStorage.getItem('rolUsuario');
@@ -22,10 +19,6 @@ const Home = () => {
   const [esObs, setEsObs] = useState(true);
   const [changePassword, setChangePassword] = useState(false);
   console.log(changePassword);
-
-
-
-  //console.log (rolUsuario);
 
   const ChangePassword = () => {
 
@@ -50,8 +43,6 @@ const Home = () => {
     }
   }
 
-
-
   useEffect(() => {
 
     console.log("estadoUsuario: " + estadoUsuario);
@@ -72,9 +63,9 @@ const Home = () => {
         icon: 'warning',
         title: 'Por Favor Cambiar el Password',
         showConfirmButton: false,
-        //timer: 1500,
+        timer: 1500,
         //timer: 5000,
-        //timerProgressBar: true,
+        timerProgressBar: true,
         didOpen: () => {
           Swal.showLoading();
         },
