@@ -29,55 +29,52 @@ const Home = () => {
 
   const ChangePassword = () => {
 
-    console.log("EstadoUser: " + estadoUsuario);
+    console.log("estadoUserRevisar: " + estadoUsuario);
+
     if (estadoUsuario === 'A') {
-      setChangePassword(true)
-    } else {
       setChangePassword(false)
     }
-
-    console.log(changePassword);
-
+    if (estadoUsuario === 'T') {
+      setChangePassword(true);
+    }
+    else {
+      setChangePassword(true);
+    }
   }
 
-
-
-
-
-
   const TipoOBS = () => {
-
-
     if (rolUsuario === 'Coordinador') {
       setEsObs(true)
     } else {
       setEsObs(false)
     }
-
-    //console.log(esObs);
-
   }
 
 
 
   useEffect(() => {
 
-    ChangePassword();
+    console.log("estadoUsuario: " + estadoUsuario);
     console.log("cambiar Pass: " + changePassword);
 
 
-    TipoOBS();
+    ChangePassword();
 
-    if (!changePassword) {
-      //Cambio de Alerta
+
+    console.log("Verifica si cambia PASS: " + changePassword);
+
+
+    if (estadoUsuario !== 'A') {
+      setChangePassword(true);      
+
       Swal.fire({
 
-        icon: 'error',
+        icon: 'warning',
         title: 'Por Favor Cambiar el Password',
         showConfirmButton: false,
         //timer: 1500,
-        timer: 5000,
-        timerProgressBar: true,
+        //timer: 5000,
+        //timerProgressBar: true,
         didOpen: () => {
           Swal.showLoading();
         },
@@ -88,6 +85,8 @@ const Home = () => {
       // <ModalChangePassword/>
 
     }
+
+    TipoOBS();
 
 
   }, [])
