@@ -54,7 +54,7 @@ const Home = () => {
 
     console.log("Verifica si cambia PASS: " + changePassword);
 
-
+    //Prueba carga
     if (estadoUsuario !== 'A') {
       setChangePassword(true);      
 
@@ -73,7 +73,6 @@ const Home = () => {
           window.location.href = '/Profile';
         },
       });
-      // <ModalChangePassword/>
 
     }
 
