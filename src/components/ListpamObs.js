@@ -35,11 +35,13 @@ const ListpamObs = () => {
         headers: { Authorization: "Bearer " + Token },
       })
       .then((response) => {
-        //console.log(response.data.Resultado);
+        console.log(response.data.Resultado);
         setData(response.data.Resultado);
       });
   };
-
+  useEffect(() => {
+    peticionGet();
+  }, []);
 
 
 
