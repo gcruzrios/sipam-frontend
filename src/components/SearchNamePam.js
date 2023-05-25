@@ -35,14 +35,57 @@ const SearchNamePam = () => {
     modalidadAtencion: "",
 
     // jefe:localStorage.getItem('idUsuario')
+
+
+    "idOrganizacion": "8",
+    "codigoInstitucion": "6-04-01-SJ-H-09",
+    "identificacion": "3002051887",
+    "razonSocial": "Asociacion de Hermanas de Los Pobres de San Pedro Claver",
+    "tipoRazonSocial": null,
+    "nombreCONAPAM": "Asociacion de Hermanas de Los Pobres de San Pedro Claver",
+    "idProvincia": "1",
+    "provincia": "San José",
+    "idCanton": "1",
+    "canton": "San José",
+    "idDistrito": "9",
+    "distrito": "Pavas",
+    "idRegion": "1",
+    "region": "Central",
+    "otrasSenias": "Contiguo a la embajada de Estados Unidos, Carretera a Pavas",
+    "geoLocalizacion": "9.942703,-84.1273707",
+    "cedulaRepresentanteLegal": null,
+    "nombreRepresentanteLegal": null,
+    "primerApellidoRepresentanteLegal": null,
+    "segundoApellidoRepresentanteLegal": null,
+    "correoRepresentante": null,
+    "telefonoRepresentante": "",
+    "cedulaCoordinador": null,
+    "nombreCoordinador": null,
+    "primerApellidoCoordinador": null,
+    "segundoApellidoCoordinador": null,
+    "correoCoordinador": null,
+    "telefonoCoordinador": null,
+    "capacidadAtencionPAM": null,
+    "correoOrganizacion": "hspccr@gmail.com",
+    "estado": null,
+    "idOBSModalidad": "200",
+    "idModalidad": "4",
+    "modalidadAtencion": "Abandonados"
+
+
   });
 
-  const { id } = useParams();
 
+ 
+  const { id } = useParams();
+  console.log(id);
   const Token = localStorage.getItem("Token");
+
+  const NombreOrganizacion = localStorage.getItem("organizacionUsuario");
+  const idOrganizacion = localStorage.getItem("idOrganizacion");
   //console.log(Token);
   const [data, setData] = useState([]);
-  const cedula = {cedula:id};
+  const cedula = {idOBS:idOrganizacion};
   console.log(cedula)
 
   const peticionGet = async () => {

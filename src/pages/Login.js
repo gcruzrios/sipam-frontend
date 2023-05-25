@@ -53,6 +53,8 @@ export const Login = () => {
             const nombreUsuario = response.data.Resultado[0].nombreCompleto;
             const rolUsuario = response.data.Resultado[0].nombreRol;
             const estadoUsuario = response.data.Resultado[0].estado;
+
+            const idOrganizacion = response.data.Resultado[0].idOrganizacion;
             const organizacionUsuario = response.data.Resultado[0].organizacion;
             const correoUsuario = response.data.Resultado[0].correo;
 
@@ -68,6 +70,8 @@ export const Login = () => {
             localStorage.setItem('rolUsuario', rolUsuario);
             localStorage.setItem('correoUsuario', correoUsuario);
             localStorage.setItem('organizacionUsuario', organizacionUsuario);
+            localStorage.setItem('idOrganizacion', idOrganizacion);
+            
 
             window.location.href = '/index'
 

@@ -2,7 +2,7 @@ import React from "react";
 
 const SearchNameObs = () => {
 
-  const nombreObs = localStorage.getItem("organizacion");
+  const nombreObs = localStorage.getItem("organizacionUsuario");
 
   return (
     <div>
