@@ -45,7 +45,9 @@ const TablapamxObs = () => {
    
 
 
-    const cedula = {idOBS: idObs};
+    const cedula = {idOBS: idObs, idModalidad: ''};
+
+   
     console.log(cedula)
     await axios
       .post('/wsSIPAM/GetPAMPorIdOBS',cedula,{
@@ -93,6 +95,9 @@ const TablapamxObs = () => {
               </span>
             </th>
             <th>
+              <span className="userDatatable-title">Modalidad</span>
+            </th>
+            <th>
               <span className="userDatatable-title">Nombre</span>
             </th>
             <th>
@@ -129,6 +134,10 @@ const TablapamxObs = () => {
               <Link  className="nav-author__signout" to={`/detallepam/${pam.identificacion}`}>  <i className="uil uil-home-alt"></i> {pam.identificacion}</Link>
               </div>
             </td>
+            <td>
+              <div className="userDatatable-content">{pam.modalidad}</div>
+            </td>
+            
             <td>
               <div className="userDatatable-content">{pam.nombre.substring(20, pam.nombre)}</div>
             </td>

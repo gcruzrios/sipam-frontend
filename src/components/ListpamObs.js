@@ -61,7 +61,7 @@ const ListpamObs = () => {
             </a>
             <ModalAddpam />
           </div> */}
-          <h3> Modalidades activa de la OBS </h3>
+          <h3> Modalidades activas de la OBS </h3>
           <select
             name="select-option2"
             id="select-option2"
